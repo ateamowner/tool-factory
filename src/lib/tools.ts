@@ -56,6 +56,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "paycheck calculator hourly",
+    aliases: ["hourly paycheck calculator", "hourly pay calculator"],
+    slug: "paycheck-calculator-hourly",
+    href: "/finance/paycheck-calculator-hourly",
+    title: "Paycheck Calculator Hourly",
+    shortTitle: "Paycheck Calculator Hourly",
+    category: "finance",
+    description:
+      "Gross pay per paycheck from an hourly rate or salary — weekly, biweekly, semimonthly, or monthly.",
+    summary:
+      "Enter hourly rate or salary, hours per week, and pay frequency to see gross weekly, monthly, and annual pay.",
+    cta: "Calculate",
+  },
+  {
     keyword: "utm builder",
     aliases: ["utm generator", "utm maker", "utm link builder"],
     slug: "utm-builder",

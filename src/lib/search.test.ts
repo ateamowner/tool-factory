@@ -6,16 +6,15 @@ import { CATEGORIES, TOOLS } from "./tools.ts";
 const catalog = indexToolsAndHubs(CATEGORIES, TOOLS);
 
 describe("searchSite", () => {
-  it("indexes the three tools and three hubs", () => {
-    assert.equal(catalog.filter((item) => item.kind === "tool").length, 3);
+  it("indexes the published tools and three hubs", () => {
+    assert.equal(catalog.filter((item) => item.kind === "tool").length, TOOLS.length);
     assert.equal(catalog.filter((item) => item.kind === "hub").length, 3);
     assert.deepEqual(
       catalog.filter((item) => item.kind === "tool").map((item) => item.href).sort(),
-      [
-        "/dev/uuid-generator",
-        "/finance/stock-average-calculator",
-        "/seo/utm-builder",
-      ],
+      TOOLS.map((tool) => tool.href).sort(),
+    );
+    assert.ok(
+      catalog.some((item) => item.href === "/finance/paycheck-calculator-hourly"),
     );
   });
 
@@ -28,6 +27,10 @@ describe("searchSite", () => {
     assert.equal(searchSite("seo", catalog)[0]?.href, "/seo");
     assert.ok(
       searchSite("uuid", catalog).some((hit) => hit.href === "/dev/uuid-generator"),
+    );
+    assert.equal(
+      searchSite("paycheck calculator hourly", catalog)[0]?.href,
+      "/finance/paycheck-calculator-hourly",
     );
     assert.equal(searchSite("", catalog).length, 0);
   });
