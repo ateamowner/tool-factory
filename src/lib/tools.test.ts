@@ -26,8 +26,18 @@ describe("tool registry stop rule", () => {
       TOOLS.find((tool) => tool.keyword === "paycheck calculator hourly")?.href,
       "/finance/paycheck-calculator-hourly",
     );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "robots.txt builder")?.href,
+      "/seo/robots-txt-builder",
+    );
     assert.ok(keywordAlreadyPublished("stock average calculator"));
     assert.ok(keywordAlreadyPublished("paycheck calculator hourly"));
+    assert.ok(keywordAlreadyPublished("robots.txt builder"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "robots.txt builder")?.aliases.includes(
+        "robot.txt generator",
+      ),
+    );
     assert.equal(
       TOOLS.find((tool) => tool.href === "/finance/stock-average-calculator")?.cta,
       "Calculate",
@@ -37,6 +47,10 @@ describe("tool registry stop rule", () => {
     assert.equal(
       TOOLS.find((tool) => tool.href === "/finance/paycheck-calculator-hourly")?.cta,
       "Calculate",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/seo/robots-txt-builder")?.cta,
+      "Generate",
     );
   });
 

@@ -4,7 +4,7 @@ import { CategoryPage } from "@/components/CategoryPage";
 export const metadata: Metadata = {
   title: "SEO Tools",
   description:
-    "Free SEO and campaign tools in your browser, starting with a UTM builder, UTM generator, and UTM link maker.",
+    "Free SEO and campaign tools in your browser, including a robots.txt builder, robot.txt generator, and UTM builder.",
 };
 
 export default function SeoHubPage() {
