@@ -25,7 +25,7 @@ export function UuidGenerator() {
   }
 
   return (
-    <div className="space-y-4 rounded-2xl border border-line bg-card p-4 sm:p-5">
+    <div className="space-y-5 rounded-2xl border border-line bg-card p-4 sm:p-6">
       <form
         className="grid gap-4 sm:grid-cols-[1fr_8rem_auto] sm:items-end"
         onSubmit={(event) => {
@@ -34,34 +34,34 @@ export function UuidGenerator() {
         }}
       >
         <fieldset>
-          <legend className="mb-1 block text-sm font-medium">Version</legend>
+          <legend className="mb-2 block text-xs text-muted">Version</legend>
           <div className="flex gap-2">
-            <label className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-line px-3 py-2 text-sm has-checked:border-accent has-checked:bg-accent-soft">
+            <label className="flex flex-1 items-center justify-center gap-2 rounded-[10px] border border-line px-3 py-2 text-sm has-checked:border-mint/60 has-checked:bg-mint/10">
               <input
                 type="radio"
                 name="uuid-version"
                 value="4"
                 checked={version === 4}
                 onChange={() => setVersion(4)}
-                className="accent-accent"
+                className="accent-mint"
               />
               UUID v4
             </label>
-            <label className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-line px-3 py-2 text-sm has-checked:border-accent has-checked:bg-accent-soft">
+            <label className="flex flex-1 items-center justify-center gap-2 rounded-[10px] border border-line px-3 py-2 text-sm has-checked:border-mint/60 has-checked:bg-mint/10">
               <input
                 type="radio"
                 name="uuid-version"
                 value="7"
                 checked={version === 7}
                 onChange={() => setVersion(7)}
-                className="accent-accent"
+                className="accent-mint"
               />
               UUID v7
             </label>
           </div>
         </fieldset>
         <label className="block text-sm">
-          <span className="mb-1 block font-medium">How many</span>
+          <span className="mb-2 block text-xs text-muted">How many</span>
           <input
             type="number"
             min={1}
@@ -69,13 +69,10 @@ export function UuidGenerator() {
             inputMode="numeric"
             value={count}
             onChange={(event) => setCount(event.target.value)}
-            className="w-full rounded-xl border border-line bg-canvas px-3 py-2"
+            className="input-field"
           />
         </label>
-        <button
-          type="submit"
-          className="rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent-hover"
-        >
+        <button type="submit" className="btn-primary">
           Generate
         </button>
       </form>
@@ -94,9 +91,9 @@ export function UuidGenerator() {
             {ids.map((id) => (
               <li
                 key={id}
-                className="flex flex-col gap-2 rounded-xl bg-canvas px-3 py-2 sm:flex-row sm:items-center sm:justify-between"
+                className="flex flex-col gap-2 rounded-[10px] bg-surface px-3 py-2 sm:flex-row sm:items-center sm:justify-between"
               >
-                <code className="break-all text-sm">{id}</code>
+                <code className="break-all font-mono text-sm text-mint">{id}</code>
                 <CopyButton value={id} label="Copy" className="shrink-0" />
               </li>
             ))}

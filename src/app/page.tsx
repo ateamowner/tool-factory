@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ToolCard } from "@/components/ToolCard";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
-import { CATEGORIES, getToolsByCategory } from "@/lib/tools";
+import { TOOLS } from "@/lib/tools";
 
 export const metadata: Metadata = {
   title: {
@@ -12,46 +11,54 @@ export const metadata: Metadata = {
     "Free stock average calculator, UTM builder, and UUID generator. No signup. Every tool runs in your browser.",
 };
 
+const trustChips = [
+  "No signup",
+  "Nothing uploaded",
+  "Everything stays on the device",
+];
+
 export default function HomePage() {
   return (
-    <main id="main" className="mx-auto max-w-5xl px-4 py-10">
-      <section className="max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">
-          Free utility tools
+    <main id="main" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-16">
+      <section className="max-w-3xl">
+        <p className="inline-flex items-center gap-2 rounded-full bg-mint px-3 py-1 text-xs font-semibold text-ink">
+          <span aria-hidden="true" className="size-1.5 rounded-full bg-ink" />
+          On your device
         </p>
-        <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
-          Tools that stay on your device.
+        <h1 className="mt-6 text-[2.35rem] font-[650] leading-[1.08] tracking-tight text-text sm:text-6xl">
+          Tools that stay{" "}
+          <span className="sm:block">on your device.</span>
         </h1>
-        <p className="mt-4 text-lg leading-7 text-muted">{SITE_TAGLINE}</p>
+        <p className="mt-5 text-lg leading-7 text-muted">{SITE_TAGLINE}</p>
+        <ul className="mt-6 flex flex-wrap gap-2">
+          {trustChips.map((chip, index) => (
+            <li
+              key={chip}
+              className={`chip inline-flex ${index === 2 ? "max-sm:hidden" : ""}`}
+            >
+              {chip}
+            </li>
+          ))}
+        </ul>
       </section>
 
-      <div className="mt-12 space-y-12">
-        {Object.values(CATEGORIES).map((category) => {
-          const tools = getToolsByCategory(category.id);
-          return (
-            <section key={category.id} aria-labelledby={`${category.id}-heading`}>
-              <div className="flex items-end justify-between gap-3">
-                <div>
-                  <h2 id={`${category.id}-heading`} className="text-2xl font-semibold tracking-tight">
-                    {category.name}
-                  </h2>
-                  <p className="mt-1 max-w-2xl text-sm leading-6 text-muted">
-                    {category.description}
-                  </p>
-                </div>
-                <Link className="shrink-0 text-sm font-medium text-accent hover:underline" href={category.href}>
-                  View hub
-                </Link>
-              </div>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                {tools.map((tool) => (
-                  <ToolCard key={tool.href} tool={tool} />
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </div>
+      <section className="mt-16 sm:mt-20" aria-labelledby="open-a-tool">
+        <h2
+          id="open-a-tool"
+          className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted"
+        >
+          Open a tool
+        </h2>
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {TOOLS.map((tool) => (
+            <ToolCard
+              key={tool.href}
+              tool={tool}
+              featured={tool.slug === "utm-builder"}
+            />
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

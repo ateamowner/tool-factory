@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { HeaderSearch } from "@/components/HeaderSearch";
 import { CATEGORIES } from "@/lib/tools";
 
 const nav = [
@@ -8,30 +12,32 @@ const nav = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
-    <header className="sticky top-0 z-20 border-b border-line/80 bg-canvas/90 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span
-            aria-hidden="true"
-            className="grid size-8 place-items-center rounded-lg bg-accent text-sm font-bold text-white"
-          >
-            TF
-          </span>
-          <span>Tool Factory</span>
+    <header className="sticky top-0 z-30 border-b border-line/80 bg-ink/90 backdrop-blur">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-4 px-4 py-4 md:grid-cols-[1fr_minmax(16rem,28rem)_1fr] md:px-6">
+        <Link href="/" className="justify-self-start text-[17px] font-semibold tracking-tight">
+          <span className="text-text">Tool</span>{" "}
+          <span className="text-mint">Factory</span>
         </Link>
-        <nav aria-label="Primary">
-          <ul className="flex flex-wrap items-center gap-1 text-sm font-medium">
-            {nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="rounded-full px-3 py-1.5 text-ink/90 hover:bg-accent-soft hover:text-accent"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+        <HeaderSearch />
+        <nav aria-label="Primary" className="hidden justify-self-end md:block">
+          <ul className="flex items-center gap-6 text-sm font-medium">
+            {nav.map((item) => {
+              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={active ? "text-text" : "text-muted hover:text-text"}
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </div>

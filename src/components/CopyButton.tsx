@@ -8,6 +8,8 @@ type CopyButtonProps = {
   copiedLabel?: string;
   className?: string;
   disabled?: boolean;
+  variant?: "primary" | "secondary";
+  showStatus?: boolean;
 };
 
 export function CopyButton({
@@ -16,6 +18,8 @@ export function CopyButton({
   copiedLabel = "Copied",
   className = "",
   disabled = false,
+  variant = "primary",
+  showStatus = false,
 }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
@@ -39,13 +43,20 @@ export function CopyButton({
   }
 
   return (
-    <button
-      type="button"
-      onClick={onCopy}
-      disabled={disabled || !value}
-      className={`inline-flex items-center justify-center rounded-full bg-accent px-3.5 py-2 text-sm font-medium text-white hover:bg-accent-hover disabled:cursor-not-allowed disabled:bg-muted ${className}`}
-    >
-      {copied ? copiedLabel : label}
-    </button>
+    <span className="inline-flex items-center gap-3">
+      {showStatus && copied ? (
+        <span className="text-sm font-medium text-mint" aria-live="polite">
+          {copiedLabel}
+        </span>
+      ) : null}
+      <button
+        type="button"
+        onClick={onCopy}
+        disabled={disabled || !value}
+        className={`${variant === "secondary" ? "btn-secondary" : "btn-primary"} ${className}`}
+      >
+        {showStatus ? label : copied ? copiedLabel : label}
+      </button>
+    </span>
   );
 }

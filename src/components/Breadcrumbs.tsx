@@ -14,15 +14,15 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
           return (
             <li key={item.href} className="flex items-center gap-1.5">
               {last ? (
-                <span aria-current="page" className="font-medium text-ink">
+                <span aria-current="page" className="text-muted">
                   {item.name}
                 </span>
               ) : (
-                <Link className="hover:text-accent hover:underline" href={item.href}>
+                <Link className="hover:text-text" href={item.href}>
                   {item.name}
                 </Link>
               )}
-              {!last ? <span aria-hidden="true">›</span> : null}
+              {!last ? <span aria-hidden="true">/</span> : null}
             </li>
           );
         })}

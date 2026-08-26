@@ -55,22 +55,26 @@ export default function UuidGeneratorPage() {
   const siteUrl = getSiteUrl();
 
   return (
-    <main id="main" className="mx-auto max-w-5xl px-4 py-8">
+    <main id="main" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
       <JsonLd data={faqPageJsonLd(faqs)} />
       <JsonLd data={breadcrumbJsonLd(crumbs, siteUrl)} />
       <Breadcrumbs items={crumbs} />
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h1 className="mt-6 text-4xl font-[650] tracking-tight sm:text-5xl">
         UUID Generator
       </h1>
-      <p className="mt-3 max-w-3xl text-muted">
+      <p className="mt-4 max-w-3xl text-base leading-7 text-muted">
         Generate UUID v4 and UUID v7 locally — the same page works as an online GUID generator.
       </p>
+      <ul className="mt-5 flex flex-wrap gap-2">
+        <li className="chip inline-flex">UUID v4</li>
+        <li className="chip inline-flex">UUID v7</li>
+      </ul>
 
       <div className="mt-8">
         <UuidGenerator />
       </div>
 
-      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-ink/90">
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90">
         <p>
           This UUID generator creates RFC 9562 identifiers in your browser. Use
           UUID v4 when you want a random id, or UUID v7 when you want
@@ -88,11 +92,11 @@ export default function UuidGeneratorPage() {
           Bulk generate up to 1,000 IDs, copy a single row, or copy all as a
           newline-separated list. Nothing is uploaded. For campaign URLs, open
           the{" "}
-          <Link className="text-accent underline" href="/seo/utm-builder">
+          <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
           </Link>
           . For position math after several buys, use the{" "}
-          <Link className="text-accent underline" href="/finance/stock-average-calculator">
+          <Link className="text-mint underline" href="/finance/stock-average-calculator">
             stock average calculator
           </Link>
           .
@@ -100,7 +104,7 @@ export default function UuidGeneratorPage() {
       </section>
 
       <section className="mt-12 max-w-3xl" aria-labelledby="howto-heading">
-        <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight">
+        <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight text-text">
           How to use the UUID generator
         </h2>
         <ol className="mt-4 list-decimal space-y-2 pl-5 leading-7">

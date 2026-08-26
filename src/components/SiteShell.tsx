@@ -9,8 +9,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         Skip to content
       </a>
       <Header />
-      <AdSlot />
       <div className="flex-1">{children}</div>
+      <AdSlot />
       <Footer />
     </div>
   );
