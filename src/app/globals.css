@@ -116,7 +116,6 @@ body {
 }
 
 .chip {
-  display: inline-flex;
   align-items: center;
   border-radius: 999px;
   border: 1px solid var(--color-line);

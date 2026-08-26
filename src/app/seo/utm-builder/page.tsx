@@ -66,9 +66,9 @@ export default function UtmBuilderPage() {
         One UTM generator, UTM maker, and UTM link builder for campaign URLs — including bulk CSV.
       </p>
       <ul className="mt-5 flex flex-wrap gap-2">
-        <li className="chip">Meta ads</li>
-        <li className="chip">Google ads</li>
-        <li className="chip">Email</li>
+        <li className="chip inline-flex">Meta ads</li>
+        <li className="chip inline-flex">Google ads</li>
+        <li className="chip inline-flex">Email</li>
       </ul>
 
       <div className="mt-8">

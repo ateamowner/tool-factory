@@ -103,7 +103,7 @@ export function UtmBuilder() {
                 key={id}
                 type="button"
                 onClick={() => applyPreset(id)}
-                className="chip hover:border-mint/40"
+                className="chip inline-flex hover:border-mint/40"
               >
                 {UTM_PRESETS[id].label}
               </button>

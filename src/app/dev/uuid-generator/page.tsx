@@ -66,8 +66,8 @@ export default function UuidGeneratorPage() {
         Generate UUID v4 and UUID v7 locally — the same page works as an online GUID generator.
       </p>
       <ul className="mt-5 flex flex-wrap gap-2">
-        <li className="chip">UUID v4</li>
-        <li className="chip">UUID v7</li>
+        <li className="chip inline-flex">UUID v4</li>
+        <li className="chip inline-flex">UUID v7</li>
       </ul>
 
       <div className="mt-8">

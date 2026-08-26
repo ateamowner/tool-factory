@@ -34,7 +34,7 @@ export default function HomePage() {
           {trustChips.map((chip, index) => (
             <li
               key={chip}
-              className={`chip ${index === 2 ? "hidden sm:inline-flex" : ""}`}
+              className={`chip inline-flex ${index === 2 ? "max-sm:hidden" : ""}`}
             >
               {chip}
             </li>
