@@ -22,17 +22,32 @@ describe("tool registry stop rule", () => {
       TOOLS.find((tool) => tool.keyword === "uuid generator")?.href,
       "/dev/uuid-generator",
     );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "paycheck calculator hourly")?.href,
+      "/finance/paycheck-calculator-hourly",
+    );
     assert.ok(keywordAlreadyPublished("stock average calculator"));
+    assert.ok(keywordAlreadyPublished("paycheck calculator hourly"));
     assert.equal(
       TOOLS.find((tool) => tool.href === "/finance/stock-average-calculator")?.cta,
       "Calculate",
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/seo/utm-builder")?.cta, "Copy URL");
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/uuid-generator")?.cta, "Generate");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/paycheck-calculator-hourly")?.cta,
+      "Calculate",
+    );
   });
 
   it("does not ship jwt decoder, excel-to-pdf, or schema.org validator pages", () => {
-    const banned = ["jwt decoder", "excel-to-pdf", "excel to pdf", "validator.schema.org"];
+    const banned = [
+      "jwt decoder",
+      "excel-to-pdf",
+      "excel to pdf",
+      "validator.schema.org",
+      "percentage calculator",
+    ];
     for (const keyword of banned) {
       assert.equal(keywordAlreadyPublished(keyword), false);
       assert.equal(

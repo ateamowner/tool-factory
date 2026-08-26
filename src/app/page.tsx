@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: `${SITE_NAME} — Free Browser Tools`,
   },
   description:
-    "Free stock average calculator, UTM builder, and UUID generator. No signup. Every tool runs in your browser.",
+    "Free stock average calculator, paycheck calculator hourly, UTM builder, and UUID generator. No signup. Every tool runs in your browser.",
 };
 
 const trustChips = [
@@ -49,7 +49,7 @@ export default function HomePage() {
         >
           Open a tool
         </h2>
-        <div className="mt-5 grid gap-4 md:grid-cols-3">
+        <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {TOOLS.map((tool) => (
             <ToolCard
               key={tool.href}
