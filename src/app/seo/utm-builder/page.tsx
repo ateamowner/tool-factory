@@ -55,22 +55,27 @@ export default function UtmBuilderPage() {
   const siteUrl = getSiteUrl();
 
   return (
-    <main id="main" className="mx-auto max-w-5xl px-4 py-8">
+    <main id="main" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
       <JsonLd data={faqPageJsonLd(faqs)} />
       <JsonLd data={breadcrumbJsonLd(crumbs, siteUrl)} />
       <Breadcrumbs items={crumbs} />
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h1 className="mt-6 text-4xl font-[650] tracking-tight sm:text-5xl">
         UTM Builder
       </h1>
-      <p className="mt-3 max-w-3xl text-muted">
+      <p className="mt-4 max-w-3xl text-base leading-7 text-muted">
         One UTM generator, UTM maker, and UTM link builder for campaign URLs — including bulk CSV.
       </p>
+      <ul className="mt-5 flex flex-wrap gap-2">
+        <li className="chip">Meta ads</li>
+        <li className="chip">Google ads</li>
+        <li className="chip">Email</li>
+      </ul>
 
       <div className="mt-8">
         <UtmBuilder />
       </div>
 
-      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-ink/90">
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90">
         <p>
           A UTM builder appends campaign tags to a landing page so analytics
           tools can credit the click. This page is the UTM generator and UTM
@@ -93,11 +98,11 @@ export default function UtmBuilderPage() {
         </p>
         <p>
           Tracking a finance landing page? Open the{" "}
-          <Link className="text-accent underline" href="/finance/stock-average-calculator">
+          <Link className="text-mint underline" href="/finance/stock-average-calculator">
             stock average calculator
           </Link>
           . Need a unique id for a test campaign? Use the{" "}
-          <Link className="text-accent underline" href="/dev/uuid-generator">
+          <Link className="text-mint underline" href="/dev/uuid-generator">
             UUID generator
           </Link>
           .
@@ -105,7 +110,7 @@ export default function UtmBuilderPage() {
       </section>
 
       <section className="mt-12 max-w-3xl" aria-labelledby="howto-heading">
-        <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight">
+        <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight text-text">
           How to use the UTM builder
         </h2>
         <ol className="mt-4 list-decimal space-y-2 pl-5 leading-7">

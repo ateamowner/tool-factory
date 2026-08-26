@@ -23,6 +23,12 @@ describe("tool registry stop rule", () => {
       "/dev/uuid-generator",
     );
     assert.ok(keywordAlreadyPublished("stock average calculator"));
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/stock-average-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/seo/utm-builder")?.cta, "Copy URL");
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/uuid-generator")?.cta, "Generate");
   });
 
   it("does not ship jwt decoder, excel-to-pdf, or schema.org validator pages", () => {

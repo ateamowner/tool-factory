@@ -10,6 +10,7 @@ export type Tool = {
   category: CategoryId;
   description: string;
   summary: string;
+  cta: "Calculate" | "Copy URL" | "Generate";
 };
 
 export const CATEGORIES: Record<
@@ -52,6 +53,7 @@ export const TOOLS: Tool[] = [
       "Weighted average cost, total shares, break-even price, and unrealized P/L from multiple lots.",
     summary:
       "Add share lots, optional fees, and a current price to see average cost and profit or loss.",
+    cta: "Calculate",
   },
   {
     keyword: "utm builder",
@@ -65,6 +67,7 @@ export const TOOLS: Tool[] = [
       "UTM generator, maker, and link builder for campaign URLs — including bulk CSV — all in the browser.",
     summary:
       "Add utm_source, medium, campaign, and optional fields, or generate a batch from CSV.",
+    cta: "Copy URL",
   },
   {
     keyword: "uuid generator",
@@ -77,6 +80,7 @@ export const TOOLS: Tool[] = [
     description:
       "Generate UUID v4 and UUID v7 (also used as an online GUID generator) with bulk copy.",
     summary: "Create one or many RFC 9562 UUIDs with Web Crypto. Copy one or copy all.",
+    cta: "Generate",
   },
 ];
 

@@ -60,14 +60,14 @@ export default function StockAverageCalculatorPage() {
   const siteUrl = getSiteUrl();
 
   return (
-    <main id="main" className="mx-auto max-w-5xl px-4 py-8">
+    <main id="main" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
       <JsonLd data={faqPageJsonLd(faqs)} />
       <JsonLd data={breadcrumbJsonLd(crumbs, siteUrl)} />
       <Breadcrumbs items={crumbs} />
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h1 className="mt-6 text-4xl font-[650] tracking-tight sm:text-5xl">
         Stock Average Calculator
       </h1>
-      <p className="mt-3 max-w-3xl text-muted">
+      <p className="mt-4 max-w-3xl text-base leading-7 text-muted">
         Find your weighted average cost after buying the same stock more than once.
       </p>
 
@@ -75,7 +75,7 @@ export default function StockAverageCalculatorPage() {
         <StockAverageCalculator />
       </div>
 
-      <section className="prose-tool mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-ink/90">
+      <section className="prose-tool mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90">
         <p>
           A stock average calculator shows the real cost basis you carry after a
           series of buys. Enter each purchase as a lot with shares and price per
@@ -101,11 +101,11 @@ export default function StockAverageCalculatorPage() {
         <p>
           Everything on this page runs in your browser. Lots never leave the
           device, and there is no account. Pair it with the{" "}
-          <Link className="text-accent underline" href="/seo/utm-builder">
+          <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
           </Link>{" "}
           if you are tracking a finance campaign, or the{" "}
-          <Link className="text-accent underline" href="/dev/uuid-generator">
+          <Link className="text-mint underline" href="/dev/uuid-generator">
             UUID generator
           </Link>{" "}
           when you need local identifiers.
@@ -113,7 +113,7 @@ export default function StockAverageCalculatorPage() {
       </section>
 
       <section className="mt-12 max-w-3xl" aria-labelledby="howto-heading">
-        <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight">
+        <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight text-text">
           How to use the stock average calculator
         </h2>
         <ol className="mt-4 list-decimal space-y-2 pl-5 leading-7">

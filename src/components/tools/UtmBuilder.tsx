@@ -91,40 +91,40 @@ export function UtmBuilder() {
 
   return (
     <div className="space-y-8">
-      <form className="space-y-4 rounded-2xl border border-line bg-card p-4 sm:p-5" onSubmit={(event) => event.preventDefault()}>
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold">Campaign URL</h2>
-          <fieldset>
-            <legend className="sr-only">Presets</legend>
-            <div className="flex flex-wrap gap-2">
-              {(Object.keys(UTM_PRESETS) as UtmPresetId[]).map((id) => (
-                <button
-                  key={id}
-                  type="button"
-                  onClick={() => applyPreset(id)}
-                  className="rounded-full border border-line px-3 py-1.5 text-sm font-medium hover:border-accent hover:text-accent"
-                >
-                  {UTM_PRESETS[id].label}
-                </button>
-              ))}
-            </div>
-          </fieldset>
-        </div>
+      <form
+        className="space-y-5 rounded-2xl border border-line bg-card p-4 sm:p-6"
+        onSubmit={(event) => event.preventDefault()}
+      >
+        <fieldset>
+          <legend className="sr-only">Presets</legend>
+          <div className="flex flex-wrap gap-2">
+            {(Object.keys(UTM_PRESETS) as UtmPresetId[]).map((id) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => applyPreset(id)}
+                className="chip hover:border-mint/40"
+              >
+                {UTM_PRESETS[id].label}
+              </button>
+            ))}
+          </div>
+        </fieldset>
 
         <label className="block text-sm">
-          <span className="mb-1 block font-medium">Destination URL</span>
+          <span className="mb-2 block text-xs text-muted">Destination URL</span>
           <input
             type="url"
             inputMode="url"
             autoComplete="url"
             value={fields.destination}
             onChange={(event) => setField("destination", event.target.value)}
-            className="w-full rounded-xl border border-line bg-canvas px-3 py-2"
+            className="input-field"
             placeholder="https://example.com/landing"
           />
         </label>
 
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           <TextField
             label="utm_source"
             value={fields.source ?? ""}
@@ -163,42 +163,47 @@ export function UtmBuilder() {
           />
         </div>
 
-        <label className="flex items-start gap-2 text-sm">
-          <input
-            type="checkbox"
-            checked={applyRules}
-            onChange={(event) => setApplyRules(event.target.checked)}
-            className="mt-1 size-4 accent-accent"
-          />
-          <span>
-            Apply naming rules: lowercase and convert spaces to underscores.
-            Recommended for a UTM generator, UTM maker, or UTM link builder so
-            reports stay consistent.
-          </span>
-        </label>
-
-        <div className="rounded-xl bg-canvas px-3 py-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-            Final URL
-          </p>
-          <p className="mt-2 break-all font-mono text-sm">
+        <div>
+          <p className="mb-2 text-xs text-muted">Final URL</p>
+          <p className="break-all font-mono text-sm text-mint">
             {preview.url || preview.error || "Enter a destination URL to preview."}
           </p>
-          <div className="mt-3">
-            <CopyButton value={preview.url} label="Copy URL" disabled={!preview.url} />
-          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 border-t border-line pt-4 sm:flex-row sm:items-center sm:justify-between">
+          <label className="flex items-start gap-2 text-sm text-muted">
+            <input
+              type="checkbox"
+              checked={applyRules}
+              onChange={(event) => setApplyRules(event.target.checked)}
+              className="mt-1 size-4 accent-mint"
+            />
+            <span>
+              {applyRules
+                ? "Naming rules on · lowercase + underscores"
+                : "Naming rules off"}
+            </span>
+          </label>
+          <CopyButton
+            value={preview.url}
+            label="Copy URL"
+            disabled={!preview.url}
+            showStatus
+          />
         </div>
       </form>
 
-      <section className="rounded-2xl border border-line bg-card p-4 sm:p-5">
-        <h2 className="text-lg font-semibold">Bulk CSV</h2>
-        <p className="mt-1 text-sm leading-6 text-muted">
+      <section className="rounded-2xl border border-line bg-card p-4 sm:p-6">
+        <h2 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
+          Bulk CSV
+        </h2>
+        <p className="mt-2 text-sm leading-6 text-muted">
           Paste rows or upload a CSV. Use headers such as destination, source,
           medium, campaign, term, content, and id — or the utm_* names. Files
           are read locally and never uploaded.
         </p>
-        <label className="mt-4 block text-sm font-medium">
-          CSV rows
+        <label className="mt-4 block text-sm">
+          <span className="sr-only">CSV rows</span>
           <textarea
             value={bulkText}
             onChange={(event) => {
@@ -206,28 +211,31 @@ export function UtmBuilder() {
               setBulkError("");
             }}
             rows={6}
-            className="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2 font-mono text-sm"
+            className="input-field min-h-36"
             placeholder={"destination,source,medium,campaign\nhttps://example.com,google,cpc,brand"}
           />
         </label>
-        <div className="mt-3 flex flex-wrap items-center gap-3">
-          <label className="text-sm font-medium">
-            <span className="sr-only">Upload CSV</span>
-            <input
-              type="file"
-              accept=".csv,text/csv,text/plain"
-              onChange={(event) => onUpload(event.target.files?.[0])}
-              className="text-sm file:mr-3 file:rounded-full file:border-0 file:bg-accent-soft file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-accent"
-            />
-          </label>
-          <button
-            type="button"
-            onClick={exportCsv}
-            disabled={bulkRows.every((row) => !row.final_url)}
-            className="rounded-full bg-accent px-3.5 py-2 text-sm font-medium text-white hover:bg-accent-hover disabled:cursor-not-allowed disabled:bg-muted"
-          >
-            Export CSV
-          </button>
+        <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-muted">Nothing uploaded</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <label className="text-sm font-medium">
+              <span className="sr-only">Upload CSV</span>
+              <input
+                type="file"
+                accept=".csv,text/csv,text/plain"
+                onChange={(event) => onUpload(event.target.files?.[0])}
+                className="text-sm file:mr-3 file:rounded-full file:border file:border-line file:bg-surface file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-text"
+              />
+            </label>
+            <button
+              type="button"
+              onClick={exportCsv}
+              disabled={bulkRows.every((row) => !row.final_url)}
+              className="btn-secondary"
+            >
+              Export CSV
+            </button>
+          </div>
         </div>
         {bulkError ? <p className="mt-2 text-sm text-danger">{bulkError}</p> : null}
 
@@ -246,7 +254,7 @@ export function UtmBuilder() {
                 {bulkRows.map((row, index) => (
                   <tr key={`${row.destination}-${index}`} className="border-b border-line/70 align-top">
                     <td className="py-2 pr-3">{row.destination || "—"}</td>
-                    <td className="max-w-xl py-2 pr-3 break-all font-mono text-xs">
+                    <td className="max-w-xl py-2 pr-3 break-all font-mono text-xs text-mint">
                       {row.final_url || row.error || "—"}
                     </td>
                     <td className="py-2">
@@ -281,14 +289,14 @@ function TextField({
   const id = label.replace(/[^a-z0-9]+/gi, "-").toLowerCase();
   return (
     <label className="block text-sm" htmlFor={id}>
-      <span className="mb-1 block font-medium">{label}</span>
+      <span className="mb-2 block text-xs text-muted">{label}</span>
       <input
         id={id}
         type="text"
         autoComplete="off"
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-xl border border-line bg-canvas px-3 py-2"
+        className="input-field"
         placeholder={placeholder}
       />
     </label>

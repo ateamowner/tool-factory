@@ -68,7 +68,7 @@ export function StockAverageCalculator() {
               setLots((current) => [...current, newLot(`lot-${nextLot}`)]);
               setNextLot((value) => value + 1);
             }}
-            className="rounded-full bg-accent px-3.5 py-2 text-sm font-medium text-white hover:bg-accent-hover"
+            className="btn-primary"
           >
             Add lot
           </button>
@@ -84,7 +84,7 @@ export function StockAverageCalculator() {
             });
 
             return (
-              <li key={lot.id} className="rounded-2xl border border-line bg-card p-4">
+              <li key={lot.id} className="rounded-2xl border border-line bg-card p-4 sm:p-5">
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <p className="text-sm font-semibold">Lot {index + 1}</p>
                   <button
@@ -104,62 +104,62 @@ export function StockAverageCalculator() {
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3">
                   <label className="block text-sm">
-                    <span className="mb-1 block font-medium">Shares</span>
+                    <span className="mb-2 block text-xs text-muted">Shares</span>
                     <input
                       type="text"
                       inputMode="decimal"
                       autoComplete="off"
                       value={lot.shares}
                       onChange={(event) => updateLot(lot.id, "shares", event.target.value)}
-                      className="w-full rounded-xl border border-line bg-canvas px-3 py-2"
+                      className="input-field"
                       placeholder="100"
                     />
                   </label>
                   <label className="block text-sm">
-                    <span className="mb-1 block font-medium">Price per share</span>
+                    <span className="mb-2 block text-xs text-muted">Price per share</span>
                     <input
                       type="text"
                       inputMode="decimal"
                       autoComplete="off"
                       value={lot.price}
                       onChange={(event) => updateLot(lot.id, "price", event.target.value)}
-                      className="w-full rounded-xl border border-line bg-canvas px-3 py-2"
+                      className="input-field"
                       placeholder="42.50"
                     />
                   </label>
                   <label className="block text-sm">
-                    <span className="mb-1 block font-medium">Fee (optional)</span>
+                    <span className="mb-2 block text-xs text-muted">Fee (optional)</span>
                     <input
                       type="text"
                       inputMode="decimal"
                       autoComplete="off"
                       value={lot.fee}
                       onChange={(event) => updateLot(lot.id, "fee", event.target.value)}
-                      className="w-full rounded-xl border border-line bg-canvas px-3 py-2"
+                      className="input-field"
                       placeholder="0.00"
                     />
                   </label>
                 </div>
                 <p className="mt-3 text-sm text-muted">
-                  Lot cost: <span className="font-medium text-ink">{money(cost, 2)}</span>
+                  Lot cost: <span className="font-mono font-medium text-text">{money(cost, 2)}</span>
                 </p>
               </li>
             );
           })}
         </ol>
 
-        <label className="block rounded-2xl border border-line bg-card p-4 text-sm">
-          <span className="mb-1 block font-medium">Current price (optional)</span>
+        <label className="block rounded-2xl border border-line bg-card p-4 text-sm sm:p-5">
+          <span className="mb-2 block text-xs text-muted">Current price (optional)</span>
           <input
             type="text"
             inputMode="decimal"
             autoComplete="off"
             value={currentPrice}
             onChange={(event) => setCurrentPrice(event.target.value)}
-            className="w-full max-w-xs rounded-xl border border-line bg-canvas px-3 py-2"
+            className="input-field max-w-xs"
             placeholder="45.00"
           />
-          <span className="mt-1 block text-muted">
+          <span className="mt-2 block text-muted">
             Used for market value and unrealized profit or loss.
           </span>
         </label>
@@ -186,11 +186,11 @@ export function StockAverageCalculator() {
           <div className="border-t border-line pt-3">
             <dt className="text-muted">Unrealized P/L</dt>
             <dd
-              className={`mt-0.5 text-lg font-semibold ${
+              className={`mt-0.5 font-mono text-lg font-semibold ${
                 result.unrealizedPL === null
                   ? ""
                   : result.unrealizedPL >= 0
-                    ? "text-accent"
+                    ? "text-mint"
                     : "text-danger"
               }`}
             >
@@ -215,7 +215,7 @@ function ResultRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-start justify-between gap-4">
       <dt className="text-muted">{label}</dt>
-      <dd className="font-medium tabular-nums">{value}</dd>
+      <dd className="font-mono font-medium tabular-nums">{value}</dd>
     </div>
   );
 }
