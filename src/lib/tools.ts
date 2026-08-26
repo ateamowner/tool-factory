@@ -29,7 +29,7 @@ export const CATEGORIES: Record<
     name: "SEO",
     href: "/seo",
     description:
-      "Campaign and link tools for marketers. Build tracking URLs without sending destinations to a server.",
+      "Campaign and crawl tools for marketers. Build tracking URLs and robots.txt files without sending destinations to a server.",
   },
   dev: {
     id: "dev",
@@ -82,6 +82,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Add utm_source, medium, campaign, and optional fields, or generate a batch from CSV.",
     cta: "Copy URL",
+  },
+  {
+    keyword: "robots.txt builder",
+    aliases: ["robot.txt generator", "robots.txt generator", "robots txt builder"],
+    slug: "robots-txt-builder",
+    href: "/seo/robots-txt-builder",
+    title: "Robots.txt Builder",
+    shortTitle: "Robots.txt Builder",
+    category: "seo",
+    description:
+      "Robots.txt builder and robot.txt generator for allow/disallow rules, user-agent groups, sitemap URLs, and AI crawler extras.",
+    summary:
+      "Write user-agent groups, allow or disallow paths, add a sitemap, then copy or download robots.txt.",
+    cta: "Generate",
   },
   {
     keyword: "uuid generator",

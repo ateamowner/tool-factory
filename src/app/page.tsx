@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: `${SITE_NAME} — Free Browser Tools`,
   },
   description:
-    "Free stock average calculator, paycheck calculator hourly, UTM builder, and UUID generator. No signup. Every tool runs in your browser.",
+    "Free stock average calculator, paycheck calculator hourly, UTM builder, robots.txt builder, and UUID generator. No signup. Every tool runs in your browser.",
 };
 
 const trustChips = [

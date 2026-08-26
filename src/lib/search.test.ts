@@ -16,6 +16,7 @@ describe("searchSite", () => {
     assert.ok(
       catalog.some((item) => item.href === "/finance/paycheck-calculator-hourly"),
     );
+    assert.ok(catalog.some((item) => item.href === "/seo/robots-txt-builder"));
   });
 
   it("jumps to UTM Builder from generator aliases", () => {
@@ -31,6 +32,10 @@ describe("searchSite", () => {
     assert.equal(
       searchSite("paycheck calculator hourly", catalog)[0]?.href,
       "/finance/paycheck-calculator-hourly",
+    );
+    assert.equal(
+      searchSite("robot.txt generator", catalog)[0]?.href,
+      "/seo/robots-txt-builder",
     );
     assert.equal(searchSite("", catalog).length, 0);
   });
