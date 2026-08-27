@@ -11,8 +11,9 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | UTM builder (also UTM generator / maker / link builder) | `/seo/utm-builder` |
 | Robots.txt builder (also robot.txt generator) | `/seo/robots-txt-builder` |
 | UUID generator (also online GUID generator) | `/dev/uuid-generator` |
+| HEIC to PNG converter | `/convert/heic-to-png` |
 
-Hubs: `/` · `/finance` · `/seo` · `/dev`
+Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert`
 
 ## Local development
 
