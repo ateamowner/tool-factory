@@ -1,4 +1,4 @@
-export type CategoryId = "finance" | "seo" | "dev";
+export type CategoryId = "finance" | "seo" | "dev" | "convert";
 
 export type Tool = {
   keyword: string;
@@ -10,7 +10,7 @@ export type Tool = {
   category: CategoryId;
   description: string;
   summary: string;
-  cta: "Calculate" | "Copy URL" | "Generate";
+  cta: "Calculate" | "Copy URL" | "Generate" | "Convert";
 };
 
 export const CATEGORIES: Record<
@@ -37,6 +37,13 @@ export const CATEGORIES: Record<
     href: "/dev",
     description:
       "Small developer utilities that run locally in your browser with Web Crypto.",
+  },
+  convert: {
+    id: "convert",
+    name: "Convert",
+    href: "/convert",
+    description:
+      "Client-side file converters. Images stay in the browser — nothing is uploaded.",
   },
 };
 
@@ -109,6 +116,20 @@ export const TOOLS: Tool[] = [
       "Generate UUID v4 and UUID v7 (also used as an online GUID generator) with bulk copy.",
     summary: "Create one or many RFC 9562 UUIDs with Web Crypto. Copy one or copy all.",
     cta: "Generate",
+  },
+  {
+    keyword: "heic to png converter",
+    aliases: ["heic to png", "heif to png", "heic converter"],
+    slug: "heic-to-png",
+    href: "/convert/heic-to-png",
+    title: "HEIC to PNG Converter",
+    shortTitle: "HEIC to PNG Converter",
+    category: "convert",
+    description:
+      "Convert HEIC and HEIF photos to PNG in the browser. Batch convert, then download — files never leave the device.",
+    summary:
+      "Select one or more .heic or .heif files and download PNG copies. Decoding stays in your browser.",
+    cta: "Convert",
   },
 ];
 

@@ -52,6 +52,12 @@ describe("tool registry stop rule", () => {
       TOOLS.find((tool) => tool.href === "/seo/robots-txt-builder")?.cta,
       "Generate",
     );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "heic to png converter")?.href,
+      "/convert/heic-to-png",
+    );
+    assert.ok(keywordAlreadyPublished("heic to png converter"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/convert/heic-to-png")?.cta, "Convert");
   });
 
   it("does not ship jwt decoder, excel-to-pdf, or schema.org validator pages", () => {

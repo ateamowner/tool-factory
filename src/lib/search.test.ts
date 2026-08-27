@@ -6,9 +6,9 @@ import { CATEGORIES, TOOLS } from "./tools.ts";
 const catalog = indexToolsAndHubs(CATEGORIES, TOOLS);
 
 describe("searchSite", () => {
-  it("indexes the published tools and three hubs", () => {
+  it("indexes the published tools and four hubs", () => {
     assert.equal(catalog.filter((item) => item.kind === "tool").length, TOOLS.length);
-    assert.equal(catalog.filter((item) => item.kind === "hub").length, 3);
+    assert.equal(catalog.filter((item) => item.kind === "hub").length, 4);
     assert.deepEqual(
       catalog.filter((item) => item.kind === "tool").map((item) => item.href).sort(),
       TOOLS.map((tool) => tool.href).sort(),
@@ -38,5 +38,10 @@ describe("searchSite", () => {
       "/seo/robots-txt-builder",
     );
     assert.equal(searchSite("", catalog).length, 0);
+    assert.equal(searchSite("convert", catalog)[0]?.href, "/convert");
+    assert.equal(
+      searchSite("heic to png converter", catalog)[0]?.href,
+      "/convert/heic-to-png",
+    );
   });
 });

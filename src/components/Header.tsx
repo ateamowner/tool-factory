@@ -5,11 +5,10 @@ import { usePathname } from "next/navigation";
 import { HeaderSearch } from "@/components/HeaderSearch";
 import { CATEGORIES } from "@/lib/tools";
 
-const nav = [
-  { href: CATEGORIES.finance.href, label: CATEGORIES.finance.name },
-  { href: CATEGORIES.seo.href, label: CATEGORIES.seo.name },
-  { href: CATEGORIES.dev.href, label: CATEGORIES.dev.name },
-];
+const nav = Object.values(CATEGORIES).map((category) => ({
+  href: category.href,
+  label: category.name,
+}));
 
 export function Header() {
   const pathname = usePathname();
