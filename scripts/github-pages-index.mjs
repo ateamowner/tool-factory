@@ -1,4 +1,4 @@
-import { copyFile, readdir } from "node:fs/promises";
+import { access, copyFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const root = "out";
@@ -8,7 +8,19 @@ const root = "out";
  * RSC payloads. GitHub Pages treats that folder as a directory and will not
  * serve `route.html` at `/route`. Copy the HTML to `route/index.html` so the
  * existing GSC paths keep working.
+ *
+ * Also rewrite `.nojekyll` at the artifact root so Jekyll cannot hide `_next`
+ * or skip serving `index.html` at `/`.
  */
+async function ensureRootIndex() {
+  await writeFile(join(root, ".nojekyll"), "");
+  try {
+    await access(join(root, "index.html"));
+  } catch {
+    throw new Error("GitHub Pages needs out/index.html to serve /");
+  }
+}
+
 async function ensureIndexHtml(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = new Set(entries.filter((entry) => entry.isFile()).map((entry) => entry.name));
@@ -24,4 +36,5 @@ async function ensureIndexHtml(dir) {
   }
 }
 
+await ensureRootIndex();
 await ensureIndexHtml(root);
