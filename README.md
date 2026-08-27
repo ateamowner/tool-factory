@@ -25,11 +25,13 @@ npm run dev
 
 Then open [http://localhost:3000](http://localhost:3000).
 
-## Deploy
+## GitHub Pages
 
-Next.js App Router. Ready for Vercel. Set `NEXT_PUBLIC_SITE_URL` to the public origin so `sitemap.xml` and `robots.txt` use absolute URLs.
-
-Ad slots are placeholders only. Do not invent AdSense or publisher IDs.
+Pushes to `main` run `.github/workflows/pages.yml`, which builds a Next.js static export (`output: 'export'`) and deploys the `out/` folder with `actions/deploy-pages`.
+Custom domain is `ateamkit.com` via `public/CNAME`; enable Pages once (Settings → Pages → GitHub Actions) after merge.
+Canonical URLs, `sitemap.xml`, and `robots.txt` use `https://ateamkit.com` (the Vercel host can keep serving the same build until cutover).
+Add a tool the same way as today: register it in `src/lib/tools.ts`, then add `src/app/<category>/<slug>/page.tsx` with FAQ + `FAQPage` JSON-LD (client-side only).
+Ads stay placeholders. Do not invent AdSense IDs.
 
 ## Rules
 

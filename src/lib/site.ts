@@ -1,4 +1,4 @@
-export const PUBLIC_SITE_ORIGIN = "https://tool-factory-alpha.vercel.app";
+export const PUBLIC_SITE_ORIGIN = "https://ateamkit.com";
 
 export const SITE_NAME = "Tool Factory";
 export const SITE_TAGLINE = "Free browser tools. No signup. Nothing uploaded.";
@@ -6,8 +6,6 @@ export const SITE_FOOTER_LINE = "Free browser tools. Nothing leaves the device."
 
 type SiteEnv = {
   NEXT_PUBLIC_SITE_URL?: string;
-  VERCEL_PROJECT_PRODUCTION_URL?: string;
-  VERCEL_URL?: string;
 };
 
 function asOrigin(value: string, protocolFallback: "https" | "http"): string | null {
@@ -33,21 +31,11 @@ export function resolveSiteUrl(env: SiteEnv): string {
     : null;
   if (explicit) return explicit;
 
-  const vercelProduction = env.VERCEL_PROJECT_PRODUCTION_URL
-    ? asOrigin(env.VERCEL_PROJECT_PRODUCTION_URL, "https")
-    : null;
-  if (vercelProduction) return vercelProduction;
-
-  const vercel = env.VERCEL_URL ? asOrigin(env.VERCEL_URL, "https") : null;
-  if (vercel) return vercel;
-
   return PUBLIC_SITE_ORIGIN;
 }
 
 export function getSiteUrl(): string {
   return resolveSiteUrl({
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
-    VERCEL_PROJECT_PRODUCTION_URL: process.env.VERCEL_PROJECT_PRODUCTION_URL,
-    VERCEL_URL: process.env.VERCEL_URL,
   });
 }
