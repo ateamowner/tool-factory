@@ -4,38 +4,38 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
-import { HeicToPngConverter } from "@/components/tools/HeicToPngConverter";
+import { HeicToPdfConverter } from "@/components/tools/HeicToPdfConverter";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
 import { getSiteUrl } from "@/lib/site";
 
-const href = "/convert/heic-to-png";
+const href = "/convert/heic-to-pdf";
 
 const crumbs = [
   { name: "Home", href: "/" },
   { name: "Convert", href: "/convert" },
-  { name: "HEIC to PNG Converter", href },
+  { name: "HEIC to PDF Converter", href },
 ];
 
 const faqs: FaqItem[] = [
   {
-    question: "What is a HEIC to PNG converter?",
+    question: "What is a HEIC to PDF converter?",
     answer:
-      "A HEIC to PNG converter turns Apple HEIC or HEIF photos into PNG files so you can open them in browsers, docs, and design tools that do not read HEIC. This page does that conversion in your browser.",
+      "A HEIC to PDF converter turns Apple HEIC or HEIF photos into a PDF you can open, print, or attach. This page does that conversion in your browser — one PDF per photo.",
   },
   {
-    question: "Does this HEIC to PNG converter upload my photos?",
+    question: "Does this HEIC to PDF converter upload my photos?",
     answer:
       "No. Selected .heic and .heif files are decoded locally. Nothing is sent to a server or stored on our side, and there is no account.",
   },
   {
-    question: "Why convert HEIC to PNG?",
+    question: "Why convert HEIC to PDF?",
     answer:
-      "iPhones often save HEIC to save space. PNG is lossless and widely supported, so it is a reliable format for sharing, printing, or dropping a photo into a document that rejects HEIC.",
+      "iPhones often save HEIC. PDF is the format forms, printers, and email attachments expect. Converting here lets you send or print a photo without asking the other person to open HEIC.",
   },
   {
     question: "Can I convert more than one HEIC file at a time?",
     answer:
-      "Yes. Choose multiple .heic or .heif files, convert them in the browser, then download each PNG or download all. Keep batches to 20 files so the tab stays responsive.",
+      "Yes. Choose multiple .heic or .heif files, convert them in the browser, then download each PDF or download all. Keep batches to 20 files so the tab stays responsive.",
   },
   {
     question: "What if the file is not HEIC or my browser cannot decode it?",
@@ -43,20 +43,20 @@ const faqs: FaqItem[] = [
       "The tool checks the file signature. If the file is not HEIC or HEIF, you get a clear error. If the format matches but this browser cannot decode it, you get a decode error instead of a broken download.",
   },
   {
-    question: "What is the difference between HEIC and HEIF?",
+    question: "How is the PDF built if nothing is uploaded?",
     answer:
-      "HEIF is the container format. HEIC is the common iPhone flavor that stores HEVC-compressed stills inside HEIF. This HEIC to PNG converter accepts both .heic and .heif.",
+      "The photo is decoded in this tab, written as a JPEG, then wrapped in a single-page PDF with a small local builder. No third-party PDF service and no server encode step.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "HEIC to PNG Converter — Convert HEIC Images in Your Browser",
+  title: "HEIC to PDF Converter — Convert HEIC Images in Your Browser",
   description:
-    "Free HEIC to PNG converter. Convert .heic and .heif photos to PNG in your browser. Batch convert and download locally. No upload, no signup.",
+    "Free HEIC to PDF converter. Convert .heic and .heif photos to PDF in your browser. Batch convert and download locally. No upload, no signup.",
   alternates: { canonical: href },
 };
 
-export default function HeicToPngPage() {
+export default function HeicToPdfPage() {
   const siteUrl = getSiteUrl();
 
   return (
@@ -65,10 +65,10 @@ export default function HeicToPngPage() {
       <JsonLd data={breadcrumbJsonLd(crumbs, siteUrl)} />
       <Breadcrumbs items={crumbs} />
       <h1 className="mt-6 text-4xl font-[650] tracking-tight sm:text-5xl">
-        HEIC to PNG Converter
+        HEIC to PDF Converter
       </h1>
       <p className="mt-4 max-w-3xl text-base leading-7 text-muted">
-        Convert HEIC photos to PNG in your browser. Files never leave the
+        Convert HEIC photos to PDF in your browser. Files never leave the
         device — no upload, no account.
       </p>
       <ul className="mt-5 flex flex-wrap gap-2">
@@ -78,26 +78,26 @@ export default function HeicToPngPage() {
       </ul>
 
       <div className="mt-8">
-        <HeicToPngConverter />
+        <HeicToPdfConverter />
       </div>
 
       <section className="prose-tool mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90">
         <p>
-          A HEIC to PNG converter is for photos that will not open where you
-          need them. iPhones often save HEIC. PNG is a lossless format almost
-          every browser, editor, and printer accepts. This page is that
-          converter: pick local files, decode them here, and download PNGs.
+          A HEIC to PDF converter is for iPhone photos that need to travel as a
+          document. HEIC saves space on the phone. PDF is what printers, forms,
+          and most inboxes accept. This page is that converter: pick local
+          files, decode them here, and download a one-page PDF for each photo.
         </p>
         <p>
           Everything stays on your device. There is no upload, no queue, and no
           account. If a file is not HEIC or HEIF, or this browser cannot decode
-          it, you get an error instead of a broken image. Batch convert up to
-          20 files when you have a handful of shots to share.
+          it, you get an error instead of a broken file. Batch convert up to 20
+          files when you have a handful of shots to attach.
         </p>
         <p>
-          Need a printable document instead? Use the{" "}
-          <Link className="text-mint underline" href="/convert/heic-to-pdf">
-            HEIC to PDF converter
+          Need a lossless image instead? Use the{" "}
+          <Link className="text-mint underline" href="/convert/heic-to-png">
+            HEIC to PNG converter
           </Link>
           . Browse more converters on the{" "}
           <Link className="text-mint underline" href="/convert">
@@ -129,12 +129,12 @@ export default function HeicToPngPage() {
 
       <section className="mt-12 max-w-3xl" aria-labelledby="howto-heading">
         <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight text-text">
-          How to use the HEIC to PNG converter
+          How to use the HEIC to PDF converter
         </h2>
         <ol className="mt-4 list-decimal space-y-2 pl-5 leading-7">
           <li>Choose one or more .heic or .heif files from your device.</li>
           <li>Wait while this tab decodes each photo. Nothing is uploaded.</li>
-          <li>Download a PNG for each success, or download all when you converted a batch.</li>
+          <li>Download a PDF for each success, or download all when you converted a batch.</li>
           <li>If a file is not HEIC or will not decode, read the error on that row and try another file.</li>
         </ol>
       </section>

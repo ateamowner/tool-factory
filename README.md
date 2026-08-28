@@ -12,6 +12,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Robots.txt builder (also robot.txt generator) | `/seo/robots-txt-builder` |
 | UUID generator (also online GUID generator) | `/dev/uuid-generator` |
 | HEIC to PNG converter | `/convert/heic-to-png` |
+| HEIC to PDF converter | `/convert/heic-to-pdf` |
 
 Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert`
 
