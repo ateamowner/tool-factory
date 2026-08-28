@@ -43,5 +43,9 @@ describe("searchSite", () => {
       searchSite("heic to png converter", catalog)[0]?.href,
       "/convert/heic-to-png",
     );
+    assert.equal(
+      searchSite("heic to pdf converter", catalog)[0]?.href,
+      "/convert/heic-to-pdf",
+    );
   });
 });

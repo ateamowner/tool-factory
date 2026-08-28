@@ -131,6 +131,20 @@ export const TOOLS: Tool[] = [
       "Select one or more .heic or .heif files and download PNG copies. Decoding stays in your browser.",
     cta: "Convert",
   },
+  {
+    keyword: "heic to pdf converter",
+    aliases: ["heic to pdf", "heif to pdf", "heic pdf converter"],
+    slug: "heic-to-pdf",
+    href: "/convert/heic-to-pdf",
+    title: "HEIC to PDF Converter",
+    shortTitle: "HEIC to PDF Converter",
+    category: "convert",
+    description:
+      "Convert HEIC and HEIF photos to PDF in the browser. Batch convert, then download — files never leave the device.",
+    summary:
+      "Select one or more .heic or .heif files and download a one-page PDF for each. Decoding stays in your browser.",
+    cta: "Convert",
+  },
 ];
 
 const publishedKeywords = new Set<string>();
