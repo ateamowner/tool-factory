@@ -64,6 +64,15 @@ describe("tool registry stop rule", () => {
     );
     assert.ok(keywordAlreadyPublished("heic to pdf converter"));
     assert.equal(TOOLS.find((tool) => tool.href === "/convert/heic-to-pdf")?.cta, "Convert");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "emergency fund calculator")?.href,
+      "/finance/emergency-fund-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("emergency fund calculator"));
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/emergency-fund-calculator")?.cta,
+      "Calculate",
+    );
   });
 
   it("does not ship jwt decoder, excel-to-pdf, or schema.org validator pages", () => {
@@ -73,6 +82,7 @@ describe("tool registry stop rule", () => {
       "excel to pdf",
       "validator.schema.org",
       "percentage calculator",
+      "mortgage recast",
     ];
     for (const keyword of banned) {
       assert.equal(keywordAlreadyPublished(keyword), false);

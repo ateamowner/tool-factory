@@ -77,6 +77,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "emergency fund calculator",
+    aliases: ["emergency savings calculator", "how much emergency fund"],
+    slug: "emergency-fund-calculator",
+    href: "/finance/emergency-fund-calculator",
+    title: "Emergency Fund Calculator",
+    shortTitle: "Emergency Fund Calculator",
+    category: "finance",
+    description:
+      "Target emergency savings from monthly essential expenses, plus the gap and months to fully fund.",
+    summary:
+      "Enter monthly expenses, a 3–12 month target, current savings, and an optional contribution.",
+    cta: "Calculate",
+  },
+  {
     keyword: "utm builder",
     aliases: ["utm generator", "utm maker", "utm link builder"],
     slug: "utm-builder",

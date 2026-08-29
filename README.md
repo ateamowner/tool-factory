@@ -8,6 +8,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | --- | --- |
 | Stock average calculator | `/finance/stock-average-calculator` |
 | Paycheck calculator hourly | `/finance/paycheck-calculator-hourly` |
+| Emergency fund calculator | `/finance/emergency-fund-calculator` |
 | UTM builder (also UTM generator / maker / link builder) | `/seo/utm-builder` |
 | Robots.txt builder (also robot.txt generator) | `/seo/robots-txt-builder` |
 | UUID generator (also online GUID generator) | `/dev/uuid-generator` |
