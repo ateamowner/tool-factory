@@ -47,5 +47,9 @@ describe("searchSite", () => {
       searchSite("heic to pdf converter", catalog)[0]?.href,
       "/convert/heic-to-pdf",
     );
+    assert.equal(
+      searchSite("emergency fund calculator", catalog)[0]?.href,
+      "/finance/emergency-fund-calculator",
+    );
   });
 });
