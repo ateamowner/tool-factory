@@ -91,6 +91,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "mortgage recast calculator",
+    aliases: ["recast mortgage calculator"],
+    slug: "mortgage-recast-calculator",
+    href: "/finance/mortgage-recast-calculator",
+    title: "Mortgage Recast Calculator",
+    shortTitle: "Mortgage Recast Calculator",
+    category: "finance",
+    description:
+      "New monthly payment, payment drop, and interest savings after a lump-sum recast — same remaining term, not a refinance.",
+    summary:
+      "Enter remaining balance, rate, remaining term, and a lump-sum principal payment to see the recast payment.",
+    cta: "Calculate",
+  },
+  {
     keyword: "utm builder",
     aliases: ["utm generator", "utm maker", "utm link builder"],
     slug: "utm-builder",
