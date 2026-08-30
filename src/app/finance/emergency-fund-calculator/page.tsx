@@ -106,10 +106,14 @@ export default function EmergencyFundCalculatorPage() {
           hub, or open the{" "}
           <Link className="text-mint underline" href="/finance/stock-average-calculator">
             stock average calculator
-          </Link>{" "}
-          and{" "}
+          </Link>
+          ,{" "}
           <Link className="text-mint underline" href="/finance/paycheck-calculator-hourly">
             paycheck calculator hourly
+          </Link>
+          , or{" "}
+          <Link className="text-mint underline" href="/finance/mortgage-recast-calculator">
+            mortgage recast calculator
           </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">

@@ -73,6 +73,20 @@ describe("tool registry stop rule", () => {
       TOOLS.find((tool) => tool.href === "/finance/emergency-fund-calculator")?.cta,
       "Calculate",
     );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "mortgage recast calculator")?.href,
+      "/finance/mortgage-recast-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("mortgage recast calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "mortgage recast calculator")?.aliases.includes(
+        "recast mortgage calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/mortgage-recast-calculator")?.cta,
+      "Calculate",
+    );
   });
 
   it("does not ship jwt decoder, excel-to-pdf, or schema.org validator pages", () => {
@@ -82,7 +96,6 @@ describe("tool registry stop rule", () => {
       "excel to pdf",
       "validator.schema.org",
       "percentage calculator",
-      "mortgage recast",
     ];
     for (const keyword of banned) {
       assert.equal(keywordAlreadyPublished(keyword), false);

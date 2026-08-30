@@ -51,5 +51,13 @@ describe("searchSite", () => {
       searchSite("emergency fund calculator", catalog)[0]?.href,
       "/finance/emergency-fund-calculator",
     );
+    assert.equal(
+      searchSite("mortgage recast calculator", catalog)[0]?.href,
+      "/finance/mortgage-recast-calculator",
+    );
+    assert.equal(
+      searchSite("recast mortgage calculator", catalog)[0]?.href,
+      "/finance/mortgage-recast-calculator",
+    );
   });
 });
