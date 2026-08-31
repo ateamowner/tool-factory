@@ -99,6 +99,10 @@ export default function HeicToPngPage() {
           <Link className="text-mint underline" href="/convert/heic-to-pdf">
             HEIC to PDF converter
           </Link>
+          . Need a spreadsheet as a document? Use the{" "}
+          <Link className="text-mint underline" href="/convert/excel-to-pdf">
+            Excel to PDF converter
+          </Link>
           . Browse more converters on the{" "}
           <Link className="text-mint underline" href="/convert">
             Convert

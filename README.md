@@ -16,6 +16,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | JWT decoder (also JWT token decoder) | `/dev/jwt-decoder` |
 | HEIC to PNG converter | `/convert/heic-to-png` |
 | HEIC to PDF converter | `/convert/heic-to-pdf` |
+| Excel to PDF converter | `/convert/excel-to-pdf` |
 
 Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert`
 

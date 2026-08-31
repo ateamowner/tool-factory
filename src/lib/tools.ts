@@ -43,7 +43,7 @@ export const CATEGORIES: Record<
     name: "Convert",
     href: "/convert",
     description:
-      "Client-side file converters. Images stay in the browser — nothing is uploaded.",
+      "Client-side file converters. Spreadsheets and images stay in the browser — nothing is uploaded.",
   },
 };
 
@@ -185,6 +185,20 @@ export const TOOLS: Tool[] = [
       "Convert HEIC and HEIF photos to PDF in the browser. Batch convert, then download — files never leave the device.",
     summary:
       "Select one or more .heic or .heif files and download a one-page PDF for each. Decoding stays in your browser.",
+    cta: "Convert",
+  },
+  {
+    keyword: "excel to pdf converter",
+    aliases: ["excel to pdf", "xlsx to pdf", "xls to pdf"],
+    slug: "excel-to-pdf",
+    href: "/convert/excel-to-pdf",
+    title: "Excel to PDF Converter",
+    shortTitle: "Excel to PDF Converter",
+    category: "convert",
+    description:
+      "Convert Excel .xlsx and .xls spreadsheets to PDF in the browser. Batch convert, then download — files never leave the device.",
+    summary:
+      "Select one or more .xlsx or .xls files and download a table PDF for each workbook. Parsing stays in your browser.",
     cta: "Convert",
   },
 ];
