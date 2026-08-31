@@ -29,6 +29,11 @@ describe("searchSite", () => {
     assert.ok(
       searchSite("uuid", catalog).some((hit) => hit.href === "/dev/uuid-generator"),
     );
+    assert.equal(searchSite("jwt decoder", catalog)[0]?.href, "/dev/jwt-decoder");
+    assert.equal(
+      searchSite("jwt token decoder", catalog)[0]?.href,
+      "/dev/jwt-decoder",
+    );
     assert.equal(
       searchSite("paycheck calculator hourly", catalog)[0]?.href,
       "/finance/paycheck-calculator-hourly",

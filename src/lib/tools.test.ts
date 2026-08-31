@@ -45,6 +45,17 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.href === "/seo/utm-builder")?.cta, "Copy URL");
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/uuid-generator")?.cta, "Generate");
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "jwt decoder")?.href,
+      "/dev/jwt-decoder",
+    );
+    assert.ok(keywordAlreadyPublished("jwt decoder"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "jwt decoder")?.aliases.includes(
+        "jwt token decoder",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/jwt-decoder")?.cta, "Decode");
+    assert.equal(
       TOOLS.find((tool) => tool.href === "/finance/paycheck-calculator-hourly")?.cta,
       "Calculate",
     );
@@ -89,9 +100,8 @@ describe("tool registry stop rule", () => {
     );
   });
 
-  it("does not ship jwt decoder, excel-to-pdf, or schema.org validator pages", () => {
+  it("does not ship excel-to-pdf or schema.org validator pages", () => {
     const banned = [
-      "jwt decoder",
       "excel-to-pdf",
       "excel to pdf",
       "validator.schema.org",
