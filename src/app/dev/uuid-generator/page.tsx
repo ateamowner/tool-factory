@@ -90,8 +90,12 @@ export default function UuidGeneratorPage() {
         </p>
         <p>
           Bulk generate up to 1,000 IDs, copy a single row, or copy all as a
-          newline-separated list. Nothing is uploaded. For campaign URLs, open
-          the{" "}
+          newline-separated list. Nothing is uploaded. Need to inspect a token?
+          Open the{" "}
+          <Link className="text-mint underline" href="/dev/jwt-decoder">
+            JWT decoder
+          </Link>
+          . For campaign URLs, open the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
           </Link>

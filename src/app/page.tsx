@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: `${SITE_NAME} — Free Browser Tools`,
   },
   description:
-    "Free stock average calculator, paycheck calculator hourly, emergency fund calculator, mortgage recast calculator, UTM builder, robots.txt builder, UUID generator, HEIC to PNG converter, and HEIC to PDF converter. No signup. Every tool runs in your browser.",
+    "Free stock average calculator, paycheck calculator hourly, emergency fund calculator, mortgage recast calculator, UTM builder, robots.txt builder, UUID generator, JWT decoder, HEIC to PNG converter, and HEIC to PDF converter. No signup. Every tool runs in your browser.",
 };
 
 const trustChips = [

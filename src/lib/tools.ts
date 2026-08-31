@@ -10,7 +10,7 @@ export type Tool = {
   category: CategoryId;
   description: string;
   summary: string;
-  cta: "Calculate" | "Copy URL" | "Generate" | "Convert";
+  cta: "Calculate" | "Copy URL" | "Generate" | "Convert" | "Decode";
 };
 
 export const CATEGORIES: Record<
@@ -36,7 +36,7 @@ export const CATEGORIES: Record<
     name: "Developer",
     href: "/dev",
     description:
-      "Small developer utilities that run locally in your browser with Web Crypto.",
+      "Small developer utilities that run locally in your browser — UUID generation and JWT decoding.",
   },
   convert: {
     id: "convert",
@@ -144,6 +144,20 @@ export const TOOLS: Tool[] = [
       "Generate UUID v4 and UUID v7 (also used as an online GUID generator) with bulk copy.",
     summary: "Create one or many RFC 9562 UUIDs with Web Crypto. Copy one or copy all.",
     cta: "Generate",
+  },
+  {
+    keyword: "jwt decoder",
+    aliases: ["jwt token decoder"],
+    slug: "jwt-decoder",
+    href: "/dev/jwt-decoder",
+    title: "JWT Decoder",
+    shortTitle: "JWT Decoder",
+    category: "dev",
+    description:
+      "Decode a JWT header and payload to readable JSON in the browser. No signature check, nothing uploaded.",
+    summary:
+      "Paste a JWT token to base64url-decode the header and claims. Decoding is not verification.",
+    cta: "Decode",
   },
   {
     keyword: "heic to png converter",
