@@ -53,6 +53,10 @@ describe("searchSite", () => {
       "/convert/heic-to-pdf",
     );
     assert.equal(
+      searchSite("excel to pdf converter", catalog)[0]?.href,
+      "/convert/excel-to-pdf",
+    );
+    assert.equal(
       searchSite("emergency fund calculator", catalog)[0]?.href,
       "/finance/emergency-fund-calculator",
     );

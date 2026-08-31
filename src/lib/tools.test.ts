@@ -76,6 +76,12 @@ describe("tool registry stop rule", () => {
     assert.ok(keywordAlreadyPublished("heic to pdf converter"));
     assert.equal(TOOLS.find((tool) => tool.href === "/convert/heic-to-pdf")?.cta, "Convert");
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "excel to pdf converter")?.href,
+      "/convert/excel-to-pdf",
+    );
+    assert.ok(keywordAlreadyPublished("excel to pdf converter"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/convert/excel-to-pdf")?.cta, "Convert");
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "emergency fund calculator")?.href,
       "/finance/emergency-fund-calculator",
     );
@@ -100,10 +106,8 @@ describe("tool registry stop rule", () => {
     );
   });
 
-  it("does not ship excel-to-pdf or schema.org validator pages", () => {
+  it("does not ship schema.org validator or percentage calculator pages", () => {
     const banned = [
-      "excel-to-pdf",
-      "excel to pdf",
       "validator.schema.org",
       "percentage calculator",
     ];
