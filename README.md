@@ -34,6 +34,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 Pushes to `main` run `.github/workflows/pages.yml`, which builds a Next.js static export (`output: 'export'`) and deploys the `out/` folder with `actions/deploy-pages`.
 Custom domain is `ateamkit.com` via `public/CNAME`; enable Pages once (Settings → Pages → GitHub Actions) after merge.
+Enforce HTTPS must stay on so `http://ateamkit.com/*` 301s to the matching `https://ateamkit.com/` URL (www already 301s to apex). The Pages certificate is approved for `ateamkit.com` and `www.ateamkit.com`. GitHub Pages has no `_redirects` / `_headers`; do not add a second host. Enable with Settings → Pages → Enforce HTTPS, or `scripts/enforce-pages-https.sh` (official API is `PUT /repos/ateamowner/tool-factory/pages` with `{"https_enforced":true}`; needs `pages=write` and `administration=write`).
 Canonical URLs, `sitemap.xml`, and `robots.txt` use `https://ateamkit.com` (the Vercel host can keep serving the same build until cutover).
 Add a tool the same way as today: register it in `src/lib/tools.ts`, then add `src/app/<category>/<slug>/page.tsx` with FAQ + `FAQPage` JSON-LD (client-side only).
 Ads stay placeholders. Do not invent AdSense IDs.
