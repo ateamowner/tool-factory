@@ -82,6 +82,22 @@ describe("tool registry stop rule", () => {
     assert.ok(keywordAlreadyPublished("excel to pdf converter"));
     assert.equal(TOOLS.find((tool) => tool.href === "/convert/excel-to-pdf")?.cta, "Convert");
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "png to jpg")?.href,
+      "/convert/png-to-jpg",
+    );
+    assert.ok(keywordAlreadyPublished("png to jpg"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "png to jpg")?.aliases.includes(
+        "png to jpg converter",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "png to jpg")?.aliases.includes(
+        "convert png to jpg",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/convert/png-to-jpg")?.cta, "Convert");
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "emergency fund calculator")?.href,
       "/finance/emergency-fund-calculator",
     );
