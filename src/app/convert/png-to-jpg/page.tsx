@@ -4,59 +4,59 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
-import { ExcelToPdfConverter } from "@/components/tools/ExcelToPdfConverter";
+import { PngToJpgConverter } from "@/components/tools/PngToJpgConverter";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
 import { getSiteUrl } from "@/lib/site";
 
-const href = "/convert/excel-to-pdf";
+const href = "/convert/png-to-jpg";
 
 const crumbs = [
   { name: "Home", href: "/" },
   { name: "Convert", href: "/convert" },
-  { name: "Excel to PDF Converter", href },
+  { name: "PNG to JPG Converter", href },
 ];
 
 const faqs: FaqItem[] = [
   {
-    question: "What is an Excel to PDF converter?",
+    question: "What is a PNG to JPG converter?",
     answer:
-      "An Excel to PDF converter turns .xlsx and .xls spreadsheets into a PDF you can open, print, or attach. This page does that conversion in your browser — one PDF per workbook, with a page sequence for each sheet.",
+      "A PNG to JPG converter turns PNG images into JPEG files so they are smaller and easier to share in email, social posts, and apps that prefer JPG. This page does that conversion in your browser.",
   },
   {
-    question: "Does this Excel to PDF converter upload my spreadsheets?",
+    question: "Does this PNG to JPG converter upload my images?",
     answer:
-      "No. Selected .xlsx and .xls files are parsed locally. Nothing is sent to a server or stored on our side, and there is no account.",
+      "No. Selected .png files are read locally with FileReader and drawn to a canvas in this tab. Nothing is sent to a server or stored on our side, and there is no account.",
   },
   {
-    question: "Why convert Excel to PDF?",
+    question: "Why convert PNG to JPG?",
     answer:
-      "A spreadsheet is easy to edit. PDF is what printers, forms, and most inboxes expect when you need a fixed layout. Converting here lets you share a table without asking the other person to open Excel.",
+      "PNG is lossless and can include transparency, so screenshots and graphics stay sharp. JPG is smaller and widely accepted for photos. Converting here is a fast way to shrink a PNG for upload or email.",
   },
   {
-    question: "Can I convert more than one Excel file at a time?",
+    question: "Can I convert more than one PNG file at a time?",
     answer:
-      "Yes. Choose multiple .xlsx or .xls files, convert them in the browser, then download each PDF or download all. Keep batches to 20 files so the tab stays responsive.",
+      "Yes. Choose multiple .png files, convert them in the browser, then download each JPG or download all. Keep batches to 20 files so the tab stays responsive.",
   },
   {
-    question: "What if the file is not Excel or my browser cannot read it?",
+    question: "What happens to transparent PNGs?",
     answer:
-      "The tool checks the file signature. If the file is not .xlsx or .xls, you get a clear error. If the format matches but this browser cannot parse it, you get a read error instead of a broken download.",
+      "JPG has no alpha channel. Transparent pixels are filled with white before encode so the download is a standard JPEG, not a broken file.",
   },
   {
-    question: "How is the PDF built if nothing is uploaded?",
+    question: "What if the file is not PNG or my browser cannot decode it?",
     answer:
-      "The workbook is parsed in this tab, then each sheet is drawn as a table with a small local PDF builder. No third-party PDF service and no server encode step. Very large sheets are clipped to 2,000 rows and 24 columns so the tab stays usable.",
+      "The tool checks the PNG file signature. If the file is not PNG, you get a clear error. If the format matches but this browser cannot decode it, you get a decode error instead of a broken download.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Excel to PDF Converter — Convert Spreadsheets in Your Browser",
+  title: "PNG to JPG Converter — Convert PNG Images in Your Browser",
   description:
-    "Free excel to pdf converter. Convert .xlsx and .xls files to PDF in your browser. Batch convert and download locally. No upload, no signup.",
+    "Free png to jpg converter. Convert PNG images to JPG in your browser. Batch convert and download locally. No upload, no signup.",
   alternates: { canonical: href },
 };
 
-export default function ExcelToPdfPage() {
+export default function PngToJpgPage() {
   const siteUrl = getSiteUrl();
 
   return (
@@ -65,47 +65,48 @@ export default function ExcelToPdfPage() {
       <JsonLd data={breadcrumbJsonLd(crumbs, siteUrl)} />
       <Breadcrumbs items={crumbs} />
       <h1 className="mt-6 text-4xl font-[650] tracking-tight sm:text-5xl">
-        Excel to PDF Converter
+        PNG to JPG Converter
       </h1>
       <p className="mt-4 max-w-3xl text-base leading-7 text-muted">
-        Convert Excel spreadsheets to PDF in your browser. Files never leave the
+        Convert PNG images to JPG in your browser. Files never leave the
         device — no upload, no account.
       </p>
       <ul className="mt-5 flex flex-wrap gap-2">
-        <li className="chip inline-flex">.xlsx / .xls</li>
+        <li className="chip inline-flex">.png</li>
         <li className="chip inline-flex">Client-side</li>
         <li className="chip inline-flex">Batch download</li>
       </ul>
 
       <div className="mt-8">
-        <ExcelToPdfConverter />
+        <PngToJpgConverter />
       </div>
 
       <section className="prose-tool mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90">
         <p>
-          An Excel to PDF converter is for workbooks that need to travel as a
-          document. Excel is for editing. PDF is what printers, forms, and most
-          inboxes accept. This page is that converter: pick local .xlsx or .xls
-          files, parse them here, and download a table PDF for each workbook.
+          A PNG to JPG converter is for images that need to be smaller or more
+          widely accepted. PNG keeps every pixel and can include transparency.
+          JPG is the format most cameras, inboxes, and social uploads expect.
+          This page is that converter: pick local PNG files, encode them here,
+          and download JPGs.
         </p>
         <p>
           Everything stays on your device. There is no upload, no queue, and no
-          account. If a file is not Excel, or this browser cannot read it, you
-          get an error instead of a broken file. Batch convert up to 20 files
-          when you have a handful of sheets to attach.
+          account. If a file is not PNG, or this browser cannot decode it, you
+          get an error instead of a broken image. Batch convert up to 20 files
+          when you have a handful of screenshots or exports to share.
         </p>
         <p>
-          Need a photo converted instead? Use the{" "}
+          Need a HEIC photo as PNG? Use the{" "}
           <Link className="text-mint underline" href="/convert/heic-to-png">
             HEIC to PNG converter
           </Link>
-          , the{" "}
+          . Need a printable photo? Use the{" "}
           <Link className="text-mint underline" href="/convert/heic-to-pdf">
             HEIC to PDF converter
           </Link>
-          , or the{" "}
-          <Link className="text-mint underline" href="/convert/png-to-jpg">
-            PNG to JPG converter
+          . Need a spreadsheet as a document? Use the{" "}
+          <Link className="text-mint underline" href="/convert/excel-to-pdf">
+            Excel to PDF converter
           </Link>
           . Browse more converters on the{" "}
           <Link className="text-mint underline" href="/convert">
@@ -137,13 +138,13 @@ export default function ExcelToPdfPage() {
 
       <section className="mt-12 max-w-3xl" aria-labelledby="howto-heading">
         <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight text-text">
-          How to use the Excel to PDF converter
+          How to use the PNG to JPG converter
         </h2>
         <ol className="mt-4 list-decimal space-y-2 pl-5 leading-7">
-          <li>Choose one or more .xlsx or .xls files from your device.</li>
-          <li>Wait while this tab reads each workbook. Nothing is uploaded.</li>
-          <li>Download a PDF for each success, or download all when you converted a batch.</li>
-          <li>If a file is not Excel or will not parse, read the error on that row and try another file.</li>
+          <li>Choose one or more .png files from your device.</li>
+          <li>Wait while this tab reads each image with FileReader and encodes JPG. Nothing is uploaded.</li>
+          <li>Download a JPG for each success, or download all when you converted a batch.</li>
+          <li>If a file is not PNG or will not decode, read the error on that row and try another file.</li>
         </ol>
       </section>
 

@@ -201,6 +201,20 @@ export const TOOLS: Tool[] = [
       "Select one or more .xlsx or .xls files and download a table PDF for each workbook. Parsing stays in your browser.",
     cta: "Convert",
   },
+  {
+    keyword: "png to jpg",
+    aliases: ["png to jpg converter", "convert png to jpg"],
+    slug: "png-to-jpg",
+    href: "/convert/png-to-jpg",
+    title: "PNG to JPG Converter",
+    shortTitle: "PNG to JPG Converter",
+    category: "convert",
+    description:
+      "Convert PNG images to JPG in the browser. Batch convert, then download — files never leave the device.",
+    summary:
+      "Select one or more .png files and download JPG copies. Encoding stays in your browser.",
+    cta: "Convert",
+  },
 ];
 
 const publishedKeywords = new Set<string>();

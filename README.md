@@ -17,6 +17,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | HEIC to PNG converter | `/convert/heic-to-png` |
 | HEIC to PDF converter | `/convert/heic-to-pdf` |
 | Excel to PDF converter | `/convert/excel-to-pdf` |
+| PNG to JPG converter | `/convert/png-to-jpg` |
 
 Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert`
 
