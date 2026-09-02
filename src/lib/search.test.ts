@@ -77,5 +77,13 @@ describe("searchSite", () => {
       searchSite("recast mortgage calculator", catalog)[0]?.href,
       "/finance/mortgage-recast-calculator",
     );
+    assert.equal(
+      searchSite("schema markup validator", catalog)[0]?.href,
+      "/seo/schema-markup-validator",
+    );
+    assert.equal(
+      searchSite("schema checker", catalog)[0]?.href,
+      "/seo/schema-markup-validator",
+    );
   });
 });

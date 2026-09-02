@@ -12,6 +12,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Mortgage recast calculator (also recast mortgage calculator) | `/finance/mortgage-recast-calculator` |
 | UTM builder (also UTM generator / maker / link builder) | `/seo/utm-builder` |
 | Robots.txt builder (also robot.txt generator) | `/seo/robots-txt-builder` |
+| Schema markup validator (also schema checker) | `/seo/schema-markup-validator` |
 | UUID generator (also online GUID generator) | `/dev/uuid-generator` |
 | JWT decoder (also JWT token decoder) | `/dev/jwt-decoder` |
 | HEIC to PNG converter | `/convert/heic-to-png` |
