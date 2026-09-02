@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { SiteShell } from "@/components/SiteShell";
-import { SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/site";
+import { PUBLIC_SITE_ORIGIN, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,7 +19,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: new URL(`${PUBLIC_SITE_ORIGIN}/`),
   title: {
     default: `${SITE_NAME} — Free Browser Tools`,
     template: `%s · ${SITE_NAME}`,

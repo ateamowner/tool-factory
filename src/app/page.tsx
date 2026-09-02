@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ToolCard } from "@/components/ToolCard";
-import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { SITE_NAME, SITE_TAGLINE, toPublicUrl } from "@/lib/site";
 import { TOOLS } from "@/lib/tools";
 
 export const metadata: Metadata = {
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     "Free stock average calculator, paycheck calculator hourly, emergency fund calculator, mortgage recast calculator, UTM builder, robots.txt builder, schema markup validator, UUID generator, JWT decoder, HEIC to PNG converter, HEIC to PDF converter, Excel to PDF converter, and PNG to JPG converter. No signup. Every tool runs in your browser.",
+  alternates: { canonical: toPublicUrl("/") },
 };
 
 const trustChips = [

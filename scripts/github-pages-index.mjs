@@ -1,4 +1,4 @@
-import { access, copyFile, readdir, writeFile } from "node:fs/promises";
+import { access, copyFile, readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const root = "out";
@@ -21,6 +21,25 @@ async function ensureRootIndex() {
   }
 }
 
+/** Next metadata emits origin-only canonicals as `https://ateamkit.com` (no slash). */
+async function ensureHomepageCanonical() {
+  const file = join(root, "index.html");
+  const html = await readFile(file, "utf8");
+  const next = html
+    .replaceAll(
+      '<link rel="canonical" href="https://ateamkit.com"/>',
+      '<link rel="canonical" href="https://ateamkit.com/"/>',
+    )
+    .replaceAll(
+      '\\"rel\\":\\"canonical\\",\\"href\\":\\"https://ateamkit.com\\"',
+      '\\"rel\\":\\"canonical\\",\\"href\\":\\"https://ateamkit.com/\\"',
+    );
+  if (next === html || !next.includes('href="https://ateamkit.com/"')) {
+    throw new Error("Expected homepage canonical https://ateamkit.com/");
+  }
+  await writeFile(file, next);
+}
+
 async function ensureIndexHtml(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = new Set(entries.filter((entry) => entry.isFile()).map((entry) => entry.name));
@@ -37,4 +56,5 @@ async function ensureIndexHtml(dir) {
 }
 
 await ensureRootIndex();
+await ensureHomepageCanonical();
 await ensureIndexHtml(root);
