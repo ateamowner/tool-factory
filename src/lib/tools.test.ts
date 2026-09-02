@@ -120,6 +120,21 @@ describe("tool registry stop rule", () => {
       TOOLS.find((tool) => tool.href === "/finance/mortgage-recast-calculator")?.cta,
       "Calculate",
     );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
+      "/seo/schema-markup-validator",
+    );
+    assert.ok(keywordAlreadyPublished("schema markup validator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "schema markup validator")?.aliases.includes(
+        "schema checker",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/seo/schema-markup-validator")?.cta,
+      "Validate",
+    );
+    assert.equal(keywordAlreadyPublished("schema checker"), false);
   });
 
   it("does not ship schema.org validator or percentage calculator pages", () => {

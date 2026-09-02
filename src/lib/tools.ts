@@ -10,7 +10,7 @@ export type Tool = {
   category: CategoryId;
   description: string;
   summary: string;
-  cta: "Calculate" | "Copy URL" | "Generate" | "Convert" | "Decode";
+  cta: "Calculate" | "Copy URL" | "Generate" | "Convert" | "Decode" | "Validate";
 };
 
 export const CATEGORIES: Record<
@@ -29,7 +29,7 @@ export const CATEGORIES: Record<
     name: "SEO",
     href: "/seo",
     description:
-      "Campaign and crawl tools for marketers. Build tracking URLs and robots.txt files without sending destinations to a server.",
+      "Campaign, crawl, and structured-data tools for marketers. Build tracking URLs, robots.txt files, and check JSON-LD schema markup without sending data to a server.",
   },
   dev: {
     id: "dev",
@@ -131,6 +131,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Write user-agent groups, allow or disallow paths, add a sitemap, then copy or download robots.txt.",
     cta: "Generate",
+  },
+  {
+    keyword: "schema markup validator",
+    aliases: ["schema checker", "json-ld validator", "jsonld validator"],
+    slug: "schema-markup-validator",
+    href: "/seo/schema-markup-validator",
+    title: "Schema Markup Validator",
+    shortTitle: "Schema Markup Validator",
+    category: "seo",
+    description:
+      "Schema markup validator and schema checker for JSON-LD — detect @context and @type, flag common errors, and pretty-print in the browser.",
+    summary:
+      "Paste JSON-LD or a script tag, validate structure, then copy a pretty-printed document.",
+    cta: "Validate",
   },
   {
     keyword: "uuid generator",
