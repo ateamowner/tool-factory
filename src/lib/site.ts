@@ -39,3 +39,11 @@ export function getSiteUrl(): string {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   });
 }
+
+/** HTTPS ateamkit.com URL for sitemap locs and canonicals. Never the Vercel host. */
+export function toPublicUrl(pathname = "/"): string {
+  const trimmed = pathname.trim() || "/";
+  const path = trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
+  if (path === "/") return `${PUBLIC_SITE_ORIGIN}/`;
+  return `${PUBLIC_SITE_ORIGIN}${path.replace(/\/+$/, "")}`;
+}

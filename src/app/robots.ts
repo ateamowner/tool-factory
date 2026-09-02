@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getSiteUrl } from "@/lib/site";
+import { PUBLIC_SITE_ORIGIN } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${getSiteUrl()}/sitemap.xml`,
+    sitemap: `${PUBLIC_SITE_ORIGIN}/sitemap.xml`,
   };
 }

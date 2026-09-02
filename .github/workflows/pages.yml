@@ -37,7 +37,13 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://ateamkit.com
 
       - name: Verify Pages root files
-        run: test -f out/index.html && test -f out/.nojekyll
+        run: |
+          test -f out/index.html && test -f out/.nojekyll
+          test -f out/78d30441c01d40bff5f9c5bd2ec23255.txt
+          test "$(tr -d '[:space:]' < out/78d30441c01d40bff5f9c5bd2ec23255.txt)" = "78d30441c01d40bff5f9c5bd2ec23255"
+          grep -F 'rel="canonical" href="https://ateamkit.com/"' out/index.html
+          grep -F '<loc>https://ateamkit.com/</loc>' out/sitemap.xml
+          grep -F 'Sitemap: https://ateamkit.com/sitemap.xml' out/robots.txt
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -54,3 +60,21 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    name: Ping Bing IndexNow
+    runs-on: ubuntu-latest
+    needs: deploy
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Submit sitemap URLs to Bing IndexNow
+        run: node --experimental-strip-types scripts/ping-indexnow.ts
