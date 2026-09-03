@@ -121,6 +121,25 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "refinance calculator auto loan")?.href,
+      "/finance/auto-loan-refinance-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("refinance calculator auto loan"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "refinance calculator auto loan")?.aliases.includes(
+        "auto refinance calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "refinance calculator auto loan")?.aliases.includes(
+        "car loan refinance calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/auto-loan-refinance-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );
