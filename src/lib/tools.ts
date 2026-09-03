@@ -105,6 +105,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "refinance calculator auto loan",
+    aliases: ["auto refinance calculator", "car loan refinance calculator"],
+    slug: "auto-loan-refinance-calculator",
+    href: "/finance/auto-loan-refinance-calculator",
+    title: "Refinance Calculator Auto Loan",
+    shortTitle: "Refinance Calculator Auto Loan",
+    category: "finance",
+    description:
+      "Current vs new monthly payment, interest, fee break-even, and total cost for an auto loan refinance — all in the browser.",
+    summary:
+      "Enter current balance, rate, remaining term, new rate, and new term. Optional fees and extra payment.",
+    cta: "Calculate",
+  },
+  {
     keyword: "utm builder",
     aliases: ["utm generator", "utm maker", "utm link builder"],
     slug: "utm-builder",

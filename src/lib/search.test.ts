@@ -78,6 +78,18 @@ describe("searchSite", () => {
       "/finance/mortgage-recast-calculator",
     );
     assert.equal(
+      searchSite("refinance calculator auto loan", catalog)[0]?.href,
+      "/finance/auto-loan-refinance-calculator",
+    );
+    assert.equal(
+      searchSite("auto refinance calculator", catalog)[0]?.href,
+      "/finance/auto-loan-refinance-calculator",
+    );
+    assert.equal(
+      searchSite("car loan refinance calculator", catalog)[0]?.href,
+      "/finance/auto-loan-refinance-calculator",
+    );
+    assert.equal(
       searchSite("schema markup validator", catalog)[0]?.href,
       "/seo/schema-markup-validator",
     );
