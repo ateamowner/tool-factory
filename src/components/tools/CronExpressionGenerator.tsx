@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { CopyButton } from "@/components/CopyButton";
 import {
   CRON_PRESETS,
@@ -26,6 +26,21 @@ const FIELD_META: { key: CronFieldName; label: string; hint: string }[] = [
 
 const PRESET_IDS = Object.keys(CRON_PRESETS) as CronPresetId[];
 
+let clientNow: Date | null = null;
+
+function subscribeNever() {
+  return () => {};
+}
+
+function getClientNow(): Date | null {
+  if (!clientNow) clientNow = new Date();
+  return clientNow;
+}
+
+function getServerNow(): Date | null {
+  return null;
+}
+
 function formatRun(date: Date): string {
   return new Intl.DateTimeFormat(undefined, {
     weekday: "short",
@@ -41,11 +56,7 @@ function formatRun(date: Date): string {
 export function CronExpressionGenerator() {
   const [fields, setFields] = useState<CronFields>(DEFAULT_CRON_FIELDS);
   const [draft, setDraft] = useState(buildCronExpression(DEFAULT_CRON_FIELDS));
-  const [now, setNow] = useState<Date | null>(null);
-
-  useEffect(() => {
-    setNow(new Date());
-  }, []);
+  const now = useSyncExternalStore(subscribeNever, getClientNow, getServerNow);
 
   const expression = buildCronExpression(fields);
   const parsed = useMemo(() => parseCronExpression(expression), [expression]);
