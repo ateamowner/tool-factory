@@ -5,7 +5,7 @@ import { toPublicUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Developer Tools",
   description:
-    "Free developer utilities that stay on your device, including a UUID generator, online GUID generator, and JWT decoder.",
+    "Free developer utilities that stay on your device, including a UUID generator, online GUID generator, JWT decoder, and cron expression generator.",
   alternates: { canonical: toPublicUrl("/dev") },
 };
 

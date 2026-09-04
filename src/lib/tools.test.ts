@@ -56,6 +56,20 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/jwt-decoder")?.cta, "Decode");
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "cron expression generator")?.href,
+      "/dev/cron-expression-generator",
+    );
+    assert.ok(keywordAlreadyPublished("cron expression generator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "cron expression generator")?.aliases.includes(
+        "cron maker",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/dev/cron-expression-generator")?.cta,
+      "Generate",
+    );
+    assert.equal(
       TOOLS.find((tool) => tool.href === "/finance/paycheck-calculator-hourly")?.cta,
       "Calculate",
     );

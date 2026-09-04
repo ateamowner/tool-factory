@@ -36,7 +36,7 @@ export const CATEGORIES: Record<
     name: "Developer",
     href: "/dev",
     description:
-      "Small developer utilities that run locally in your browser — UUID generation and JWT decoding.",
+      "Small developer utilities that run locally in your browser — UUID generation, JWT decoding, and cron expressions.",
   },
   convert: {
     id: "convert",
@@ -186,6 +186,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Paste a JWT token to base64url-decode the header and claims. Decoding is not verification.",
     cta: "Decode",
+  },
+  {
+    keyword: "cron expression generator",
+    aliases: ["cron generator", "cron maker", "crontab generator"],
+    slug: "cron-expression-generator",
+    href: "/dev/cron-expression-generator",
+    title: "Cron Expression Generator",
+    shortTitle: "Cron Expression Generator",
+    category: "dev",
+    description:
+      "Build a standard 5-field cron expression with presets, a human-readable summary, and upcoming run times — all in the browser.",
+    summary:
+      "Pick minute, hour, day, month, and weekday fields or a preset, then copy the expression.",
+    cta: "Generate",
   },
   {
     keyword: "heic to png converter",
