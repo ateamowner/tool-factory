@@ -31,6 +31,14 @@ describe("searchSite", () => {
     );
     assert.equal(searchSite("jwt decoder", catalog)[0]?.href, "/dev/jwt-decoder");
     assert.equal(
+      searchSite("cron expression generator", catalog)[0]?.href,
+      "/dev/cron-expression-generator",
+    );
+    assert.equal(
+      searchSite("cron maker", catalog)[0]?.href,
+      "/dev/cron-expression-generator",
+    );
+    assert.equal(
       searchSite("jwt token decoder", catalog)[0]?.href,
       "/dev/jwt-decoder",
     );

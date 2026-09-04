@@ -15,6 +15,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Schema markup validator (also schema checker) | `/seo/schema-markup-validator` |
 | UUID generator (also online GUID generator) | `/dev/uuid-generator` |
 | JWT decoder (also JWT token decoder) | `/dev/jwt-decoder` |
+| Cron expression generator (also cron maker) | `/dev/cron-expression-generator` |
 | HEIC to PNG converter | `/convert/heic-to-png` |
 | HEIC to PDF converter | `/convert/heic-to-pdf` |
 | Excel to PDF converter | `/convert/excel-to-pdf` |
