@@ -119,6 +119,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "real estate commission calculator",
+    aliases: ["realtor commission calculator", "home sale commission calculator"],
+    slug: "real-estate-commission-calculator",
+    href: "/finance/real-estate-commission-calculator",
+    title: "Real Estate Commission Calculator",
+    shortTitle: "Real Estate Commission Calculator",
+    category: "finance",
+    description:
+      "Total commission, listing-side and buyer-side dollars, and seller net proceeds from a home sale — all in the browser.",
+    summary:
+      "Enter sale price and commission rate. Optional listing/buyer split and extra fees or concessions.",
+    cta: "Calculate",
+  },
+  {
     keyword: "utm builder",
     aliases: ["utm generator", "utm maker", "utm link builder"],
     slug: "utm-builder",

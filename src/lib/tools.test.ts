@@ -172,6 +172,25 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "real estate commission calculator")?.href,
+      "/finance/real-estate-commission-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("real estate commission calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "real estate commission calculator")?.aliases.includes(
+        "realtor commission calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "real estate commission calculator")?.aliases.includes(
+        "home sale commission calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/real-estate-commission-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

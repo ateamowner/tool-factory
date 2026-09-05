@@ -98,6 +98,18 @@ describe("searchSite", () => {
       "/finance/auto-loan-refinance-calculator",
     );
     assert.equal(
+      searchSite("real estate commission calculator", catalog)[0]?.href,
+      "/finance/real-estate-commission-calculator",
+    );
+    assert.equal(
+      searchSite("realtor commission calculator", catalog)[0]?.href,
+      "/finance/real-estate-commission-calculator",
+    );
+    assert.equal(
+      searchSite("home sale commission calculator", catalog)[0]?.href,
+      "/finance/real-estate-commission-calculator",
+    );
+    assert.equal(
       searchSite("schema markup validator", catalog)[0]?.href,
       "/seo/schema-markup-validator",
     );
