@@ -74,7 +74,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # Type stripping (`--experimental-strip-types`) needs Node 22+.
+          node-version: 22
 
       - name: Submit sitemap URLs to Bing IndexNow
         run: node --experimental-strip-types scripts/ping-indexnow.ts
