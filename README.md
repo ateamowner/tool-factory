@@ -10,6 +10,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Paycheck calculator hourly | `/finance/paycheck-calculator-hourly` |
 | Emergency fund calculator | `/finance/emergency-fund-calculator` |
 | Mortgage recast calculator (also recast mortgage calculator) | `/finance/mortgage-recast-calculator` |
+| Real estate commission calculator | `/finance/real-estate-commission-calculator` |
 | UTM builder (also UTM generator / maker / link builder) | `/seo/utm-builder` |
 | Robots.txt builder (also robot.txt generator) | `/seo/robots-txt-builder` |
 | Schema markup validator (also schema checker) | `/seo/schema-markup-validator` |
