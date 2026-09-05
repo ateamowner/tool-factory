@@ -275,6 +275,24 @@ export function getToolByHref(href: string): Tool | undefined {
   return TOOLS.find((tool) => tool.href === href);
 }
 
+export const FEATURED_TOOL_SLUGS = [
+  "stock-average-calculator",
+  "utm-builder",
+  "heic-to-png",
+] as const;
+
+export const CATEGORY_ORDER: CategoryId[] = ["finance", "seo", "dev", "convert"];
+
+export function getFeaturedTools(): Tool[] {
+  return FEATURED_TOOL_SLUGS.map((slug) => {
+    const tool = TOOLS.find((item) => item.slug === slug);
+    if (!tool) {
+      throw new Error(`Featured tool is missing from the registry: ${slug}`);
+    }
+    return tool;
+  });
+}
+
 export function getToolsByCategory(category: CategoryId): Tool[] {
   return TOOLS.filter((tool) => tool.category === category);
 }
