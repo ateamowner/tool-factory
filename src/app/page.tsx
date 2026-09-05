@@ -45,7 +45,7 @@ export default function HomePage() {
           <span aria-hidden="true" className="size-1.5 rounded-full bg-ink" />
           On your device
         </p>
-        <h1 className="mt-6 text-[2.35rem] font-[650] leading-[1.08] tracking-tight text-text sm:text-6xl">
+        <h1 className="mt-6 text-[28px] font-[650] leading-9 tracking-tight text-text sm:text-[40px] sm:leading-[48px]">
           Tools that stay{" "}
           <span className="sm:block">on your device.</span>
         </h1>
@@ -63,10 +63,7 @@ export default function HomePage() {
       </section>
 
       <section className="mt-14 sm:mt-16" aria-labelledby="featured-tools">
-        <h2
-          id="featured-tools"
-          className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted"
-        >
+        <h2 id="featured-tools" className="section-label">
           Featured
         </h2>
         <div className="mt-5 grid gap-5 md:grid-cols-3">
@@ -91,10 +88,7 @@ export default function HomePage() {
             aria-labelledby={`${categoryId}-heading`}
           >
             <div className="flex items-end justify-between gap-4">
-              <h2
-                id={`${categoryId}-heading`}
-                className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted"
-              >
+              <h2 id={`${categoryId}-heading`} className="section-label">
                 {category.name}
               </h2>
               <Link

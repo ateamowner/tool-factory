@@ -79,7 +79,7 @@ describe("homePageJsonLd", () => {
     publisher?: { "@id"?: string };
     potentialAction?: {
       "@type"?: string;
-      target?: { urlTemplate?: string };
+      target?: string;
     };
     itemListElement?: { name?: string; url?: string }[];
   }>;
@@ -119,9 +119,6 @@ describe("homePageJsonLd", () => {
     const website = graph.find((node) => node["@type"] === "WebSite");
     const action = website?.potentialAction;
     assert.equal(action?.["@type"], "SearchAction");
-    assert.equal(
-      action?.target?.urlTemplate,
-      "https://ateamkit.com/?q={search_term_string}",
-    );
+    assert.equal(action?.target, "https://ateamkit.com/?q={search_term_string}");
   });
 });

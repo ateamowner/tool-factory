@@ -36,10 +36,7 @@ export function homePageJsonLd({
         publisher: { "@id": organizationId },
         potentialAction: {
           "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${siteOrigin}/?q={search_term_string}`,
-          },
+          target: `${siteOrigin}/?q={search_term_string}`,
           "query-input": "required name=search_term_string",
         },
       },

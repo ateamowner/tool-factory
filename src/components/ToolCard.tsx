@@ -17,23 +17,21 @@ export function ToolCard({
 
   return (
     <article
-      className={`h-full rounded-2xl border border-line bg-card ${featured ? "card-glow" : ""}`}
+      className={`h-full rounded-xl border bg-card ${
+        large ? "min-h-[22rem] border-mint/20" : "border-line"
+      } ${featured ? "card-glow" : ""}`}
     >
       <Link
         href={tool.href}
-        className={`relative z-10 flex h-full flex-col ${large ? "p-7 sm:p-8" : "p-6"}`}
+        className={`relative z-10 flex h-full flex-col ${large ? "p-5" : "p-5"}`}
       >
-        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-mint">
-          {category.name}
-        </p>
-        <h3
-          className={`mt-3 font-semibold tracking-tight text-text ${large ? "text-2xl" : "text-xl"}`}
-        >
+        <p className="section-label">{category.name}</p>
+        <h3 className="mt-3 text-[18px] leading-[26px] font-semibold tracking-tight text-text">
           {tool.title}
         </h3>
-        <p className="mt-3 flex-1 text-sm leading-6 text-muted">{benefit}</p>
+        <p className="mt-3 flex-1 text-sm leading-[22px] text-muted">{benefit}</p>
         <span
-          className={`btn-primary mt-6 self-start ${large ? "" : "btn-primary-sm"}`}
+          className={`btn-card mt-6 ${large ? "w-full sm:w-auto" : "self-start"}`}
         >
           {tool.cta}
         </span>
