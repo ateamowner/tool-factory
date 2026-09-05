@@ -1,6 +1,24 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { TOOLS, keywordAlreadyPublished } from "./tools.ts";
+import { TOOLS, getFeaturedTools, keywordAlreadyPublished } from "./tools.ts";
+
+describe("featured homepage tools", () => {
+  it("locks the three Site Design featured slugs to live paths", () => {
+    const featured = getFeaturedTools();
+    assert.deepEqual(
+      featured.map((tool) => tool.href),
+      [
+        "/finance/stock-average-calculator",
+        "/seo/utm-builder",
+        "/convert/heic-to-png",
+      ],
+    );
+    assert.deepEqual(
+      featured.map((tool) => tool.cta),
+      ["Calculate", "Copy URL", "Convert"],
+    );
+  });
+});
 
 describe("tool registry stop rule", () => {
   it("publishes unique primary keywords as their own pages", () => {

@@ -26,6 +26,15 @@ export function HeaderSearch() {
   const results = searchSite(query, catalog);
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const initial = params.get("q");
+    if (initial) {
+      setQuery(initial);
+      setOpen(true);
+    }
+  }, []);
+
+  useEffect(() => {
     function onKey(event: KeyboardEvent) {
       if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) {
         return;

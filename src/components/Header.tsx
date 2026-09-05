@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CategoryChips } from "@/components/CategoryChips";
 import { HeaderSearch } from "@/components/HeaderSearch";
 import { CATEGORIES } from "@/lib/tools";
 
@@ -40,6 +41,7 @@ export function Header() {
           </ul>
         </nav>
       </div>
+      <CategoryChips />
     </header>
   );
 }

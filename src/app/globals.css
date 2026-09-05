@@ -16,6 +16,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 8.5rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 5.5rem;
+  }
 }
 
 body {
@@ -81,6 +88,11 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-ink);
+}
+
+.btn-primary-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8125rem;
 }
 
 .btn-primary:hover {
