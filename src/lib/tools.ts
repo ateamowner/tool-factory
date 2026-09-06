@@ -133,6 +133,23 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "credit utilization calculator",
+    aliases: [
+      "credit utilization ratio calculator",
+      "credit card utilization calculator",
+    ],
+    slug: "credit-utilization-calculator",
+    href: "/finance/credit-utilization-calculator",
+    title: "Credit Utilization Calculator",
+    shortTitle: "Credit Utilization Calculator",
+    category: "finance",
+    description:
+      "Overall credit utilization %, available credit, per-card ratios, and dollars to pay to reach a target — all in the browser.",
+    summary:
+      "Enter total or per-card limits and balances, plus an optional target utilization, to see the ratio and paydown amount.",
+    cta: "Calculate",
+  },
+  {
     keyword: "utm builder",
     aliases: ["utm generator", "utm maker", "utm link builder"],
     slug: "utm-builder",
