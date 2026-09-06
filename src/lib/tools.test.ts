@@ -191,6 +191,25 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "credit utilization calculator")?.href,
+      "/finance/credit-utilization-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("credit utilization calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "credit utilization calculator")?.aliases.includes(
+        "credit utilization ratio calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "credit utilization calculator")?.aliases.includes(
+        "credit card utilization calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/credit-utilization-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );
