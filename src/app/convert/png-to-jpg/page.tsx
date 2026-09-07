@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { PngToJpgConverter } from "@/components/tools/PngToJpgConverter";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/convert/png-to-jpg";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "PNG to JPG Converter — Convert PNG Images in Your Browser",
   description:
     "Free png to jpg converter. Convert PNG images to JPG in your browser. Batch convert and download locally. No upload, no signup.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function PngToJpgPage() {

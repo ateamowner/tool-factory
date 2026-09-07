@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { CronExpressionGenerator } from "@/components/tools/CronExpressionGenerator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/dev/cron-expression-generator";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Cron Expression Generator — Free Online Cron Maker",
   description:
     "Free cron expression generator and cron maker. Build a 5-field crontab with presets, a human-readable summary, and upcoming run times, then copy the expression. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function CronExpressionGeneratorPage() {

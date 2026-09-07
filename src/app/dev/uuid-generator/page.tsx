@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { UuidGenerator } from "@/components/tools/UuidGenerator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/dev/uuid-generator";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   title: "UUID Generator — Free Online GUID Generator (v4 & v7)",
   description:
     "Free UUID generator and online GUID generator. Create UUID v4 or UUID v7 in bulk, then copy one or copy all. Uses Web Crypto in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function UuidGeneratorPage() {

@@ -1,4 +1,5 @@
 export const PUBLIC_SITE_ORIGIN = "https://ateamkit.com";
+export const PUBLIC_SITE_HOST = "ateamkit.com";
 
 export const SITE_NAME = "Tool Factory";
 export const SITE_TAGLINE = "Free browser tools. No signup. Nothing uploaded.";
@@ -25,11 +26,24 @@ function asOrigin(value: string, protocolFallback: "https" | "http"): string | n
   }
 }
 
+function isCanonicalOrigin(origin: string): boolean {
+  try {
+    const url = new URL(origin);
+    return url.protocol === "https:" && url.hostname === PUBLIC_SITE_HOST;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Canonical origin is always https://ateamkit.com.
+ * Env overrides that are http, vercel.app, or any other host are ignored.
+ */
 export function resolveSiteUrl(env: SiteEnv): string {
   const explicit = env.NEXT_PUBLIC_SITE_URL
     ? asOrigin(env.NEXT_PUBLIC_SITE_URL, "https")
     : null;
-  if (explicit) return explicit;
+  if (explicit && isCanonicalOrigin(explicit)) return explicit;
 
   return PUBLIC_SITE_ORIGIN;
 }
@@ -46,4 +60,13 @@ export function toPublicUrl(pathname = "/"): string {
   const path = trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
   if (path === "/") return `${PUBLIC_SITE_ORIGIN}/`;
   return `${PUBLIC_SITE_ORIGIN}${path.replace(/\/+$/, "")}`;
+}
+
+/** Absolute canonical + og:url for Next metadata. Always https://ateamkit.com. */
+export function publicPageMetadata(pathname: string) {
+  const url = toPublicUrl(pathname);
+  return {
+    alternates: { canonical: url },
+    openGraph: { url },
+  };
 }

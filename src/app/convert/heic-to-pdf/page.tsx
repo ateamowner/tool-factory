@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { HeicToPdfConverter } from "@/components/tools/HeicToPdfConverter";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/convert/heic-to-pdf";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "HEIC to PDF Converter — Convert HEIC Images in Your Browser",
   description:
     "Free HEIC to PDF converter. Convert .heic and .heif photos to PDF in your browser. Batch convert and download locally. No upload, no signup.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function HeicToPdfPage() {

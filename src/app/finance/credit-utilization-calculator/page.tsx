@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { CreditUtilizationCalculator } from "@/components/tools/CreditUtilizationCalculator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/credit-utilization-calculator";
 
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   title: "Credit Utilization Calculator — Ratio, Available Credit & Paydown",
   description:
     "Free credit utilization calculator. See overall and per-card utilization, remaining available credit, and how much to pay to reach a target like 30%. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function CreditUtilizationCalculatorPage() {

@@ -21,7 +21,7 @@ async function ensureRootIndex() {
   }
 }
 
-/** Next metadata emits origin-only canonicals as `https://ateamkit.com` (no slash). */
+/** Next metadata emits origin-only canonicals/og:url as `https://ateamkit.com` (no slash). */
 async function ensureHomepageCanonical() {
   const file = join(root, "index.html");
   const html = await readFile(file, "utf8");
@@ -33,9 +33,23 @@ async function ensureHomepageCanonical() {
     .replaceAll(
       '\\"rel\\":\\"canonical\\",\\"href\\":\\"https://ateamkit.com\\"',
       '\\"rel\\":\\"canonical\\",\\"href\\":\\"https://ateamkit.com/\\"',
+    )
+    .replaceAll(
+      'property="og:url" content="https://ateamkit.com"',
+      'property="og:url" content="https://ateamkit.com/"',
+    )
+    .replaceAll(
+      '\\"property\\":\\"og:url\\",\\"content\\":\\"https://ateamkit.com\\"',
+      '\\"property\\":\\"og:url\\",\\"content\\":\\"https://ateamkit.com/\\"',
     );
-  if (next === html || !next.includes('href="https://ateamkit.com/"')) {
-    throw new Error("Expected homepage canonical https://ateamkit.com/");
+  if (
+    !next.includes('href="https://ateamkit.com/"') ||
+    !next.includes('property="og:url" content="https://ateamkit.com/"')
+  ) {
+    throw new Error("Expected homepage canonical and og:url https://ateamkit.com/");
+  }
+  if (next.includes("vercel.app") || next.includes("http://ateamkit.com")) {
+    throw new Error("Homepage HTML must not mention vercel.app or http://ateamkit.com");
   }
   await writeFile(file, next);
 }

@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { FourOhThreeBCalculator } from "@/components/tools/FourOhThreeBCalculator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/403b-calculator";
 
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   title: "403b Calculator — Contribution, Match & Retirement Balance",
   description:
     "Free 403b calculator. Estimate employee contributions, employer match, and projected retirement balance. Runs in your browser — nothing is uploaded.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function FourOhThreeBCalculatorPage() {

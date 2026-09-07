@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AutoLoanRefinanceCalculator } from "@/components/tools/AutoLoanRefinanceCalculator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/auto-loan-refinance-calculator";
 
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   title: "Refinance Calculator Auto Loan — Payment, Savings & Break-Even",
   description:
     "Free refinance calculator auto loan. Compare current vs new monthly payment, total interest, fees break-even, and total cost. Optional extra payment. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function AutoLoanRefinanceCalculatorPage() {
