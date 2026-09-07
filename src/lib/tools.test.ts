@@ -210,6 +210,25 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "403b calculator")?.href,
+      "/finance/403b-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("403b calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "403b calculator")?.aliases.includes(
+        "403b contribution calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "403b calculator")?.aliases.includes(
+        "403 b calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/403b-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

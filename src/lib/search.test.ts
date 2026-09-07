@@ -110,6 +110,18 @@ describe("searchSite", () => {
       "/finance/real-estate-commission-calculator",
     );
     assert.equal(
+      searchSite("403b calculator", catalog)[0]?.href,
+      "/finance/403b-calculator",
+    );
+    assert.equal(
+      searchSite("403b contribution calculator", catalog)[0]?.href,
+      "/finance/403b-calculator",
+    );
+    assert.equal(
+      searchSite("403 b calculator", catalog)[0]?.href,
+      "/finance/403b-calculator",
+    );
+    assert.equal(
       searchSite("schema markup validator", catalog)[0]?.href,
       "/seo/schema-markup-validator",
     );

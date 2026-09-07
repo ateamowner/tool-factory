@@ -150,6 +150,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "403b calculator",
+    aliases: ["403b contribution calculator", "403 b calculator"],
+    slug: "403b-calculator",
+    href: "/finance/403b-calculator",
+    title: "403b Calculator",
+    shortTitle: "403b Calculator",
+    category: "finance",
+    description:
+      "Employee contributions, optional employer match, and projected 403(b) balance at retirement — all in the browser.",
+    summary:
+      "Enter age, salary, contribution percent or dollars, optional match, and return to see a retirement projection.",
+    cta: "Calculate",
+  },
+  {
     keyword: "utm builder",
     aliases: ["utm generator", "utm maker", "utm link builder"],
     slug: "utm-builder",
