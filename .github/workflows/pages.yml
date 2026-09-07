@@ -42,8 +42,14 @@ jobs:
           test -f out/78d30441c01d40bff5f9c5bd2ec23255.txt
           test "$(tr -d '[:space:]' < out/78d30441c01d40bff5f9c5bd2ec23255.txt)" = "78d30441c01d40bff5f9c5bd2ec23255"
           grep -F 'rel="canonical" href="https://ateamkit.com/"' out/index.html
+          grep -F 'property="og:url" content="https://ateamkit.com/"' out/index.html
           grep -F '<loc>https://ateamkit.com/</loc>' out/sitemap.xml
           grep -F 'Sitemap: https://ateamkit.com/sitemap.xml' out/robots.txt
+          grep -R -F 'rel="canonical" href="https://ateamkit.com/finance/stock-average-calculator"' out
+          if grep -R -F --include='*.html' --include='*.xml' --include='*.txt' 'vercel.app' out; then
+            echo 'static export must not mention vercel.app' >&2
+            exit 1
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

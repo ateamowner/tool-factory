@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { PaycheckCalculatorHourly } from "@/components/tools/PaycheckCalculatorHourly";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/paycheck-calculator-hourly";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Paycheck Calculator Hourly — Gross Pay Per Paycheck",
   description:
     "Free paycheck calculator hourly for weekly, biweekly, semimonthly, or monthly pay. Enter hourly rate or salary and hours to see gross pay per paycheck, week, month, and year. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function PaycheckCalculatorHourlyPage() {

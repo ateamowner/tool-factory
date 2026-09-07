@@ -5,6 +5,7 @@ import {
   PUBLIC_SITE_ORIGIN,
   SITE_NAME,
   SITE_TAGLINE,
+  publicPageMetadata,
   resolveSiteUrl,
   toPublicUrl,
 } from "./site.ts";
@@ -16,14 +17,34 @@ describe("resolveSiteUrl", () => {
     assert.equal(resolveSiteUrl({}), PUBLIC_SITE_ORIGIN);
   });
 
-  it("uses NEXT_PUBLIC_SITE_URL when it is a valid origin", () => {
+  it("accepts NEXT_PUBLIC_SITE_URL only when it is https://ateamkit.com", () => {
     assert.equal(
-      resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "https://example.com/" }),
-      "https://example.com",
+      resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "https://ateamkit.com/" }),
+      PUBLIC_SITE_ORIGIN,
     );
   });
 
-  it("ignores invalid NEXT_PUBLIC_SITE_URL instead of throwing", () => {
+  it("ignores non-canonical hosts, http, and the Vercel fallback", () => {
+    assert.equal(
+      resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "https://example.com/" }),
+      PUBLIC_SITE_ORIGIN,
+    );
+    assert.equal(
+      resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "https://tool-factory-alpha.vercel.app" }),
+      PUBLIC_SITE_ORIGIN,
+    );
+    assert.equal(
+      resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "https://tool-factory-git-main.vercel.app" }),
+      PUBLIC_SITE_ORIGIN,
+    );
+    assert.equal(
+      resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "http://ateamkit.com" }),
+      PUBLIC_SITE_ORIGIN,
+    );
+    assert.equal(
+      resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "https://www.ateamkit.com" }),
+      PUBLIC_SITE_ORIGIN,
+    );
     assert.equal(
       resolveSiteUrl({ NEXT_PUBLIC_SITE_URL: "not a url" }),
       PUBLIC_SITE_ORIGIN,
@@ -48,6 +69,20 @@ describe("toPublicUrl", () => {
 
   it("stays on https://ateamkit.com even if pathname looks host-like", () => {
     assert.equal(toPublicUrl("seo/utm-builder"), "https://ateamkit.com/seo/utm-builder");
+  });
+
+  it("emits absolute canonical and og:url on ateamkit.com", () => {
+    assert.deepEqual(publicPageMetadata("/"), {
+      alternates: { canonical: "https://ateamkit.com/" },
+      openGraph: { url: "https://ateamkit.com/" },
+    });
+    assert.deepEqual(publicPageMetadata("/finance/stock-average-calculator"), {
+      alternates: { canonical: "https://ateamkit.com/finance/stock-average-calculator" },
+      openGraph: { url: "https://ateamkit.com/finance/stock-average-calculator" },
+    });
+    const serialized = JSON.stringify(publicPageMetadata("/seo/utm-builder"));
+    assert.equal(serialized.includes("vercel.app"), false);
+    assert.equal(serialized.includes("http://"), false);
   });
 
   it("covers the live sitemap set without the Vercel host", () => {

@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { StockAverageCalculator } from "@/components/tools/StockAverageCalculator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/stock-average-calculator";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Stock Average Calculator — Weighted Average Cost & Break-Even",
   description:
     "Free stock average calculator for multiple lots. Add shares, price, and optional fees to get weighted average cost, total invested, break-even, and unrealized P/L. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function StockAverageCalculatorPage() {

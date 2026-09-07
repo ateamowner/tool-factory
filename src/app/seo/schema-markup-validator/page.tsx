@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { SchemaMarkupValidator } from "@/components/tools/SchemaMarkupValidator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/seo/schema-markup-validator";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   title: "Schema Markup Validator — Free Schema Checker (JSON-LD)",
   description:
     "Free schema markup validator and schema checker. Paste JSON-LD to detect @context and @type, catch common errors, and pretty-print. Client-side only — nothing uploaded.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function SchemaMarkupValidatorPage() {

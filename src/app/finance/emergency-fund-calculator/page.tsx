@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { EmergencyFundCalculator } from "@/components/tools/EmergencyFundCalculator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/emergency-fund-calculator";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Emergency Fund Calculator — Target Savings, Gap & Months to Fund",
   description:
     "Free emergency fund calculator for a 3–12 month cash cushion. Enter monthly essential expenses, current savings, and an optional contribution to see your target, gap, and months to fully fund. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function EmergencyFundCalculatorPage() {

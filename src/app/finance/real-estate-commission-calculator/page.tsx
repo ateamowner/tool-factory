@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { RealEstateCommissionCalculator } from "@/components/tools/RealEstateCommissionCalculator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/real-estate-commission-calculator";
 
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   title: "Real Estate Commission Calculator — Seller Net, Split & Fees",
   description:
     "Free real estate commission calculator. See total commission, listing-side and buyer-side dollars, and seller net proceeds after optional fees. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function RealEstateCommissionCalculatorPage() {

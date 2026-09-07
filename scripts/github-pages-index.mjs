@@ -34,8 +34,11 @@ async function ensureHomepageCanonical() {
       '\\"rel\\":\\"canonical\\",\\"href\\":\\"https://ateamkit.com\\"',
       '\\"rel\\":\\"canonical\\",\\"href\\":\\"https://ateamkit.com/\\"',
     );
-  if (next === html || !next.includes('href="https://ateamkit.com/"')) {
+  if (!next.includes('href="https://ateamkit.com/"')) {
     throw new Error("Expected homepage canonical https://ateamkit.com/");
+  }
+  if (next.includes("vercel.app") || next.includes("http://ateamkit.com")) {
+    throw new Error("Homepage HTML must not mention vercel.app or http://ateamkit.com");
   }
   await writeFile(file, next);
 }

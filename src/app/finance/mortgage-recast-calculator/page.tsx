@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { MortgageRecastCalculator } from "@/components/tools/MortgageRecastCalculator";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/finance/mortgage-recast-calculator";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Mortgage Recast Calculator — New Payment & Interest Savings",
   description:
     "Free mortgage recast calculator for a lump-sum principal payment. See the new monthly payment, payment drop, and interest savings with the same remaining term — not a refinance. Runs in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function MortgageRecastCalculatorPage() {

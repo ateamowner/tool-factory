@@ -4,7 +4,7 @@ import { AdPlaceholder } from "@/components/AdSlot";
 import { JsonLd } from "@/components/JsonLd";
 import { ToolCard } from "@/components/ToolCard";
 import { homePageJsonLd } from "@/lib/faq-schema";
-import { PUBLIC_SITE_ORIGIN, SITE_NAME, SITE_TAGLINE, toPublicUrl } from "@/lib/site";
+import { PUBLIC_SITE_ORIGIN, SITE_NAME, SITE_TAGLINE, publicPageMetadata } from "@/lib/site";
 import {
   CATEGORIES,
   CATEGORY_ORDER,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   description:
     "Free online calculators and SEO/dev tools — stock average, paycheck, UTM builder, robots.txt, schema validator, and more. Runs in your browser.",
-  alternates: { canonical: toPublicUrl("/") },
+  ...publicPageMetadata("/"),
 };
 
 const trustChips = [

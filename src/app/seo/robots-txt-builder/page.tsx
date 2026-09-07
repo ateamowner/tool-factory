@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { RobotsTxtBuilder } from "@/components/tools/RobotsTxtBuilder";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/seo/robots-txt-builder";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Robots.txt Builder — Free Robot.txt Generator",
   description:
     "Free robots.txt builder and robot.txt generator. Add user-agent groups, allow/disallow rules, sitemap URLs, and optional AI crawler or llms.txt extras. Preview, copy, or download in your browser.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function RobotsTxtBuilderPage() {

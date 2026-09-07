@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { ExcelToPdfConverter } from "@/components/tools/ExcelToPdfConverter";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/convert/excel-to-pdf";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Excel to PDF Converter — Convert Spreadsheets in Your Browser",
   description:
     "Free excel to pdf converter. Convert .xlsx and .xls files to PDF in your browser. Batch convert and download locally. No upload, no signup.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function ExcelToPdfPage() {

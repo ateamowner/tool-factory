@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { UtmBuilder } from "@/components/tools/UtmBuilder";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/seo/utm-builder";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   title: "UTM Builder — Free UTM Generator, Maker & Link Builder",
   description:
     "Free UTM builder, UTM generator, and UTM link maker. Add source, medium, campaign, optional fields, presets, and bulk CSV. Copy the final URL. Client-side only.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function UtmBuilderPage() {

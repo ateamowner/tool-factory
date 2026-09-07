@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { JwtDecoder } from "@/components/tools/JwtDecoder";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/dev/jwt-decoder";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   title: "JWT Decoder — Free JWT Token Decoder (Client-Side)",
   description:
     "Free JWT decoder and JWT token decoder. Paste a token to read the header and payload as JSON. Base64url decode only — no signature check, nothing uploaded.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function JwtDecoderPage() {

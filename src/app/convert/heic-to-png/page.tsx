@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RelatedTools } from "@/components/RelatedTools";
 import { HeicToPngConverter } from "@/components/tools/HeicToPngConverter";
 import { breadcrumbJsonLd, faqPageJsonLd, type FaqItem } from "@/lib/faq-schema";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, publicPageMetadata } from "@/lib/site";
 
 const href = "/convert/heic-to-png";
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "HEIC to PNG Converter — Convert HEIC Images in Your Browser",
   description:
     "Free HEIC to PNG converter. Convert .heic and .heif photos to PNG in your browser. Batch convert and download locally. No upload, no signup.",
-  alternates: { canonical: href },
+  ...publicPageMetadata(href),
 };
 
 export default function HeicToPngPage() {
