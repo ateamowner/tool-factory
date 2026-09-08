@@ -50,7 +50,7 @@ const faqs: FaqItem[] = [
   {
     question: "How is the savings rate calculated?",
     answer:
-      "Savings rate is the sum of lines in the Savings category divided by total income, then shown as a percent. If income is $4,600 and you plan $400 of savings, the rate is about 8.7%. Leave savings at $0 or income blank and the rate is omitted. This is an educational estimate, not financial advice.",
+      "Savings rate is the sum of lines in the Savings category divided by total income, then shown as a percent. If income is $4,600 and you plan $400 of savings, the rate is about 8.7%. A $0 savings plan still shows 0% when income is above zero. If income is blank or $0, the rate is omitted. This is an educational estimate, not financial advice.",
   },
 ];
 
