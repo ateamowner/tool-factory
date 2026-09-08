@@ -122,6 +122,18 @@ describe("searchSite", () => {
       "/finance/403b-calculator",
     );
     assert.equal(
+      searchSite("monthly budget template", catalog)[0]?.href,
+      "/finance/monthly-budget-template",
+    );
+    assert.equal(
+      searchSite("monthly budget planner", catalog)[0]?.href,
+      "/finance/monthly-budget-template",
+    );
+    assert.equal(
+      searchSite("budget template monthly", catalog)[0]?.href,
+      "/finance/monthly-budget-template",
+    );
+    assert.equal(
       searchSite("schema markup validator", catalog)[0]?.href,
       "/seo/schema-markup-validator",
     );

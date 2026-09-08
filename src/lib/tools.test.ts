@@ -229,6 +229,25 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "monthly budget template")?.href,
+      "/finance/monthly-budget-template",
+    );
+    assert.ok(keywordAlreadyPublished("monthly budget template"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "monthly budget template")?.aliases.includes(
+        "monthly budget planner",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "monthly budget template")?.aliases.includes(
+        "budget template monthly",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/monthly-budget-template")?.cta,
+      "Calculate",
+    );
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

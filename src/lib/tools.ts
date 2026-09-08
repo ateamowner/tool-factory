@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators for investing and personal finance. Your numbers stay in the browser.",
+      "Client-side calculators for investing and personal finance, including a monthly budget template. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -161,6 +161,20 @@ export const TOOLS: Tool[] = [
       "Employee contributions, optional employer match, and projected 403(b) balance at retirement — all in the browser.",
     summary:
       "Enter age, salary, contribution percent or dollars, optional match, and return to see a retirement projection.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "monthly budget template",
+    aliases: ["monthly budget planner", "budget template monthly", "monthly budget"],
+    slug: "monthly-budget-template",
+    href: "/finance/monthly-budget-template",
+    title: "Monthly Budget Template",
+    shortTitle: "Monthly Budget Template",
+    category: "finance",
+    description:
+      "Monthly income and expense lines with totals, leftover surplus or deficit, and savings rate — all in the browser.",
+    summary:
+      "Add income and category expenses to see totals, remaining cash, and an optional savings rate.",
     cta: "Calculate",
   },
   {
