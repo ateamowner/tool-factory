@@ -382,7 +382,7 @@ export function SoftWashMixCalculator() {
             <p className="mt-4 text-sm leading-6 text-mint" role="status">
               {leadStatus === "sent"
                 ? "Quote request sent. A person can review the name, phone, location, surface, and square feet you entered."
-                : "Quote request saved on this device and opened as an email draft so it can be reviewed. Add NEXT_PUBLIC_LEAD_FORM_ENDPOINT to capture production leads."}
+                : "Quote request saved on this device and opened as an email draft so it can be reviewed."}
             </p>
           ) : (
             <form className="relative mt-5 grid gap-4 sm:grid-cols-2" onSubmit={onSubmitQuote} noValidate>
