@@ -22,8 +22,9 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | HEIC to PDF converter | `/convert/heic-to-pdf` |
 | Excel to PDF converter | `/convert/excel-to-pdf` |
 | PNG to JPG converter | `/convert/png-to-jpg` |
+| Soft wash mix calculator (also softwash / house wash mix calculator) | `/home/soft-wash-mix-calculator` |
 
-Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert`
+Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert` · `/home`
 
 ## Local development
 
@@ -44,6 +45,8 @@ Canonical URLs, `sitemap.xml`, and `robots.txt` use `https://ateamkit.com` (the 
 IndexNow key file is `https://ateamkit.com/78d30441c01d40bff5f9c5bd2ec23255.txt` (text/plain). The Pages workflow pings Bing IndexNow with sitemap URLs after deploy. Add `ateamkit.com` in Bing Webmaster Tools; the IndexNow key file is the verify path — do not invent Bing or Google HTML verify codes.
 Add a tool the same way as today: register it in `src/lib/tools.ts`, then add `src/app/<category>/<slug>/page.tsx` with FAQ + `FAQPage` JSON-LD (client-side only).
 Ads stay placeholders. Do not invent AdSense IDs.
+
+The soft wash mix calculator quote form POSTs JSON to `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` when that env var is set (Formspree, Formspark, Getform, or any endpoint that accepts JSON). The GitHub Pages workflow does not set it yet. Without it, submit stores the lead in `localStorage` under `ateamkit:soft-wash-quote-leads` and opens a `mailto:` draft so the payload is reviewable. Mix math stays client-side either way.
 
 ## Rules
 
