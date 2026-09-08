@@ -173,6 +173,7 @@ export function MonthlyBudgetTemplate() {
                     <span className="mb-2 block text-xs text-muted">Label</span>
                     <input
                       type="text"
+                      name={`income-label-${line.id}`}
                       autoComplete="off"
                       value={line.label}
                       onChange={(event) => updateIncome(line.id, "label", event.target.value)}
@@ -184,6 +185,7 @@ export function MonthlyBudgetTemplate() {
                     <span className="mb-2 block text-xs text-muted">Monthly amount</span>
                     <input
                       type="text"
+                      name={`income-amount-${line.id}`}
                       inputMode="decimal"
                       autoComplete="off"
                       value={line.amount}
@@ -242,6 +244,7 @@ export function MonthlyBudgetTemplate() {
                   <label className="block text-sm">
                     <span className="mb-2 block text-xs text-muted">Category</span>
                     <select
+                      name={`expense-category-${line.id}`}
                       value={line.category}
                       onChange={(event) =>
                         updateExpense(
@@ -263,6 +266,7 @@ export function MonthlyBudgetTemplate() {
                     <span className="mb-2 block text-xs text-muted">Label</span>
                     <input
                       type="text"
+                      name={`expense-label-${line.id}`}
                       autoComplete="off"
                       value={line.label}
                       onChange={(event) =>
@@ -276,6 +280,7 @@ export function MonthlyBudgetTemplate() {
                     <span className="mb-2 block text-xs text-muted">Monthly amount</span>
                     <input
                       type="text"
+                      name={`expense-amount-${line.id}`}
                       inputMode="decimal"
                       autoComplete="off"
                       value={line.amount}
