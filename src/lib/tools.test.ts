@@ -248,6 +248,31 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "vat number validator")?.href,
+      "/finance/vat-number-validator",
+    );
+    assert.ok(keywordAlreadyPublished("vat number validator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "vat number validator")?.aliases.includes(
+        "vat number checker",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "vat number validator")?.aliases.includes(
+        "eu vat validator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "vat number validator")?.aliases.includes(
+        "vat checker",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/vat-number-validator")?.cta,
+      "Validate",
+    );
+    assert.equal(keywordAlreadyPublished("vat number checker"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );
