@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser. Mix estimates are educational — not a service booking or a chemical spec.",
+      "Household calculators that run in the browser. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking or a chemical spec.",
   },
 };
 
@@ -353,6 +353,56 @@ export const TOOLS: Tool[] = [
       "Educational gallons of mix, bleach, water, and surfactant from surface, square feet, and soil — then request a local quote.",
     summary:
       "Pick siding, roof, concrete, or fence, enter square feet or L×W, and see a typical pro-range SH mix. Optional quote form after results.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "house sq ft estimator",
+    aliases: [
+      "house square footage estimator",
+      "wall square footage calculator",
+      "roof square footage estimator",
+    ],
+    slug: "house-sq-ft-estimator",
+    href: "/home/house-sq-ft-estimator",
+    title: "House Sq-Ft Estimator",
+    shortTitle: "House Sq-Ft Estimator",
+    category: "home",
+    description:
+      "Educational wall or roof square feet from L×W or footprint, 1–2 stories, and an optional roof pitch bump — then request a local quote.",
+    summary:
+      "Toggle walls vs roof, enter length × width or footprint, and see an envelope estimate. Optional quote form after results.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "vinyl siding cleanability",
+    aliases: [
+      "vinyl siding cleaner checker",
+      "siding cleanability checker",
+      "vinyl siding wash checker",
+    ],
+    slug: "vinyl-siding-cleanability",
+    href: "/home/vinyl-siding-cleanability",
+    title: "Vinyl Siding Cleanability Checker",
+    shortTitle: "Vinyl Siding Cleanability",
+    category: "home",
+    description:
+      "Educational good / caution / skip soft-wash fit from siding type, soil, age, and shade — then request a local quote.",
+    summary:
+      "Choose vinyl, fiber cement, wood, or other, plus soil and shade, for a short educational fit score. Optional quote form after results.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "roof algae severity",
+    aliases: ["roof algae quiz", "roof streak quiz", "roof algae checker"],
+    slug: "roof-algae-severity",
+    href: "/home/roof-algae-severity",
+    title: "Roof Algae Severity Quiz",
+    shortTitle: "Roof Algae Severity Quiz",
+    category: "home",
+    description:
+      "Educational 1–4 streak score from coverage, roof age, trees, and north face, plus a typical soft-wash candidate note — not a diagnosis.",
+    summary:
+      "Describe streak coverage and shade factors for a 1–4 appearance score. Optional quote form after results.",
     cta: "Calculate",
   },
 ];

@@ -11,6 +11,18 @@ export const MAX_SURFACTANT_OZ_PER_GAL = 2;
 
 export const SOFT_WASH_LEAD_STORAGE_KEY = "ateamkit:soft-wash-quote-leads";
 
+export const SOFT_WASH_LEAD_SOURCES = [
+  "soft-wash-mix-calculator",
+  "house-sq-ft-estimator",
+  "vinyl-siding-cleanability",
+  "roof-algae-severity",
+] as const;
+export type SoftWashLeadSource = (typeof SOFT_WASH_LEAD_SOURCES)[number];
+
+export function isSoftWashLeadSource(value: string): value is SoftWashLeadSource {
+  return (SOFT_WASH_LEAD_SOURCES as readonly string[]).includes(value);
+}
+
 export const SURFACE_PRESETS: Record<
   SurfaceId,
   {
@@ -206,6 +218,7 @@ export type SoftWashLeadInput = {
   surface: string;
   sqFt: number;
   mixGallons: number | null;
+  source: SoftWashLeadSource;
   honeypot?: string;
 };
 
@@ -216,7 +229,7 @@ export type SoftWashLead = {
   surface: SurfaceId;
   sqFt: number;
   mixGallons: number | null;
-  source: "soft-wash-mix-calculator";
+  source: SoftWashLeadSource;
 };
 
 export type SoftWashLeadValidation =
@@ -247,6 +260,9 @@ export function validateSoftWashLead(input: SoftWashLeadInput): SoftWashLeadVali
   if (!isFiniteNumber(input.sqFt) || input.sqFt <= 0) {
     return { ok: false, error: "Enter square feet greater than zero." };
   }
+  if (!isSoftWashLeadSource(input.source)) {
+    return { ok: false, error: "Unable to send this request." };
+  }
 
   return {
     ok: true,
@@ -260,7 +276,7 @@ export function validateSoftWashLead(input: SoftWashLeadInput): SoftWashLeadVali
         input.mixGallons !== null && isFiniteNumber(input.mixGallons)
           ? input.mixGallons
           : null,
-      source: "soft-wash-mix-calculator",
+      source: input.source,
     },
   };
 }

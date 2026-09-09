@@ -170,5 +170,29 @@ describe("searchSite", () => {
       searchSite("house wash mix calculator", catalog)[0]?.href,
       "/home/soft-wash-mix-calculator",
     );
+    assert.equal(
+      searchSite("house sq ft estimator", catalog)[0]?.href,
+      "/home/house-sq-ft-estimator",
+    );
+    assert.equal(
+      searchSite("house square footage estimator", catalog)[0]?.href,
+      "/home/house-sq-ft-estimator",
+    );
+    assert.equal(
+      searchSite("vinyl siding cleanability", catalog)[0]?.href,
+      "/home/vinyl-siding-cleanability",
+    );
+    assert.equal(
+      searchSite("siding cleanability checker", catalog)[0]?.href,
+      "/home/vinyl-siding-cleanability",
+    );
+    assert.equal(
+      searchSite("roof algae severity", catalog)[0]?.href,
+      "/home/roof-algae-severity",
+    );
+    assert.equal(
+      searchSite("roof algae quiz", catalog)[0]?.href,
+      "/home/roof-algae-severity",
+    );
   });
 });
