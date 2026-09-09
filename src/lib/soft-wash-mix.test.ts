@@ -159,6 +159,7 @@ describe("soft wash quote lead", () => {
       surface: "siding",
       sqFt: 2000,
       mixGallons: 10,
+      source: "soft-wash-mix-calculator",
     });
     assert.equal(checked.ok, true);
     if (!checked.ok) return;
@@ -177,6 +178,7 @@ describe("soft wash quote lead", () => {
         surface: "roof",
         sqFt: 900,
         mixGallons: null,
+        source: "soft-wash-mix-calculator",
       }).ok,
       false,
     );
@@ -188,6 +190,7 @@ describe("soft wash quote lead", () => {
         surface: "roof",
         sqFt: 900,
         mixGallons: null,
+        source: "soft-wash-mix-calculator",
       }).ok,
       false,
     );
@@ -199,6 +202,7 @@ describe("soft wash quote lead", () => {
         surface: "roof",
         sqFt: 900,
         mixGallons: null,
+        source: "soft-wash-mix-calculator",
         honeypot: "http://spam.example",
       }).ok,
       false,

@@ -23,6 +23,9 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Excel to PDF converter | `/convert/excel-to-pdf` |
 | PNG to JPG converter | `/convert/png-to-jpg` |
 | Soft wash mix calculator (also softwash / house wash mix calculator) | `/home/soft-wash-mix-calculator` |
+| House sq-ft estimator (also house square footage estimator) | `/home/house-sq-ft-estimator` |
+| Vinyl siding cleanability checker | `/home/vinyl-siding-cleanability` |
+| Roof algae severity quiz (also roof algae quiz) | `/home/roof-algae-severity` |
 
 Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert` · `/home`
 
@@ -46,7 +49,7 @@ IndexNow key file is `https://ateamkit.com/78d30441c01d40bff5f9c5bd2ec23255.txt`
 Add a tool the same way as today: register it in `src/lib/tools.ts`, then add `src/app/<category>/<slug>/page.tsx` with FAQ + `FAQPage` JSON-LD (client-side only).
 Ads stay placeholders. Do not invent AdSense IDs.
 
-The soft wash mix calculator quote form POSTs JSON to `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` when that env var is set. The Pages workflow reads repo Actions variable `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` at build time (`vars.NEXT_PUBLIC_LEAD_FORM_ENDPOINT`) and passes it into `npm run build`. Set that variable to the Formspree form endpoint (Settings → Secrets and variables → Actions → Variables). Do not commit the Formspree URL. Without the variable, submit stores the lead in `localStorage` under `ateamkit:soft-wash-quote-leads` and opens a `mailto:` draft so the payload is reviewable. Mix math stays client-side either way.
+Household soft-wash tools share one quote form. It POSTs JSON to `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` when that env var is set. The Pages workflow reads repo Actions variable `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` at build time (`vars.NEXT_PUBLIC_LEAD_FORM_ENDPOINT`) and passes it into `npm run build`. Set that variable to the Formspree form endpoint (Settings → Secrets and variables → Actions → Variables). Do not commit the Formspree URL. Without the variable, submit stores the lead in `localStorage` under `ateamkit:soft-wash-quote-leads` and opens a `mailto:` draft so the payload is reviewable. Mix math stays client-side either way.
 
 ## Rules
 

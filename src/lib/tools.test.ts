@@ -302,12 +302,55 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/home/soft-wash-mix-calculator")?.category, "home");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "house sq ft estimator")?.href,
+      "/home/house-sq-ft-estimator",
+    );
+    assert.ok(keywordAlreadyPublished("house sq ft estimator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "house sq ft estimator")?.aliases.includes(
+        "house square footage estimator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/home/house-sq-ft-estimator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "vinyl siding cleanability")?.href,
+      "/home/vinyl-siding-cleanability",
+    );
+    assert.ok(keywordAlreadyPublished("vinyl siding cleanability"));
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/home/vinyl-siding-cleanability")?.cta,
+      "Calculate",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "roof algae severity")?.href,
+      "/home/roof-algae-severity",
+    );
+    assert.ok(keywordAlreadyPublished("roof algae severity"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "roof algae severity")?.aliases.includes(
+        "roof algae quiz",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/home/roof-algae-severity")?.cta,
+      "Calculate",
+    );
+    assert.equal(
+      TOOLS.filter((tool) => tool.category === "home").map((tool) => tool.slug).sort().join(","),
+      "house-sq-ft-estimator,roof-algae-severity,soft-wash-mix-calculator,vinyl-siding-cleanability",
+    );
   });
 
   it("does not ship schema.org validator or percentage calculator pages", () => {
     const banned = [
       "validator.schema.org",
       "percentage calculator",
+      "job cost ballpark",
+      "soft wash job cost",
     ];
     for (const keyword of banned) {
       assert.equal(keywordAlreadyPublished(keyword), false);

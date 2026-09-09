@@ -105,16 +105,20 @@ export default function SoftWashMixCalculatorPage() {
             Household
           </Link>{" "}
           hub, or open the{" "}
-          <Link className="text-mint underline" href="/finance/monthly-budget-template">
-            monthly budget template
+          <Link className="text-mint underline" href="/home/house-sq-ft-estimator">
+            house sq-ft estimator
           </Link>
           ,{" "}
-          <Link className="text-mint underline" href="/finance/emergency-fund-calculator">
-            emergency fund calculator
+          <Link className="text-mint underline" href="/home/vinyl-siding-cleanability">
+            vinyl siding cleanability checker
           </Link>
-          , or{" "}
-          <Link className="text-mint underline" href="/convert/heic-to-png">
-            HEIC to PNG converter
+          ,{" "}
+          <Link className="text-mint underline" href="/home/roof-algae-severity">
+            roof algae severity quiz
+          </Link>
+          , or the{" "}
+          <Link className="text-mint underline" href="/finance/monthly-budget-template">
+            monthly budget template
           </Link>
           .
         </p>
