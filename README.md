@@ -46,7 +46,7 @@ IndexNow key file is `https://ateamkit.com/78d30441c01d40bff5f9c5bd2ec23255.txt`
 Add a tool the same way as today: register it in `src/lib/tools.ts`, then add `src/app/<category>/<slug>/page.tsx` with FAQ + `FAQPage` JSON-LD (client-side only).
 Ads stay placeholders. Do not invent AdSense IDs.
 
-The soft wash mix calculator quote form POSTs JSON to `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` when that env var is set (Formspree, Formspark, Getform, or any endpoint that accepts JSON). The GitHub Pages workflow does not set it yet. Without it, submit stores the lead in `localStorage` under `ateamkit:soft-wash-quote-leads` and opens a `mailto:` draft so the payload is reviewable. Mix math stays client-side either way.
+The soft wash mix calculator quote form POSTs JSON to `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` when that env var is set. The Pages workflow reads repo Actions variable `NEXT_PUBLIC_LEAD_FORM_ENDPOINT` at build time (`vars.NEXT_PUBLIC_LEAD_FORM_ENDPOINT`) and passes it into `npm run build`. Set that variable to the Formspree form endpoint (Settings → Secrets and variables → Actions → Variables). Do not commit the Formspree URL. Without the variable, submit stores the lead in `localStorage` under `ateamkit:soft-wash-quote-leads` and opens a `mailto:` draft so the payload is reviewable. Mix math stays client-side either way.
 
 ## Rules
 

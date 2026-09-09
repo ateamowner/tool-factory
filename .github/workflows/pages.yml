@@ -35,6 +35,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://ateamkit.com
+          NEXT_PUBLIC_LEAD_FORM_ENDPOINT: ${{ vars.NEXT_PUBLIC_LEAD_FORM_ENDPOINT }}
 
       - name: Verify Pages root files
         run: |
