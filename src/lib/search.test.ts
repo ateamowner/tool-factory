@@ -141,5 +141,21 @@ describe("searchSite", () => {
       searchSite("schema checker", catalog)[0]?.href,
       "/seo/schema-markup-validator",
     );
+    assert.equal(
+      searchSite("vat number validator", catalog)[0]?.href,
+      "/finance/vat-number-validator",
+    );
+    assert.equal(
+      searchSite("vat number checker", catalog)[0]?.href,
+      "/finance/vat-number-validator",
+    );
+    assert.equal(
+      searchSite("eu vat validator", catalog)[0]?.href,
+      "/finance/vat-number-validator",
+    );
+    assert.equal(
+      searchSite("vat checker", catalog)[0]?.href,
+      "/finance/vat-number-validator",
+    );
   });
 });

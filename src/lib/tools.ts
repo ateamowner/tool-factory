@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators for investing and personal finance, including a monthly budget template. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a monthly budget template and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -176,6 +176,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Add income and category expenses to see totals, remaining cash, and an optional savings rate.",
     cta: "Calculate",
+  },
+  {
+    keyword: "vat number validator",
+    aliases: ["vat number checker", "eu vat validator", "vat checker"],
+    slug: "vat-number-validator",
+    href: "/finance/vat-number-validator",
+    title: "VAT Number Validator",
+    shortTitle: "VAT Number Validator",
+    category: "finance",
+    description:
+      "VAT number validator and VAT number checker for EU (and legacy GB) IDs — format, country, and check digits in the browser. Not a VIES lookup.",
+    summary:
+      "Paste a VAT ID with or without a country prefix to check format and public check digits. Nothing is uploaded.",
+    cta: "Validate",
   },
   {
     keyword: "utm builder",

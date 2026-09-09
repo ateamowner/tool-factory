@@ -5,7 +5,7 @@ import { toPublicUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Finance Tools",
   description:
-    "Free finance calculators that run in your browser, including a monthly budget template, a 403b calculator, a credit utilization calculator, a real estate commission calculator, a refinance calculator auto loan, a mortgage recast calculator, an emergency fund calculator, a paycheck calculator hourly, and a stock average calculator for weighted average cost.",
+    "Free finance calculators that run in your browser, including a VAT number validator, a monthly budget template, a 403b calculator, a credit utilization calculator, a real estate commission calculator, a refinance calculator auto loan, a mortgage recast calculator, an emergency fund calculator, a paycheck calculator hourly, and a stock average calculator for weighted average cost.",
   alternates: { canonical: toPublicUrl("/finance") },
 };
 
