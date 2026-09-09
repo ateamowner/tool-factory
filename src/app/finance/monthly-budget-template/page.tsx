@@ -120,6 +120,10 @@ export default function MonthlyBudgetTemplatePage() {
           <Link className="text-mint underline" href="/finance/credit-utilization-calculator">
             credit utilization calculator
           </Link>
+          . For a house-wash mix estimate, use the{" "}
+          <Link className="text-mint underline" href="/home/soft-wash-mix-calculator">
+            soft wash mix calculator
+          </Link>
           .
         </p>
       </section>

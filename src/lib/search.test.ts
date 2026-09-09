@@ -6,9 +6,9 @@ import { CATEGORIES, TOOLS } from "./tools.ts";
 const catalog = indexToolsAndHubs(CATEGORIES, TOOLS);
 
 describe("searchSite", () => {
-  it("indexes the published tools and four hubs", () => {
+  it("indexes the published tools and five hubs", () => {
     assert.equal(catalog.filter((item) => item.kind === "tool").length, TOOLS.length);
-    assert.equal(catalog.filter((item) => item.kind === "hub").length, 4);
+    assert.equal(catalog.filter((item) => item.kind === "hub").length, 5);
     assert.deepEqual(
       catalog.filter((item) => item.kind === "tool").map((item) => item.href).sort(),
       TOOLS.map((tool) => tool.href).sort(),
@@ -156,6 +156,19 @@ describe("searchSite", () => {
     assert.equal(
       searchSite("vat checker", catalog)[0]?.href,
       "/finance/vat-number-validator",
+    );
+    assert.equal(searchSite("household", catalog)[0]?.href, "/home");
+    assert.equal(
+      searchSite("soft wash mix calculator", catalog)[0]?.href,
+      "/home/soft-wash-mix-calculator",
+    );
+    assert.equal(
+      searchSite("softwash mix calculator", catalog)[0]?.href,
+      "/home/soft-wash-mix-calculator",
+    );
+    assert.equal(
+      searchSite("house wash mix calculator", catalog)[0]?.href,
+      "/home/soft-wash-mix-calculator",
     );
   });
 });

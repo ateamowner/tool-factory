@@ -119,9 +119,13 @@ export default function EmergencyFundCalculatorPage() {
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
           </Link>
-          . Need a photo converted locally? Try the{" "}
+          .           Need a photo converted locally? Try the{" "}
           <Link className="text-mint underline" href="/convert/heic-to-png">
             HEIC to PNG converter
+          </Link>
+          . For a house-wash mix estimate, use the{" "}
+          <Link className="text-mint underline" href="/home/soft-wash-mix-calculator">
+            soft wash mix calculator
           </Link>
           .
         </p>

@@ -287,6 +287,21 @@ describe("tool registry stop rule", () => {
       "Validate",
     );
     assert.equal(keywordAlreadyPublished("schema checker"), false);
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "soft wash mix calculator")?.href,
+      "/home/soft-wash-mix-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("soft wash mix calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "soft wash mix calculator")?.aliases.includes(
+        "softwash mix calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/home/soft-wash-mix-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/home/soft-wash-mix-calculator")?.category, "home");
   });
 
   it("does not ship schema.org validator or percentage calculator pages", () => {

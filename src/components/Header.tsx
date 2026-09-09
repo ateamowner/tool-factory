@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CategoryChips } from "@/components/CategoryChips";
 import { HeaderSearch } from "@/components/HeaderSearch";
-import { CATEGORIES } from "@/lib/tools";
+import { CATEGORIES, CATEGORY_ORDER } from "@/lib/tools";
 
-const nav = Object.values(CATEGORIES).map((category) => ({
-  href: category.href,
-  label: category.name,
+const nav = CATEGORY_ORDER.map((id) => ({
+  href: CATEGORIES[id].href,
+  label: CATEGORIES[id].name,
 }));
 
 export function Header() {
@@ -23,7 +23,7 @@ export function Header() {
         </Link>
         <HeaderSearch />
         <nav aria-label="Primary" className="hidden justify-self-end md:block">
-          <ul className="flex items-center gap-6 text-sm font-medium">
+            <ul className="flex items-center gap-4 text-sm font-medium lg:gap-6">
             {nav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (

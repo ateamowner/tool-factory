@@ -1,4 +1,4 @@
-export type CategoryId = "finance" | "seo" | "dev" | "convert";
+export type CategoryId = "finance" | "seo" | "dev" | "convert" | "home";
 
 export type Tool = {
   keyword: string;
@@ -44,6 +44,13 @@ export const CATEGORIES: Record<
     href: "/convert",
     description:
       "Client-side file converters. Spreadsheets and images stay in the browser — nothing is uploaded.",
+  },
+  home: {
+    id: "home",
+    name: "Household",
+    href: "/home",
+    description:
+      "Household calculators that run in the browser. Mix estimates are educational — not a service booking or a chemical spec.",
   },
 };
 
@@ -330,6 +337,24 @@ export const TOOLS: Tool[] = [
       "Select one or more .png files and download JPG copies. Encoding stays in your browser.",
     cta: "Convert",
   },
+  {
+    keyword: "soft wash mix calculator",
+    aliases: [
+      "softwash mix calculator",
+      "house wash mix calculator",
+      "bleach wash calculator",
+    ],
+    slug: "soft-wash-mix-calculator",
+    href: "/home/soft-wash-mix-calculator",
+    title: "Soft Wash Mix Calculator",
+    shortTitle: "Soft Wash Mix Calculator",
+    category: "home",
+    description:
+      "Educational gallons of mix, bleach, water, and surfactant from surface, square feet, and soil — then request a local quote.",
+    summary:
+      "Pick siding, roof, concrete, or fence, enter square feet or L×W, and see a typical pro-range SH mix. Optional quote form after results.",
+    cta: "Calculate",
+  },
 ];
 
 const publishedKeywords = new Set<string>();
@@ -354,7 +379,7 @@ export const FEATURED_TOOL_SLUGS = [
   "heic-to-png",
 ] as const;
 
-export const CATEGORY_ORDER: CategoryId[] = ["finance", "seo", "dev", "convert"];
+export const CATEGORY_ORDER: CategoryId[] = ["finance", "seo", "dev", "convert", "home"];
 
 export function getFeaturedTools(): Tool[] {
   return FEATURED_TOOL_SLUGS.map((slug) => {
