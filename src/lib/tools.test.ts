@@ -273,6 +273,26 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("vat number checker"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "break even sales calculator")?.href,
+      "/finance/break-even-sales-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("break even sales calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "break even sales calculator")?.aliases.includes(
+        "break even calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "break even sales calculator")?.aliases.includes(
+        "break-even point calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/break-even-sales-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(keywordAlreadyPublished("break even calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

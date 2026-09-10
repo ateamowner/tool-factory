@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a monthly budget template and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -197,6 +197,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Paste a VAT ID with or without a country prefix to check format and public check digits. Nothing is uploaded.",
     cta: "Validate",
+  },
+  {
+    keyword: "break even sales calculator",
+    aliases: ["break even calculator", "break-even point calculator"],
+    slug: "break-even-sales-calculator",
+    href: "/finance/break-even-sales-calculator",
+    title: "Break Even Sales Calculator",
+    shortTitle: "Break Even Sales Calculator",
+    category: "finance",
+    description:
+      "Break-even units, sales revenue, and contribution margin from fixed costs, variable cost, and price — optional target profit. All in the browser.",
+    summary:
+      "Enter fixed costs, variable cost per unit, and price. Optional target profit shows units and sales to hit that profit.",
+    cta: "Calculate",
   },
   {
     keyword: "utm builder",

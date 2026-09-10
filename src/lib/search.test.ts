@@ -157,6 +157,18 @@ describe("searchSite", () => {
       searchSite("vat checker", catalog)[0]?.href,
       "/finance/vat-number-validator",
     );
+    assert.equal(
+      searchSite("break even sales calculator", catalog)[0]?.href,
+      "/finance/break-even-sales-calculator",
+    );
+    assert.equal(
+      searchSite("break even calculator", catalog)[0]?.href,
+      "/finance/break-even-sales-calculator",
+    );
+    assert.equal(
+      searchSite("break-even point calculator", catalog)[0]?.href,
+      "/finance/break-even-sales-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,
