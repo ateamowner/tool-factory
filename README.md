@@ -13,6 +13,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Real estate commission calculator | `/finance/real-estate-commission-calculator` |
 | VAT number validator (also VAT number checker / EU VAT validator / VAT checker) | `/finance/vat-number-validator` |
 | Break even sales calculator (also break even calculator / break-even point calculator) | `/finance/break-even-sales-calculator` |
+| Student loan refinance calculator (also student loan refinancing calculator / refinance student loan calculator) | `/finance/student-loan-refinance-calculator` |
 | UTM builder (also UTM generator / maker / link builder) | `/seo/utm-builder` |
 | Robots.txt builder (also robot.txt generator) | `/seo/robots-txt-builder` |
 | Schema markup validator (also schema checker) | `/seo/schema-markup-validator` |

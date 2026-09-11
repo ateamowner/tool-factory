@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -210,6 +210,20 @@ export const TOOLS: Tool[] = [
       "Break-even units, sales revenue, and contribution margin from fixed costs, variable cost, and price — optional target profit. All in the browser.",
     summary:
       "Enter fixed costs, variable cost per unit, and price. Optional target profit shows units and sales to hit that profit.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "student loan refinance calculator",
+    aliases: ["student loan refinancing calculator", "refinance student loan calculator"],
+    slug: "student-loan-refinance-calculator",
+    href: "/finance/student-loan-refinance-calculator",
+    title: "Student Loan Refinance Calculator",
+    shortTitle: "Student Loan Refinance Calculator",
+    category: "finance",
+    description:
+      "Current vs new monthly payment, total interest, estimated savings vs the current loan, and fee break-even for a student loan refinance — all in the browser.",
+    summary:
+      "Enter current balance, rate, remaining term, new rate, and new term. Optional fees show break-even months.",
     cta: "Calculate",
   },
   {
