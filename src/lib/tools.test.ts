@@ -293,6 +293,26 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("break even calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.href,
+      "/finance/student-loan-refinance-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("student loan refinance calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.aliases.includes(
+        "student loan refinancing calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.aliases.includes(
+        "refinance student loan calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/student-loan-refinance-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(keywordAlreadyPublished("student loan refinancing calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

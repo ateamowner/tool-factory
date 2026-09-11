@@ -169,6 +169,18 @@ describe("searchSite", () => {
       searchSite("break-even point calculator", catalog)[0]?.href,
       "/finance/break-even-sales-calculator",
     );
+    assert.equal(
+      searchSite("student loan refinance calculator", catalog)[0]?.href,
+      "/finance/student-loan-refinance-calculator",
+    );
+    assert.equal(
+      searchSite("student loan refinancing calculator", catalog)[0]?.href,
+      "/finance/student-loan-refinance-calculator",
+    );
+    assert.equal(
+      searchSite("refinance student loan calculator", catalog)[0]?.href,
+      "/finance/student-loan-refinance-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,
