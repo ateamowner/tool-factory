@@ -17,6 +17,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | UTM builder (also UTM generator / maker / link builder) | `/seo/utm-builder` |
 | Robots.txt builder (also robot.txt generator) | `/seo/robots-txt-builder` |
 | Schema markup validator (also schema checker) | `/seo/schema-markup-validator` |
+| Domain age checker (also website age checker / WHOIS age checker) | `/seo/domain-age-checker` |
 | UUID generator (also online GUID generator) | `/dev/uuid-generator` |
 | JWT decoder (also JWT token decoder) | `/dev/jwt-decoder` |
 | Cron expression generator (also cron maker) | `/dev/cron-expression-generator` |

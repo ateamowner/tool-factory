@@ -328,6 +328,37 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("schema checker"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "domain age checker")?.href,
+      "/seo/domain-age-checker",
+    );
+    assert.ok(keywordAlreadyPublished("domain age checker"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "domain age checker")?.aliases.includes(
+        "check domain age",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "domain age checker")?.aliases.includes(
+        "website age checker",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "domain age checker")?.aliases.includes(
+        "domain age lookup",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "domain age checker")?.aliases.includes(
+        "whois age checker",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/seo/domain-age-checker")?.cta,
+      "Validate",
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/seo/domain-age-checker")?.category, "seo");
+    assert.equal(keywordAlreadyPublished("check domain age"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "soft wash mix calculator")?.href,
       "/home/soft-wash-mix-calculator",
     );
