@@ -29,7 +29,7 @@ export const CATEGORIES: Record<
     name: "SEO",
     href: "/seo",
     description:
-      "Campaign, crawl, and structured-data tools for marketers. Build tracking URLs, robots.txt files, and check JSON-LD schema markup without sending data to a server.",
+      "Campaign, crawl, and structured-data tools for marketers. Build tracking URLs, robots.txt files, check JSON-LD schema markup, and look up domain age without sending pasted WHOIS to a server.",
   },
   dev: {
     id: "dev",
@@ -266,6 +266,25 @@ export const TOOLS: Tool[] = [
       "Schema markup validator and schema checker for JSON-LD — detect @context and @type, flag common errors, and pretty-print in the browser.",
     summary:
       "Paste JSON-LD or a script tag, validate structure, then copy a pretty-printed document.",
+    cta: "Validate",
+  },
+  {
+    keyword: "domain age checker",
+    aliases: [
+      "check domain age",
+      "website age checker",
+      "domain age lookup",
+      "whois age checker",
+    ],
+    slug: "domain-age-checker",
+    href: "/seo/domain-age-checker",
+    title: "Domain Age Checker",
+    shortTitle: "Domain Age Checker",
+    category: "seo",
+    description:
+      "Domain age checker for registration date, age in years/months/days, registrar, and expiration — public RDAP in the browser, or paste WHOIS. Nothing uploaded.",
+    summary:
+      "Enter a domain to query public RDAP, or paste WHOIS/RDAP text to parse creation and expiry dates locally.",
     cta: "Validate",
   },
   {

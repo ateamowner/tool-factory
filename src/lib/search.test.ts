@@ -17,6 +17,7 @@ describe("searchSite", () => {
       catalog.some((item) => item.href === "/finance/paycheck-calculator-hourly"),
     );
     assert.ok(catalog.some((item) => item.href === "/seo/robots-txt-builder"));
+    assert.ok(catalog.some((item) => item.href === "/seo/domain-age-checker"));
   });
 
   it("jumps to UTM Builder from generator aliases", () => {
@@ -140,6 +141,26 @@ describe("searchSite", () => {
     assert.equal(
       searchSite("schema checker", catalog)[0]?.href,
       "/seo/schema-markup-validator",
+    );
+    assert.equal(
+      searchSite("domain age checker", catalog)[0]?.href,
+      "/seo/domain-age-checker",
+    );
+    assert.equal(
+      searchSite("check domain age", catalog)[0]?.href,
+      "/seo/domain-age-checker",
+    );
+    assert.equal(
+      searchSite("website age checker", catalog)[0]?.href,
+      "/seo/domain-age-checker",
+    );
+    assert.equal(
+      searchSite("domain age lookup", catalog)[0]?.href,
+      "/seo/domain-age-checker",
+    );
+    assert.equal(
+      searchSite("whois age checker", catalog)[0]?.href,
+      "/seo/domain-age-checker",
     );
     assert.equal(
       searchSite("vat number validator", catalog)[0]?.href,
