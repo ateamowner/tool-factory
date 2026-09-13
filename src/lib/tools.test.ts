@@ -313,6 +313,26 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("student loan refinancing calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "balance transfer calculator")?.href,
+      "/finance/balance-transfer-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("balance transfer calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "balance transfer calculator")?.aliases.includes(
+        "credit card balance transfer calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "balance transfer calculator")?.aliases.includes(
+        "balance transfer fee calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/balance-transfer-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(keywordAlreadyPublished("balance transfer fee calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

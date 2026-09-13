@@ -202,6 +202,18 @@ describe("searchSite", () => {
       searchSite("refinance student loan calculator", catalog)[0]?.href,
       "/finance/student-loan-refinance-calculator",
     );
+    assert.equal(
+      searchSite("balance transfer calculator", catalog)[0]?.href,
+      "/finance/balance-transfer-calculator",
+    );
+    assert.equal(
+      searchSite("credit card balance transfer calculator", catalog)[0]?.href,
+      "/finance/balance-transfer-calculator",
+    );
+    assert.equal(
+      searchSite("balance transfer fee calculator", catalog)[0]?.href,
+      "/finance/balance-transfer-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,
