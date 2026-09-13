@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -224,6 +224,23 @@ export const TOOLS: Tool[] = [
       "Current vs new monthly payment, total interest, estimated savings vs the current loan, and fee break-even for a student loan refinance — all in the browser.",
     summary:
       "Enter current balance, rate, remaining term, new rate, and new term. Optional fees show break-even months.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "balance transfer calculator",
+    aliases: [
+      "credit card balance transfer calculator",
+      "balance transfer fee calculator",
+    ],
+    slug: "balance-transfer-calculator",
+    href: "/finance/balance-transfer-calculator",
+    title: "Balance Transfer Calculator",
+    shortTitle: "Balance Transfer Calculator",
+    category: "finance",
+    description:
+      "Stay-put vs promo APR payoff, transfer fee, months to pay off, total interest, and estimated savings for a credit card balance transfer — all in the browser.",
+    summary:
+      "Enter current balance, APR, and payment, plus the transfer fee, promo APR, promo length, and go-to APR.",
     cta: "Calculate",
   },
   {
