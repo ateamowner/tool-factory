@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -241,6 +241,23 @@ export const TOOLS: Tool[] = [
       "Stay-put vs promo APR payoff, transfer fee, months to pay off, total interest, and estimated savings for a credit card balance transfer — all in the browser.",
     summary:
       "Enter current balance, APR, and payment, plus the transfer fee, promo APR, promo length, and go-to APR.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "purchasing power calculator",
+    aliases: [
+      "inflation purchasing power calculator",
+      "buying power calculator",
+    ],
+    slug: "purchasing-power-calculator",
+    href: "/finance/purchasing-power-calculator",
+    title: "Purchasing Power Calculator",
+    shortTitle: "Purchasing Power Calculator",
+    category: "finance",
+    description:
+      "Equivalent buying power across years, % change in purchasing power, and a plain-language inflation summary — average rate or CPI indexes, all in the browser.",
+    summary:
+      "Enter an amount, start and end year or a year span, plus an inflation rate or CPI indexes to see equivalent purchasing power.",
     cta: "Calculate",
   },
   {
