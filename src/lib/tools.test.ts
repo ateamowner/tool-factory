@@ -333,6 +333,26 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("balance transfer fee calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "purchasing power calculator")?.href,
+      "/finance/purchasing-power-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("purchasing power calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "purchasing power calculator")?.aliases.includes(
+        "inflation purchasing power calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "purchasing power calculator")?.aliases.includes(
+        "buying power calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/purchasing-power-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(keywordAlreadyPublished("buying power calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

@@ -214,6 +214,18 @@ describe("searchSite", () => {
       searchSite("balance transfer fee calculator", catalog)[0]?.href,
       "/finance/balance-transfer-calculator",
     );
+    assert.equal(
+      searchSite("purchasing power calculator", catalog)[0]?.href,
+      "/finance/purchasing-power-calculator",
+    );
+    assert.equal(
+      searchSite("inflation purchasing power calculator", catalog)[0]?.href,
+      "/finance/purchasing-power-calculator",
+    );
+    assert.equal(
+      searchSite("buying power calculator", catalog)[0]?.href,
+      "/finance/purchasing-power-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,
