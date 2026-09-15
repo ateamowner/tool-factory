@@ -10,7 +10,7 @@ export type Tool = {
   category: CategoryId;
   description: string;
   summary: string;
-  cta: "Calculate" | "Copy URL" | "Generate" | "Convert" | "Decode" | "Validate";
+  cta: "Calculate" | "Copy URL" | "Generate" | "Convert" | "Decode" | "Validate" | "Format";
 };
 
 export const CATEGORIES: Record<
@@ -36,7 +36,7 @@ export const CATEGORIES: Record<
     name: "Developer",
     href: "/dev",
     description:
-      "Small developer utilities that run locally in your browser — UUID generation, JWT decoding, and cron expressions.",
+      "Small developer utilities that run locally in your browser — UUID generation, JWT decoding, cron expressions, and a SQL formatter.",
   },
   convert: {
     id: "convert",
@@ -361,6 +361,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Pick minute, hour, day, month, and weekday fields or a preset, then copy the expression.",
     cta: "Generate",
+  },
+  {
+    keyword: "sql formatter",
+    aliases: [],
+    slug: "sql-formatter",
+    href: "/dev/sql-formatter",
+    title: "SQL Formatter",
+    shortTitle: "SQL Formatter",
+    category: "dev",
+    description:
+      "Pretty-print SQL with indentation and uppercase keywords in the browser. Copy the formatted query — nothing uploaded.",
+    summary:
+      "Paste a query to format SELECT, JOIN, and nested subqueries, then copy the result.",
+    cta: "Format",
   },
   {
     keyword: "heic to png converter",

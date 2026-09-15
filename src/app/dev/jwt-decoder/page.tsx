@@ -93,7 +93,11 @@ export default function JwtDecoderPage() {
         <p>
           Everything runs locally with no network call. Use this when you need
           to inspect a token you already have — not to authenticate a user.
-          Need identifiers for a test fixture? Open the{" "}
+          Need to pretty-print a query? Open the{" "}
+          <Link className="text-mint underline" href="/dev/sql-formatter">
+            SQL formatter
+          </Link>
+          . Need identifiers for a test fixture? Open the{" "}
           <Link className="text-mint underline" href="/dev/uuid-generator">
             UUID generator
           </Link>

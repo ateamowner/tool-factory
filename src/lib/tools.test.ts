@@ -88,6 +88,14 @@ describe("tool registry stop rule", () => {
       "Generate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "sql formatter")?.href,
+      "/dev/sql-formatter",
+    );
+    assert.ok(keywordAlreadyPublished("sql formatter"));
+    assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.category, "dev");
+    assert.equal(
       TOOLS.find((tool) => tool.href === "/finance/paycheck-calculator-hourly")?.cta,
       "Calculate",
     );
