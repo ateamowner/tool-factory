@@ -43,6 +43,7 @@ describe("searchSite", () => {
       searchSite("jwt token decoder", catalog)[0]?.href,
       "/dev/jwt-decoder",
     );
+    assert.equal(searchSite("sql formatter", catalog)[0]?.href, "/dev/sql-formatter");
     assert.equal(
       searchSite("paycheck calculator hourly", catalog)[0]?.href,
       "/finance/paycheck-calculator-hourly",

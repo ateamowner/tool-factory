@@ -97,8 +97,12 @@ export default function CronExpressionGeneratorPage() {
           few run times are estimated in your local timezone.
         </p>
         <p>
-          Everything stays in this tab — no upload, no account. Need random
-          IDs for a fixture? Open the{" "}
+          Everything stays in this tab — no upload, no account. Need to
+          pretty-print a query? Open the{" "}
+          <Link className="text-mint underline" href="/dev/sql-formatter">
+            SQL formatter
+          </Link>
+          . Need random IDs for a fixture? Open the{" "}
           <Link className="text-mint underline" href="/dev/uuid-generator">
             UUID generator
           </Link>

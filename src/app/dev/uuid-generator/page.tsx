@@ -90,8 +90,11 @@ export default function UuidGeneratorPage() {
         </p>
         <p>
           Bulk generate up to 1,000 IDs, copy a single row, or copy all as a
-          newline-separated list. Nothing is uploaded. Need to inspect a token?
-          Open the{" "}
+          newline-separated list. Nothing is uploaded. Need to pretty-print a query? Open the{" "}
+          <Link className="text-mint underline" href="/dev/sql-formatter">
+            SQL formatter
+          </Link>
+          . Need to inspect a token? Open the{" "}
           <Link className="text-mint underline" href="/dev/jwt-decoder">
             JWT decoder
           </Link>
