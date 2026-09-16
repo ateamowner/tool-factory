@@ -361,6 +361,26 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("buying power calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "straight line depreciation calculator")?.href,
+      "/finance/straight-line-depreciation-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("straight line depreciation calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "straight line depreciation calculator")?.aliases.includes(
+        "straight-line depreciation calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "straight line depreciation calculator")?.aliases.includes(
+        "sl depreciation",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/straight-line-depreciation-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(keywordAlreadyPublished("straight-line depreciation calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );
