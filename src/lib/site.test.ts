@@ -61,6 +61,7 @@ describe("toPublicUrl", () => {
     assert.ok(urls.every((url) => !url.includes("vercel.app")));
     assert.equal(urls.length, 1 + Object.keys(CATEGORIES).length + TOOLS.length);
     assert.ok(urls.includes("https://ateamkit.com/dev/sql-formatter"));
+    assert.ok(urls.includes("https://ateamkit.com/finance/straight-line-depreciation-calculator"));
   });
 });
 

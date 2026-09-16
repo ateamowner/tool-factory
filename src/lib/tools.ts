@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -258,6 +258,23 @@ export const TOOLS: Tool[] = [
       "Equivalent buying power across years, % change in purchasing power, and a plain-language inflation summary — average rate or CPI indexes, all in the browser.",
     summary:
       "Enter an amount, start and end year or a year span, plus an inflation rate or CPI indexes to see equivalent purchasing power.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "straight line depreciation calculator",
+    aliases: [
+      "straight-line depreciation calculator",
+      "sl depreciation",
+    ],
+    slug: "straight-line-depreciation-calculator",
+    href: "/finance/straight-line-depreciation-calculator",
+    title: "Straight Line Depreciation Calculator",
+    shortTitle: "Straight Line Depreciation",
+    category: "finance",
+    description:
+      "Annual straight-line expense, depreciable basis, optional monthly (annual ÷ 12), and a year-by-year book-value schedule — all in the browser.",
+    summary:
+      "Enter asset cost, salvage, and useful life. Optional first-year fraction or placed-in-service date.",
     cta: "Calculate",
   },
   {

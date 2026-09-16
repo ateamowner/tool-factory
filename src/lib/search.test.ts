@@ -227,6 +227,18 @@ describe("searchSite", () => {
       searchSite("buying power calculator", catalog)[0]?.href,
       "/finance/purchasing-power-calculator",
     );
+    assert.equal(
+      searchSite("straight line depreciation calculator", catalog)[0]?.href,
+      "/finance/straight-line-depreciation-calculator",
+    );
+    assert.equal(
+      searchSite("straight-line depreciation calculator", catalog)[0]?.href,
+      "/finance/straight-line-depreciation-calculator",
+    );
+    assert.equal(
+      searchSite("sl depreciation", catalog)[0]?.href,
+      "/finance/straight-line-depreciation-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,
