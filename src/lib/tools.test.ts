@@ -381,6 +381,15 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("straight-line depreciation calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "markup calculator")?.href,
+      "/finance/markup-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("markup calculator"));
+    assert.deepEqual(TOOLS.find((tool) => tool.href === "/finance/markup-calculator")?.aliases, []);
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/markup-calculator")?.cta, "Calculate");
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/markup-calculator")?.category, "finance");
+    assert.equal(keywordAlreadyPublished("markup percentage calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );
