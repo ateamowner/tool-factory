@@ -390,6 +390,15 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/markup-calculator")?.category, "finance");
     assert.equal(keywordAlreadyPublished("markup percentage calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "cd rate calculator")?.href,
+      "/finance/cd-rate-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("cd rate calculator"));
+    assert.deepEqual(TOOLS.find((tool) => tool.href === "/finance/cd-rate-calculator")?.aliases, []);
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/cd-rate-calculator")?.cta, "Calculate");
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/cd-rate-calculator")?.category, "finance");
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/cd-rate-calculator")?.title, "CD Rate Calculator");
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

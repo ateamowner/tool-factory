@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -275,6 +275,20 @@ export const TOOLS: Tool[] = [
       "Annual straight-line expense, depreciable basis, optional monthly (annual ÷ 12), and a year-by-year book-value schedule — all in the browser.",
     summary:
       "Enter asset cost, salvage, and useful life. Optional first-year fraction or placed-in-service date.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "cd rate calculator",
+    aliases: [],
+    slug: "cd-rate-calculator",
+    href: "/finance/cd-rate-calculator",
+    title: "CD Rate Calculator",
+    shortTitle: "CD Rate Calculator",
+    category: "finance",
+    description:
+      "Ending balance, interest earned, APY or interest rate, and a year-by-year schedule from deposit, term, and compounding — all in the browser.",
+    summary:
+      "Enter deposit, APY or interest rate, term in months or years, and compounding to see maturity value and interest.",
     cta: "Calculate",
   },
   {
