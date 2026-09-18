@@ -243,6 +243,10 @@ describe("searchSite", () => {
       searchSite("markup calculator", catalog)[0]?.href,
       "/finance/markup-calculator",
     );
+    assert.equal(
+      searchSite("cd rate calculator", catalog)[0]?.href,
+      "/finance/cd-rate-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,
