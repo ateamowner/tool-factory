@@ -64,6 +64,7 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/straight-line-depreciation-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/markup-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/cd-rate-calculator"));
+    assert.ok(urls.includes("https://ateamkit.com/finance/percent-off-calculator"));
   });
 });
 
