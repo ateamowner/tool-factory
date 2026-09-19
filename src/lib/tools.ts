@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -303,6 +303,20 @@ export const TOOLS: Tool[] = [
       "Selling price, profit dollars, markup %, and margin % from cost plus markup percent or selling price — all in the browser.",
     summary:
       "Enter cost and markup %, selling price, or a desired margin % to see price, profit, and the other percent.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "percent off calculator",
+    aliases: ["percentage off calculator", "percent discount calculator"],
+    slug: "percent-off-calculator",
+    href: "/finance/percent-off-calculator",
+    title: "Percent Off Calculator",
+    shortTitle: "Percent Off Calculator",
+    category: "finance",
+    description:
+      "Discount amount, sale price, and percent off from original price plus percent off, sale price, or dollars off — all in the browser.",
+    summary:
+      "Enter original price and percent off, sale price, or dollars off to see the discount and final price.",
     cta: "Calculate",
   },
   {

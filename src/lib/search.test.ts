@@ -247,6 +247,18 @@ describe("searchSite", () => {
       searchSite("cd rate calculator", catalog)[0]?.href,
       "/finance/cd-rate-calculator",
     );
+    assert.equal(
+      searchSite("percent off calculator", catalog)[0]?.href,
+      "/finance/percent-off-calculator",
+    );
+    assert.equal(
+      searchSite("percentage off calculator", catalog)[0]?.href,
+      "/finance/percent-off-calculator",
+    );
+    assert.equal(
+      searchSite("percent discount calculator", catalog)[0]?.href,
+      "/finance/percent-off-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,

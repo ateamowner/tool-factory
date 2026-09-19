@@ -399,6 +399,29 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/cd-rate-calculator")?.category, "finance");
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/cd-rate-calculator")?.title, "CD Rate Calculator");
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "percent off calculator")?.href,
+      "/finance/percent-off-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("percent off calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/percent-off-calculator")?.aliases.includes(
+        "percentage off calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/percent-off-calculator")?.aliases.includes(
+        "percent discount calculator",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/percent-off-calculator")?.cta, "Calculate");
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/percent-off-calculator")?.category, "finance");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/percent-off-calculator")?.title,
+      "Percent Off Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("percentage off calculator"), false);
+    assert.equal(keywordAlreadyPublished("percentage calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );
