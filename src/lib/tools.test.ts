@@ -420,6 +420,29 @@ describe("tool registry stop rule", () => {
       "Percent Off Calculator",
     );
     assert.equal(keywordAlreadyPublished("percentage off calculator"), false);
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "discount calculator")?.href,
+      "/finance/discount-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("discount calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/discount-calculator")?.aliases.includes(
+        "stacked discount calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/discount-calculator")?.aliases.includes(
+        "successive discount calculator",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/discount-calculator")?.cta, "Calculate");
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/discount-calculator")?.category, "finance");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/discount-calculator")?.title,
+      "Discount Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("stacked discount calculator"), false);
+    assert.equal(keywordAlreadyPublished("successive discount calculator"), false);
     assert.equal(keywordAlreadyPublished("percentage calculator"), false);
     assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
