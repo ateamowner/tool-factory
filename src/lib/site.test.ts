@@ -65,6 +65,7 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/markup-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/cd-rate-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/percent-off-calculator"));
+    assert.ok(urls.includes("https://ateamkit.com/finance/discount-calculator"));
   });
 });
 

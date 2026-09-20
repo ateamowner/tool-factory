@@ -259,6 +259,18 @@ describe("searchSite", () => {
       searchSite("percent discount calculator", catalog)[0]?.href,
       "/finance/percent-off-calculator",
     );
+    assert.equal(
+      searchSite("discount calculator", catalog)[0]?.href,
+      "/finance/discount-calculator",
+    );
+    assert.equal(
+      searchSite("stacked discount calculator", catalog)[0]?.href,
+      "/finance/discount-calculator",
+    );
+    assert.equal(
+      searchSite("successive discount calculator", catalog)[0]?.href,
+      "/finance/discount-calculator",
+    );
     assert.equal(searchSite("household", catalog)[0]?.href, "/home");
     assert.equal(
       searchSite("soft wash mix calculator", catalog)[0]?.href,
