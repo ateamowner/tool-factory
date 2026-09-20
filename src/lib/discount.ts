@@ -120,10 +120,9 @@ export function originalFromSalePercent(salePrice: number, percentOff: number): 
   return salePrice / (1 - percentOff / 100);
 }
 
-/** Combined effective % = (1 − (1 − first) × (1 − second)) × 100. */
+/** Combined effective % = first + second − (first × second / 100). */
 export function effectiveStackedPercent(firstPercent: number, secondPercent: number): number {
-  const remaining = (1 - firstPercent / 100) * (1 - secondPercent / 100);
-  return (1 - remaining) * 100;
+  return firstPercent + secondPercent - (firstPercent * secondPercent) / 100;
 }
 
 export function applyStackedDiscounts(
@@ -134,7 +133,7 @@ export function applyStackedDiscounts(
   const afterFirstPrice = saleFromPercent(originalPrice, firstPercent);
   const salePrice = saleFromPercent(afterFirstPrice, secondPercent);
   const discountAmount = originalPrice - salePrice;
-  const effectivePercent = percentFromSale(originalPrice, salePrice);
+  const effectivePercent = effectiveStackedPercent(firstPercent, secondPercent);
 
   return { afterFirstPrice, salePrice, discountAmount, effectivePercent };
 }
