@@ -213,7 +213,7 @@ export function FutureValueCalculator() {
             emphasize
           />
           <ResultRow
-            label="Total contributions"
+            label="Total invested"
             value={
               result.valid && result.totalContributions !== null
                 ? formatUsd(result.totalContributions)
@@ -229,7 +229,7 @@ export function FutureValueCalculator() {
             }
           />
           <ResultRow
-            label="Growth on money in"
+            label="Growth vs money in"
             value={
               result.valid && result.effectiveYieldPercent !== null
                 ? formatPercent(result.effectiveYieldPercent)

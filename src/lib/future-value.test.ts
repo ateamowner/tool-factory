@@ -113,8 +113,10 @@ describe("computeFutureValue", () => {
 
     assert.equal(result.valid, true);
     assert.equal(cents(result.futureValue), cents(expected));
+    assert.equal(cents(result.futureValue), 54_713.58);
     assert.equal(result.contributionCount, 120);
     assert.equal(result.totalContributions, 10_000 + 200 * 120);
+    assert.equal(cents(result.interestEarned), 20_713.58);
     assert.equal(
       cents(result.interestEarned),
       cents((result.futureValue ?? 0) - (result.totalContributions ?? 0)),
@@ -237,10 +239,10 @@ describe("formatFutureValueSummary", () => {
         ratePercent: 7,
         compounding: "monthly",
         years: 10,
-        futureValue: 54_713.77,
-        interestEarned: 20_713.77,
+        futureValue: 54_713.58,
+        interestEarned: 20_713.58,
       }),
-      "$10,000.00 at 7% for 10 years (monthly compounding) plus $200.00 monthly (end-of-period) grows to $54,713.77 — $20,713.77 interest earned.",
+      "$10,000.00 at 7% for 10 years (monthly compounding) plus $200.00 monthly (end-of-period) grows to $54,713.58 — $20,713.58 interest earned.",
     );
   });
 });
