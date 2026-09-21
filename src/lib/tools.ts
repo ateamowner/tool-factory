@@ -43,7 +43,7 @@ export const CATEGORIES: Record<
     name: "Convert",
     href: "/convert",
     description:
-      "Client-side file converters. Spreadsheets and images stay in the browser — nothing is uploaded.",
+      "Client-side converters for files and length units. Convert millimeters to inches with the exact 25.4 mm = 1 inch formula, plus spreadsheets and images — nothing is uploaded.",
   },
   home: {
     id: "home",
@@ -517,6 +517,20 @@ export const TOOLS: Tool[] = [
       "Convert PNG images to JPG in the browser. Batch convert, then download — files never leave the device.",
     summary:
       "Select one or more .png files and download JPG copies. Encoding stays in your browser.",
+    cta: "Convert",
+  },
+  {
+    keyword: "mm to inches calculator",
+    aliases: ["mm to inches", "millimeters to inches", "mm to in converter"],
+    slug: "mm-to-inches-calculator",
+    href: "/convert/mm-to-inches-calculator",
+    title: "Mm to Inches Calculator",
+    shortTitle: "Mm to Inches",
+    category: "convert",
+    description:
+      "Convert millimeters to inches (and inches back to mm) with the exact 1 inch = 25.4 mm formula — decimal and fractional inches, all in the browser.",
+    summary:
+      "Enter millimeters or inches to see the other unit, plus a nearest 1/64 inch fraction. Nothing is uploaded.",
     cta: "Convert",
   },
   {
