@@ -445,6 +445,32 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("successive discount calculator"), false);
     assert.equal(keywordAlreadyPublished("percentage calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "future value calculator")?.href,
+      "/finance/future-value-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("future value calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/future-value-calculator")?.aliases.includes(
+        "fv calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/future-value-calculator")?.aliases.includes(
+        "future value of investment calculator",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/future-value-calculator")?.cta, "Calculate");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/future-value-calculator")?.category,
+      "finance",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/future-value-calculator")?.title,
+      "Future Value Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("fv calculator"), false);
+    assert.equal(keywordAlreadyPublished("compound interest calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -331,6 +331,20 @@ export const TOOLS: Tool[] = [
       "Sale price, discount dollars, and discount % from list price plus % or $ off — plus reverse (sale + % → original) and stacked/successive percent discounts. All in the browser.",
     summary:
       "Enter list price and discount % or dollars, reverse from a sale price, or stack two percent discounts for the combined effective %.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "future value calculator",
+    aliases: ["fv calculator", "future value of investment calculator"],
+    slug: "future-value-calculator",
+    href: "/finance/future-value-calculator",
+    title: "Future Value Calculator",
+    shortTitle: "Future Value Calculator",
+    category: "finance",
+    description:
+      "Future value, total contributions, and interest earned from an initial investment, optional deposits, annual rate, and compounding — all in the browser.",
+    summary:
+      "Enter present value, optional periodic contribution, annual interest rate, compounding frequency, and years to see future value.",
     cta: "Calculate",
   },
   {
