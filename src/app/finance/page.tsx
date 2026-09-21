@@ -5,7 +5,7 @@ import { toPublicUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Finance Tools",
   description:
-    "Free finance calculators that run in your browser, including a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a VAT number validator, a monthly budget template, a 403b calculator, a credit utilization calculator, a real estate commission calculator, a refinance calculator auto loan, a mortgage recast calculator, an emergency fund calculator, a paycheck calculator hourly, and a stock average calculator for weighted average cost.",
+    "Free finance calculators that run in your browser, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a VAT number validator, a monthly budget template, a 403b calculator, a credit utilization calculator, a real estate commission calculator, a refinance calculator auto loan, a mortgage recast calculator, an emergency fund calculator, a paycheck calculator hourly, and a stock average calculator for weighted average cost.",
   alternates: { canonical: toPublicUrl("/finance") },
 };
 
