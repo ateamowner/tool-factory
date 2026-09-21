@@ -138,6 +138,43 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/convert/png-to-jpg")?.cta, "Convert");
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "mm to inches calculator")?.href,
+      "/convert/mm-to-inches-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("mm to inches calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "mm to inches calculator")?.aliases.includes(
+        "mm to inches",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "mm to inches calculator")?.aliases.includes(
+        "millimeters to inches",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "mm to inches calculator")?.aliases.includes(
+        "mm to in converter",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/mm-to-inches-calculator")?.cta,
+      "Convert",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/mm-to-inches-calculator")?.category,
+      "convert",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/mm-to-inches-calculator")?.title,
+      "Mm to Inches Calculator",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/mm-to-inches-calculator")?.shortTitle,
+      "Mm to Inches",
+    );
+    assert.equal(keywordAlreadyPublished("mm to inches"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "emergency fund calculator")?.href,
       "/finance/emergency-fund-calculator",
     );

@@ -26,6 +26,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | HEIC to PDF converter | `/convert/heic-to-pdf` |
 | Excel to PDF converter | `/convert/excel-to-pdf` |
 | PNG to JPG converter | `/convert/png-to-jpg` |
+| Mm to inches calculator (also millimeters to inches / mm to in converter) | `/convert/mm-to-inches-calculator` |
 | Soft wash mix calculator (also softwash / house wash mix calculator) | `/home/soft-wash-mix-calculator` |
 | House sq-ft estimator (also house square footage estimator) | `/home/house-sq-ft-estimator` |
 | Vinyl siding cleanability checker | `/home/vinyl-siding-cleanability` |

@@ -76,6 +76,22 @@ describe("searchSite", () => {
       "/convert/png-to-jpg",
     );
     assert.equal(
+      searchSite("mm to inches calculator", catalog)[0]?.href,
+      "/convert/mm-to-inches-calculator",
+    );
+    assert.equal(
+      searchSite("mm to inches", catalog)[0]?.href,
+      "/convert/mm-to-inches-calculator",
+    );
+    assert.equal(
+      searchSite("millimeters to inches", catalog)[0]?.href,
+      "/convert/mm-to-inches-calculator",
+    );
+    assert.equal(
+      searchSite("mm to in converter", catalog)[0]?.href,
+      "/convert/mm-to-inches-calculator",
+    );
+    assert.equal(
       searchSite("emergency fund calculator", catalog)[0]?.href,
       "/finance/emergency-fund-calculator",
     );
