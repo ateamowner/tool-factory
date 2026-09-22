@@ -92,6 +92,18 @@ describe("searchSite", () => {
       "/convert/mm-to-inches-calculator",
     );
     assert.equal(
+      searchSite("cubic yard calculator", catalog)[0]?.href,
+      "/convert/cubic-yard-calculator",
+    );
+    assert.equal(
+      searchSite("cubic yards calculator", catalog)[0]?.href,
+      "/convert/cubic-yard-calculator",
+    );
+    assert.equal(
+      searchSite("mulch calculator", catalog)[0]?.href,
+      "/convert/cubic-yard-calculator",
+    );
+    assert.equal(
       searchSite("emergency fund calculator", catalog)[0]?.href,
       "/finance/emergency-fund-calculator",
     );

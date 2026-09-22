@@ -5,7 +5,7 @@ import { toPublicUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Convert Tools",
   description:
-    "Free converters that run in your browser, including a millimeters to inches calculator, a PNG to JPG converter, Excel to PDF, HEIC to PNG, and HEIC to PDF. Nothing is uploaded.",
+    "Free converters that run in your browser, including a cubic yard calculator, a millimeters to inches calculator, a PNG to JPG converter, Excel to PDF, HEIC to PNG, and HEIC to PDF. Nothing is uploaded.",
   alternates: { canonical: toPublicUrl("/convert") },
 };
 
