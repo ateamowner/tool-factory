@@ -43,7 +43,7 @@ export const CATEGORIES: Record<
     name: "Convert",
     href: "/convert",
     description:
-      "Client-side converters for files and length units. Convert millimeters to inches with the exact 25.4 mm = 1 inch formula, plus spreadsheets and images — nothing is uploaded.",
+      "Client-side converters for files, length, and volume. Calculate cubic yards from length, width, and depth, convert millimeters to inches with the exact 25.4 mm = 1 inch formula, plus spreadsheets and images — nothing is uploaded.",
   },
   home: {
     id: "home",
@@ -532,6 +532,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Enter millimeters or inches to see the other unit, plus a nearest 1/64 inch fraction. Nothing is uploaded.",
     cta: "Convert",
+  },
+  {
+    keyword: "cubic yard calculator",
+    aliases: ["cubic yards calculator", "mulch calculator", "gravel calculator"],
+    slug: "cubic-yard-calculator",
+    href: "/convert/cubic-yard-calculator",
+    title: "Cubic Yard Calculator",
+    shortTitle: "Cubic Yard Calculator",
+    category: "convert",
+    description:
+      "Cubic yards and cubic feet from length × width × depth (or a cylinder) in feet or inches — mulch, gravel, concrete, soil, and sand, all in the browser.",
+    summary:
+      "Enter rectangle or cylinder dimensions in feet or inches. Optional bag count. Nothing is uploaded.",
+    cta: "Calculate",
   },
   {
     keyword: "soft wash mix calculator",

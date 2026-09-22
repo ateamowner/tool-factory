@@ -173,6 +173,33 @@ describe("tool registry stop rule", () => {
       TOOLS.find((tool) => tool.href === "/convert/mm-to-inches-calculator")?.shortTitle,
       "Mm to Inches",
     );
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "cubic yard calculator")?.href,
+      "/convert/cubic-yard-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("cubic yard calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "cubic yard calculator")?.aliases.includes(
+        "cubic yards calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "cubic yard calculator")?.aliases.includes(
+        "mulch calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/cubic-yard-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/cubic-yard-calculator")?.category,
+      "convert",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/cubic-yard-calculator")?.title,
+      "Cubic Yard Calculator",
+    );
     assert.equal(keywordAlreadyPublished("mm to inches"), false);
     assert.equal(
       TOOLS.find((tool) => tool.keyword === "emergency fund calculator")?.href,
