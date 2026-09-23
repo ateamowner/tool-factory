@@ -191,6 +191,11 @@ describe("searchSite", () => {
       searchSite("whois age checker", catalog)[0]?.href,
       "/seo/domain-age-checker",
     );
+    assert.equal(searchSite("cpm calculator", catalog)[0]?.href, "/seo/cpm-calculator");
+    assert.equal(
+      searchSite("cost per mille calculator", catalog)[0]?.href,
+      "/seo/cpm-calculator",
+    );
     assert.equal(
       searchSite("vat number validator", catalog)[0]?.href,
       "/finance/vat-number-validator",

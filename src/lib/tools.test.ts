@@ -581,6 +581,29 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.href === "/seo/domain-age-checker")?.category, "seo");
     assert.equal(keywordAlreadyPublished("check domain age"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "cpm calculator")?.href,
+      "/seo/cpm-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("cpm calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "cpm calculator")?.aliases.includes(
+        "cost per mille calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "cpm calculator")?.aliases.includes(
+        "cost per thousand calculator",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/seo/cpm-calculator")?.cta, "Calculate");
+    assert.equal(TOOLS.find((tool) => tool.href === "/seo/cpm-calculator")?.category, "seo");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/seo/cpm-calculator")?.title,
+      "CPM Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("cost per mille calculator"), false);
+    assert.equal(keywordAlreadyPublished("cpc calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "soft wash mix calculator")?.href,
       "/home/soft-wash-mix-calculator",
     );

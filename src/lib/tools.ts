@@ -29,7 +29,7 @@ export const CATEGORIES: Record<
     name: "SEO",
     href: "/seo",
     description:
-      "Campaign, crawl, and structured-data tools for marketers. Build tracking URLs, robots.txt files, check JSON-LD schema markup, and look up domain age without sending pasted WHOIS to a server.",
+      "Campaign, crawl, and structured-data tools for marketers, including a CPM calculator. Build tracking URLs, robots.txt files, check JSON-LD schema markup, calculate cost per mille, and look up domain age without sending pasted WHOIS to a server.",
   },
   dev: {
     id: "dev",
@@ -407,6 +407,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Enter a domain to query public RDAP, or paste WHOIS/RDAP text to parse creation and expiry dates locally.",
     cta: "Validate",
+  },
+  {
+    keyword: "cpm calculator",
+    aliases: ["cost per mille calculator", "cost per thousand calculator"],
+    slug: "cpm-calculator",
+    href: "/seo/cpm-calculator",
+    title: "CPM Calculator",
+    shortTitle: "CPM Calculator",
+    category: "seo",
+    description:
+      "CPM calculator for cost per 1,000 impressions — solve CPM, cost, or impressions, plus CPC and CTR, all in the browser.",
+    summary:
+      "Enter cost and impressions to see CPM, or switch modes to solve cost, impressions, or CPM from CPC and CTR.",
+    cta: "Calculate",
   },
   {
     keyword: "uuid generator",
