@@ -225,6 +225,18 @@ describe("searchSite", () => {
       "/finance/break-even-sales-calculator",
     );
     assert.equal(
+      searchSite("bottleneck calculator", catalog)[0]?.href,
+      "/finance/bottleneck-calculator",
+    );
+    assert.equal(
+      searchSite("theory of constraints calculator", catalog)[0]?.href,
+      "/finance/bottleneck-calculator",
+    );
+    assert.equal(
+      searchSite("throughput calculator", catalog)[0]?.href,
+      "/finance/bottleneck-calculator",
+    );
+    assert.equal(
       searchSite("student loan refinance calculator", catalog)[0]?.href,
       "/finance/student-loan-refinance-calculator",
     );

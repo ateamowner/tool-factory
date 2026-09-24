@@ -365,6 +365,40 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("break even calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "bottleneck calculator")?.href,
+      "/finance/bottleneck-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("bottleneck calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "bottleneck calculator")?.aliases.includes(
+        "theory of constraints calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "bottleneck calculator")?.aliases.includes(
+        "throughput calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "bottleneck calculator")?.aliases.includes(
+        "constraint calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/bottleneck-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/bottleneck-calculator")?.category,
+      "finance",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/bottleneck-calculator")?.title,
+      "Bottleneck Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("theory of constraints calculator"), false);
+    assert.equal(keywordAlreadyPublished("throughput calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.href,
       "/finance/student-loan-refinance-calculator",
     );

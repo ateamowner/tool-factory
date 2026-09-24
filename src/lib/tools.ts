@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -210,6 +210,24 @@ export const TOOLS: Tool[] = [
       "Break-even units, sales revenue, and contribution margin from fixed costs, variable cost, and price — optional target profit. All in the browser.",
     summary:
       "Enter fixed costs, variable cost per unit, and price. Optional target profit shows units and sales to hit that profit.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "bottleneck calculator",
+    aliases: [
+      "theory of constraints calculator",
+      "throughput calculator",
+      "constraint calculator",
+    ],
+    slug: "bottleneck-calculator",
+    href: "/finance/bottleneck-calculator",
+    title: "Bottleneck Calculator",
+    shortTitle: "Bottleneck Calculator",
+    category: "finance",
+    description:
+      "Bottleneck step, system throughput, and utilization % from each step’s capacity — Theory of Constraints, all in the browser.",
+    summary:
+      "Add process steps and units per period. The lowest capacity is the bottleneck and sets throughput.",
     cta: "Calculate",
   },
   {
