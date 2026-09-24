@@ -70,7 +70,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/convert/mm-to-inches-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/convert/cubic-yard-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/seo/cpm-calculator"));
-    assert.equal(urls.length, 45);
+    assert.ok(urls.includes("https://ateamkit.com/finance/bottleneck-calculator"));
+    assert.equal(urls.length, 46);
   });
 });
 
