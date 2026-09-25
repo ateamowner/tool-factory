@@ -365,5 +365,13 @@ describe("searchSite", () => {
       searchSite("roof algae quiz", catalog)[0]?.href,
       "/home/roof-algae-severity",
     );
+    assert.equal(
+      searchSite("roofing calculator", catalog)[0]?.href,
+      "/home/roofing-calculator",
+    );
+    assert.equal(
+      searchSite("roofing squares calculator", catalog)[0]?.href,
+      "/home/roofing-calculator",
+    );
   });
 });

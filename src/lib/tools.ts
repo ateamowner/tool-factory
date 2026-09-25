@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking or a chemical spec.",
+      "Household calculators that run in the browser, including a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
 };
 
@@ -645,6 +645,20 @@ export const TOOLS: Tool[] = [
       "Educational 1–4 streak score from coverage, roof age, trees, and north face, plus a typical soft-wash candidate note — not a diagnosis.",
     summary:
       "Describe streak coverage and shade factors for a 1–4 appearance score. Optional quote form after results.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "roofing calculator",
+    aliases: ["roof square calculator", "roofing squares calculator"],
+    slug: "roofing-calculator",
+    href: "/home/roofing-calculator",
+    title: "Roofing Calculator",
+    shortTitle: "Roofing Calculator",
+    category: "home",
+    description:
+      "Roof surface area, roofing squares, and squares with waste from length × width or plan area, plus an optional pitch factor. Optional price per square stays blank.",
+    summary:
+      "Enter roof length and width or a plan area, an optional pitch, and waste. One square is 100 sq ft. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];

@@ -69,9 +69,10 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/future-value-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/convert/mm-to-inches-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/convert/cubic-yard-calculator"));
+    assert.ok(urls.includes("https://ateamkit.com/home/roofing-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/seo/cpm-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/bottleneck-calculator"));
-    assert.equal(urls.length, 46);
+    assert.equal(urls.length, 47);
   });
 });
 

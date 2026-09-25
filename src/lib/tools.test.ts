@@ -690,8 +690,28 @@ describe("tool registry stop rule", () => {
       "Calculate",
     );
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "roofing calculator")?.href,
+      "/home/roofing-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("roofing calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "roofing calculator")?.aliases.includes(
+        "roof square calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/home/roofing-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/home/roofing-calculator")?.category, "home");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/home/roofing-calculator")?.title,
+      "Roofing Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("roof square calculator"), false);
+    assert.equal(
       TOOLS.filter((tool) => tool.category === "home").map((tool) => tool.slug).sort().join(","),
-      "house-sq-ft-estimator,roof-algae-severity,soft-wash-mix-calculator,vinyl-siding-cleanability",
+      "house-sq-ft-estimator,roof-algae-severity,roofing-calculator,soft-wash-mix-calculator,vinyl-siding-cleanability",
     );
   });
 
