@@ -72,7 +72,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/home/roofing-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/seo/cpm-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/bottleneck-calculator"));
-    assert.equal(urls.length, 47);
+    assert.ok(urls.includes("https://ateamkit.com/finance/overtime-calculator"));
+    assert.equal(urls.length, 48);
   });
 });
 

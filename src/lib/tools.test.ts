@@ -397,6 +397,40 @@ describe("tool registry stop rule", () => {
       "Bottleneck Calculator",
     );
     assert.equal(keywordAlreadyPublished("theory of constraints calculator"), false);
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "overtime calculator")?.href,
+      "/finance/overtime-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("overtime calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "overtime calculator")?.aliases.includes(
+        "overtime pay calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "overtime calculator")?.aliases.includes(
+        "time and a half calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "overtime calculator")?.aliases.includes(
+        "ot calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/overtime-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/overtime-calculator")?.category,
+      "finance",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/overtime-calculator")?.title,
+      "Overtime Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("overtime pay calculator"), false);
+    assert.equal(keywordAlreadyPublished("time and a half calculator"), false);
     assert.equal(keywordAlreadyPublished("throughput calculator"), false);
     assert.equal(
       TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.href,
