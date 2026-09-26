@@ -373,5 +373,17 @@ describe("searchSite", () => {
       searchSite("roofing squares calculator", catalog)[0]?.href,
       "/home/roofing-calculator",
     );
+    assert.equal(
+      searchSite("overtime calculator", catalog)[0]?.href,
+      "/finance/overtime-calculator",
+    );
+    assert.equal(
+      searchSite("time and a half calculator", catalog)[0]?.href,
+      "/finance/overtime-calculator",
+    );
+    assert.equal(
+      searchSite("overtime pay calculator", catalog)[0]?.href,
+      "/finance/overtime-calculator",
+    );
   });
 });

@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -228,6 +228,24 @@ export const TOOLS: Tool[] = [
       "Bottleneck step, system throughput, and utilization % from each step’s capacity — Theory of Constraints, all in the browser.",
     summary:
       "Add process steps and units per period. The lowest capacity is the bottleneck and sets throughput.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "overtime calculator",
+    aliases: [
+      "overtime pay calculator",
+      "time and a half calculator",
+      "ot calculator",
+    ],
+    slug: "overtime-calculator",
+    href: "/finance/overtime-calculator",
+    title: "Overtime Calculator",
+    shortTitle: "Overtime Calculator",
+    category: "finance",
+    description:
+      "Regular pay, overtime pay, and total gross from hourly rate, regular/OT hours or total hours with a weekly threshold — default 1.5×, all in the browser.",
+    summary:
+      "Enter hourly rate, hours (split or total with a 40-hour threshold), and OT multiplier to see regular, OT, and total pay.",
     cta: "Calculate",
   },
   {
