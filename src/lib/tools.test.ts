@@ -433,6 +433,35 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("time and a half calculator"), false);
     assert.equal(keywordAlreadyPublished("throughput calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "apr calculator")?.href,
+      "/finance/apr-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("apr calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "apr calculator")?.aliases.includes(
+        "loan apr calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "apr calculator")?.aliases.includes(
+        "annual percentage rate calculator",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/apr-calculator")?.cta,
+      "Calculate",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/apr-calculator")?.category,
+      "finance",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/apr-calculator")?.title,
+      "APR Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("loan apr calculator"), false);
+    assert.equal(keywordAlreadyPublished("annual percentage rate calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.href,
       "/finance/student-loan-refinance-calculator",
     );
