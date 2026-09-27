@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -246,6 +246,23 @@ export const TOOLS: Tool[] = [
       "Regular pay, overtime pay, and total gross from hourly rate, regular/OT hours or total hours with a weekly threshold — default 1.5×, all in the browser.",
     summary:
       "Enter hourly rate, hours (split or total with a 40-hour threshold), and OT multiplier to see regular, OT, and total pay.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "apr calculator",
+    aliases: [
+      "loan apr calculator",
+      "annual percentage rate calculator",
+    ],
+    slug: "apr-calculator",
+    href: "/finance/apr-calculator",
+    title: "APR Calculator",
+    shortTitle: "APR Calculator",
+    category: "finance",
+    description:
+      "Monthly payment, estimated APR, total interest, and total cost for a fixed installment loan — optional upfront fees reduce net proceeds, all in the browser.",
+    summary:
+      "Enter loan amount, nominal rate, term, and optional fees to see payment, APR, and total cost.",
     cta: "Calculate",
   },
   {
