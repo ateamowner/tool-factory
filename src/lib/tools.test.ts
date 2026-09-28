@@ -462,6 +462,35 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("loan apr calculator"), false);
     assert.equal(keywordAlreadyPublished("annual percentage rate calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "json to csv")?.href,
+      "/convert/json-to-csv",
+    );
+    assert.ok(keywordAlreadyPublished("json to csv"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "json to csv")?.aliases.includes(
+        "json to csv converter",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "json to csv")?.aliases.includes(
+        "convert json to csv",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/json-to-csv")?.cta,
+      "Convert",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/json-to-csv")?.category,
+      "convert",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/json-to-csv")?.title,
+      "JSON to CSV Converter",
+    );
+    assert.equal(keywordAlreadyPublished("json to csv converter"), false);
+    assert.equal(keywordAlreadyPublished("convert json to csv"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.href,
       "/finance/student-loan-refinance-calculator",
     );

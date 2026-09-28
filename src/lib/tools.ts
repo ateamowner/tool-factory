@@ -43,7 +43,7 @@ export const CATEGORIES: Record<
     name: "Convert",
     href: "/convert",
     description:
-      "Client-side converters for files, length, and volume. Calculate cubic yards from length, width, and depth, convert millimeters to inches with the exact 25.4 mm = 1 inch formula, plus spreadsheets and images — nothing is uploaded.",
+      "Client-side converters for files, length, volume, and tabular data. Convert JSON to CSV in the browser, calculate cubic yards from length, width, and depth, convert millimeters to inches with the exact 25.4 mm = 1 inch formula, plus spreadsheets and images — nothing is uploaded.",
   },
   home: {
     id: "home",
@@ -570,6 +570,24 @@ export const TOOLS: Tool[] = [
       "Convert Excel .xlsx and .xls spreadsheets to PDF in the browser. Batch convert, then download — files never leave the device.",
     summary:
       "Select one or more .xlsx or .xls files and download a table PDF for each workbook. Parsing stays in your browser.",
+    cta: "Convert",
+  },
+  {
+    keyword: "json to csv",
+    aliases: [
+      "json to csv converter",
+      "convert json to csv",
+      "json2csv",
+    ],
+    slug: "json-to-csv",
+    href: "/convert/json-to-csv",
+    title: "JSON to CSV Converter",
+    shortTitle: "JSON to CSV",
+    category: "convert",
+    description:
+      "Convert JSON arrays and objects to CSV in the browser. Paste or open a .json file, then copy or download — nothing is uploaded.",
+    summary:
+      "Paste JSON or choose a .json file to get CSV columns, a preview, and a download. Parsing stays in your browser.",
     cta: "Convert",
   },
   {
