@@ -111,7 +111,11 @@ export default function JsonToCsvPage() {
           broken file.
         </p>
         <p>
-          Need a spreadsheet turned into a document instead? Use the{" "}
+          Going the other way into a workbook? Use the{" "}
+          <Link className="text-mint underline" href="/convert/csv-to-excel">
+            CSV to Excel converter
+          </Link>
+          . Need a spreadsheet turned into a document instead? Use the{" "}
           <Link className="text-mint underline" href="/convert/excel-to-pdf">
             Excel to PDF converter
           </Link>
