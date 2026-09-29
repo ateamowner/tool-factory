@@ -43,7 +43,7 @@ export const CATEGORIES: Record<
     name: "Convert",
     href: "/convert",
     description:
-      "Client-side converters for files, length, volume, and tabular data. Convert JSON to CSV in the browser, calculate cubic yards from length, width, and depth, convert millimeters to inches with the exact 25.4 mm = 1 inch formula, plus spreadsheets and images — nothing is uploaded.",
+      "Client-side converters for files, length, volume, and tabular data. Convert CSV to Excel or JSON to CSV in the browser, calculate cubic yards from length, width, and depth, convert millimeters to inches with the exact 25.4 mm = 1 inch formula, plus spreadsheets and images — nothing is uploaded.",
   },
   home: {
     id: "home",
@@ -570,6 +570,24 @@ export const TOOLS: Tool[] = [
       "Convert Excel .xlsx and .xls spreadsheets to PDF in the browser. Batch convert, then download — files never leave the device.",
     summary:
       "Select one or more .xlsx or .xls files and download a table PDF for each workbook. Parsing stays in your browser.",
+    cta: "Convert",
+  },
+  {
+    keyword: "csv to excel",
+    aliases: [
+      "csv to excel converter",
+      "convert csv to excel",
+      "csv to xlsx",
+    ],
+    slug: "csv-to-excel",
+    href: "/convert/csv-to-excel",
+    title: "CSV to Excel Converter",
+    shortTitle: "CSV to Excel",
+    category: "convert",
+    description:
+      "Convert CSV to Excel (.xlsx) in the browser. Paste or open a .csv file, then download a spreadsheet — nothing is uploaded.",
+    summary:
+      "Paste CSV or choose a .csv file to get Excel columns, a preview, and an .xlsx download. Parsing stays in your browser.",
     cta: "Convert",
   },
   {

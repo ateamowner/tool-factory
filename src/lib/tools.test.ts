@@ -491,6 +491,40 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("json to csv converter"), false);
     assert.equal(keywordAlreadyPublished("convert json to csv"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "csv to excel")?.href,
+      "/convert/csv-to-excel",
+    );
+    assert.ok(keywordAlreadyPublished("csv to excel"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "csv to excel")?.aliases.includes(
+        "csv to excel converter",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "csv to excel")?.aliases.includes(
+        "convert csv to excel",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "csv to excel")?.aliases.includes(
+        "csv to xlsx",
+      ),
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/csv-to-excel")?.cta,
+      "Convert",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/csv-to-excel")?.category,
+      "convert",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/convert/csv-to-excel")?.title,
+      "CSV to Excel Converter",
+    );
+    assert.equal(keywordAlreadyPublished("csv to excel converter"), false);
+    assert.equal(keywordAlreadyPublished("convert csv to excel"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "student loan refinance calculator")?.href,
       "/finance/student-loan-refinance-calculator",
     );
