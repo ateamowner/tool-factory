@@ -695,6 +695,32 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("fv calculator"), false);
     assert.equal(keywordAlreadyPublished("compound interest calculator"), false);
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "roi calculator")?.href,
+      "/finance/roi-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("roi calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/roi-calculator")?.aliases.includes(
+        "return on investment calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/roi-calculator")?.aliases.includes(
+        "investment roi calculator",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/roi-calculator")?.cta, "Calculate");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/roi-calculator")?.category,
+      "finance",
+    );
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/finance/roi-calculator")?.title,
+      "ROI Calculator",
+    );
+    assert.equal(keywordAlreadyPublished("return on investment calculator"), false);
+    assert.equal(keywordAlreadyPublished("investment roi calculator"), false);
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "schema markup validator")?.href,
       "/seo/schema-markup-validator",
     );

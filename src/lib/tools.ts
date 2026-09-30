@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -398,6 +398,20 @@ export const TOOLS: Tool[] = [
       "Future value, total contributions, and interest earned from an initial investment, optional deposits, annual rate, and compounding — all in the browser.",
     summary:
       "Enter present value, optional periodic contribution, annual interest rate, compounding frequency, and years to see future value.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "roi calculator",
+    aliases: ["return on investment calculator", "investment roi calculator"],
+    slug: "roi-calculator",
+    href: "/finance/roi-calculator",
+    title: "ROI Calculator",
+    shortTitle: "ROI Calculator",
+    category: "finance",
+    description:
+      "ROI %, net profit, and final value from an initial investment plus ending value or gain — all in the browser.",
+    summary:
+      "Enter initial investment and final value (or net profit) to see return on investment percent and gain.",
     cta: "Calculate",
   },
   {
