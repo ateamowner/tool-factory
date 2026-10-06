@@ -92,6 +92,14 @@ describe("tool registry stop rule", () => {
       "/dev/sql-formatter",
     );
     assert.ok(keywordAlreadyPublished("sql formatter"));
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "json formatter")?.href,
+      "/dev/json-formatter",
+    );
+    assert.ok(keywordAlreadyPublished("json formatter"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/json-formatter")?.cta, "Format");
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/json-formatter")?.category, "dev");
+
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.category, "dev");

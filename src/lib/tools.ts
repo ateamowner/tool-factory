@@ -36,7 +36,7 @@ export const CATEGORIES: Record<
     name: "Developer",
     href: "/dev",
     description:
-      "Small developer utilities that run locally in your browser — UUID generation, JWT decoding, cron expressions, and a SQL formatter.",
+      "Small developer utilities that run locally in your browser — a JSON formatter and validator, UUID generation, JWT decoding, cron expressions, and a SQL formatter.",
   },
   convert: {
     id: "convert",
@@ -542,6 +542,20 @@ export const TOOLS: Tool[] = [
       "Pretty-print SQL with indentation and uppercase keywords in the browser. Copy the formatted query — nothing uploaded.",
     summary:
       "Paste a query to format SELECT, JOIN, and nested subqueries, then copy the result.",
+    cta: "Format",
+  },
+  {
+    keyword: "json formatter",
+    aliases: [],
+    slug: "json-formatter",
+    href: "/dev/json-formatter",
+    title: "JSON Formatter",
+    shortTitle: "JSON Formatter",
+    category: "dev",
+    description:
+      "Validate and pretty-print JSON in the browser with 2 or 4 spaces or tabs, minify, or sort keys. Copy or download — nothing uploaded.",
+    summary:
+      "Paste JSON to validate it, pretty-print or minify it, then copy or download the result.",
     cta: "Format",
   },
   {
