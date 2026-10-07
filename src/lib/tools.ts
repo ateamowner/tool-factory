@@ -231,6 +231,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "time card calculator",
+    aliases: ["timecard calculator", "time sheet calculator", "work hours calculator"],
+    slug: "time-card-calculator",
+    href: "/finance/time-card-calculator",
+    title: "Time Card Calculator",
+    shortTitle: "Time Card Calculator",
+    category: "finance",
+    description:
+      "Total a week of start and end times with unpaid breaks in h:mm and decimal hours, split overtime after 40 hours, and estimate gross pay — all in the browser.",
+    summary:
+      "Enter clock-in, clock-out, and break minutes for each day to total weekly hours, overtime, and optional gross pay.",
+    cta: "Calculate",
+  },
+  {
     keyword: "overtime calculator",
     aliases: [
       "overtime pay calculator",
