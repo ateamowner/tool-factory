@@ -99,6 +99,12 @@ describe("tool registry stop rule", () => {
     assert.ok(keywordAlreadyPublished("json formatter"));
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/json-formatter")?.cta, "Format");
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/json-formatter")?.category, "dev");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "time card calculator")?.href,
+      "/finance/time-card-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("time card calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/time-card-calculator")?.category, "finance");
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
