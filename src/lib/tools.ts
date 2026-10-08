@@ -245,6 +245,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "tip calculator",
+    aliases: ["gratuity calculator", "tip split calculator", "bill split calculator"],
+    slug: "tip-calculator",
+    href: "/finance/tip-calculator",
+    title: "Tip Calculator",
+    shortTitle: "Tip Calculator",
+    category: "finance",
+    description:
+      "Tip amount, total with tip, and per-person split from a bill and a 15%, 18%, 20%, 25%, or custom tip — optional round up, all in the browser.",
+    summary:
+      "Enter the bill, pick a tip percentage, and set the number of people to see the tip, total, and each person's share.",
+    cta: "Calculate",
+  },
+  {
     keyword: "overtime calculator",
     aliases: [
       "overtime pay calculator",
