@@ -119,6 +119,14 @@ describe("computeTip", () => {
       "A 15% tip on $120.00 is $18.00, for a total of $138.00. Split 4 ways, each person pays $34.50.",
     );
   });
+
+  it("uses An before an 18% tip in the summary", () => {
+    const r = computeTip(input({ billAmount: 50, tipPercent: 18, people: 1 }));
+    assert.equal(
+      r.summary,
+      "An 18% tip on $50.00 is $9.00, for a total of $59.00.",
+    );
+  });
 });
 
 describe("formatting", () => {

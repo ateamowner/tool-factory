@@ -146,7 +146,18 @@ export function formatTipSummary(result: TipResult): string | null {
   ) {
     return null;
   }
-  const base = `A ${formatPercent(result.tipPercent ?? 0)} tip on ${formatUsd(result.billAmount)} is ${formatUsd(result.tipAmount)}, for a total of ${formatUsd(result.total)}`;
+  const tipPercent = result.tipPercent ?? 0;
+  const percentLabel = formatPercent(tipPercent);
+  // "An" before vowel-sounding percents (8, 11, 18, 80–89); "A" otherwise.
+  const absInt = Math.floor(Math.abs(tipPercent));
+  const article =
+    absInt === 8 ||
+    absInt === 11 ||
+    absInt === 18 ||
+    (absInt >= 80 && absInt <= 89)
+      ? "An"
+      : "A";
+  const base = `${article} ${percentLabel} tip on ${formatUsd(result.billAmount)} is ${formatUsd(result.tipAmount)}, for a total of ${formatUsd(result.total)}`;
   const rounding = result.roundedUp
     ? ` after rounding up (effective tip ${formatPercent(result.effectiveTipPercent ?? 0)})`
     : "";
