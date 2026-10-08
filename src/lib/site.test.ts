@@ -78,7 +78,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/roi-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/dev/json-formatter"));
     assert.ok(urls.includes("https://ateamkit.com/finance/time-card-calculator"));
-    assert.equal(urls.length, 54);
+    assert.ok(urls.includes("https://ateamkit.com/finance/tip-calculator"));
+    assert.equal(urls.length, 55);
   });
 });
 
