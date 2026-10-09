@@ -105,6 +105,12 @@ describe("tool registry stop rule", () => {
     );
     assert.ok(keywordAlreadyPublished("time card calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/time-card-calculator")?.category, "finance");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "amortization calculator")?.href,
+      "/finance/amortization-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("amortization calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/amortization-calculator")?.category, "finance");
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");

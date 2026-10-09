@@ -245,6 +245,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "amortization calculator",
+    aliases: ["loan amortization calculator", "amortization schedule calculator", "mortgage amortization calculator"],
+    slug: "amortization-calculator",
+    href: "/finance/amortization-calculator",
+    title: "Amortization Calculator",
+    shortTitle: "Amortization Calculator",
+    category: "finance",
+    description:
+      "Monthly payment, total interest, and a full monthly or yearly amortization schedule for any fixed-rate loan, with optional extra payments — all in the browser.",
+    summary:
+      "Enter loan amount, rate, and term to see the monthly payment and how each payment splits between principal and interest.",
+    cta: "Calculate",
+  },
+  {
     keyword: "tip calculator",
     aliases: ["gratuity calculator", "tip split calculator", "bill split calculator"],
     slug: "tip-calculator",
