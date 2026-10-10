@@ -245,6 +245,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "date calculator",
+    aliases: ["days between dates calculator", "day counter", "add days to date calculator"],
+    slug: "date-calculator",
+    href: "/finance/date-calculator",
+    title: "Date Calculator",
+    shortTitle: "Date Calculator",
+    category: "finance",
+    description:
+      "Count the days between two dates, or add and subtract days, weeks, months, and years from any date — all in the browser.",
+    summary:
+      "Pick two dates to see days, weeks, weekdays, and years-months-days between them, or move a date forward or back.",
+    cta: "Calculate",
+  },
+  {
     keyword: "amortization calculator",
     aliases: ["loan amortization calculator", "amortization schedule calculator", "mortgage amortization calculator"],
     slug: "amortization-calculator",
