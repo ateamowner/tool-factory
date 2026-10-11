@@ -81,7 +81,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/tip-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/amortization-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/date-calculator"));
-    assert.equal(urls.length, 57);
+    assert.ok(urls.includes("https://ateamkit.com/home/concrete-calculator"));
+    assert.equal(urls.length, 58);
   });
 });
 
