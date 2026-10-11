@@ -166,6 +166,10 @@ export default function RoofingCalculatorPage() {
           <Link className="text-mint underline" href="/convert/cubic-yard-calculator">
             cubic yard calculator
           </Link>
+          , or size a slab or footing with the{" "}
+          <Link className="text-mint underline" href="/home/concrete-calculator">
+            concrete calculator
+          </Link>
           .
         </p>
       </section>

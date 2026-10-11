@@ -114,6 +114,9 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/date-calculator")?.category, "finance");
     assert.equal(TOOLS.find((tool) => tool.keyword === "date calculator")?.href, "/finance/date-calculator");
     assert.ok(keywordAlreadyPublished("date calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/home/concrete-calculator")?.category, "home");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "concrete calculator")?.href, "/home/concrete-calculator");
+    assert.ok(keywordAlreadyPublished("concrete calculator"));
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
@@ -886,7 +889,7 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("roof square calculator"), false);
     assert.equal(
       TOOLS.filter((tool) => tool.category === "home").map((tool) => tool.slug).sort().join(","),
-      "house-sq-ft-estimator,roof-algae-severity,roofing-calculator,soft-wash-mix-calculator,vinyl-siding-cleanability",
+      "concrete-calculator,house-sq-ft-estimator,roof-algae-severity,roofing-calculator,soft-wash-mix-calculator,vinyl-siding-cleanability",
     );
   });
 

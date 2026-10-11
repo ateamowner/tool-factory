@@ -816,6 +816,20 @@ export const TOOLS: Tool[] = [
       "Enter roof length and width or a plan area, an optional pitch, and waste. One square is 100 sq ft. Nothing is uploaded.",
     cta: "Calculate",
   },
+  {
+    keyword: "concrete calculator",
+    aliases: ["concrete slab calculator", "cubic yards of concrete calculator", "concrete bag calculator"],
+    slug: "concrete-calculator",
+    href: "/home/concrete-calculator",
+    title: "Concrete Calculator",
+    shortTitle: "Concrete Calculator",
+    category: "home",
+    description:
+      "Concrete volume in cubic yards and cubic feet for slabs, patios, footings, and round columns, plus waste and 40, 60, and 80 lb bag counts.",
+    summary:
+      "Enter slab length, width, and thickness or a column diameter and height. Get cubic yards and bags. Nothing is uploaded.",
+    cta: "Calculate",
+  },
 ];
 
 const publishedKeywords = new Set<string>();
