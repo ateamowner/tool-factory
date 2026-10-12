@@ -6,9 +6,9 @@ import { CATEGORIES, TOOLS } from "./tools.ts";
 const catalog = indexToolsAndHubs(CATEGORIES, TOOLS);
 
 describe("searchSite", () => {
-  it("indexes the published tools and five hubs", () => {
+  it("indexes the published tools and six hubs", () => {
     assert.equal(catalog.filter((item) => item.kind === "tool").length, TOOLS.length);
-    assert.equal(catalog.filter((item) => item.kind === "hub").length, 5);
+    assert.equal(catalog.filter((item) => item.kind === "hub").length, 6);
     assert.deepEqual(
       catalog.filter((item) => item.kind === "tool").map((item) => item.href).sort(),
       TOOLS.map((tool) => tool.href).sort(),

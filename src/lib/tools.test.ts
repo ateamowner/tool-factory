@@ -117,6 +117,9 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.href === "/home/concrete-calculator")?.category, "home");
     assert.equal(TOOLS.find((tool) => tool.keyword === "concrete calculator")?.href, "/home/concrete-calculator");
     assert.ok(keywordAlreadyPublished("concrete calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/ratio-calculator")?.category, "math");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "ratio calculator")?.href, "/math/ratio-calculator");
+    assert.ok(keywordAlreadyPublished("ratio calculator"));
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");

@@ -1,4 +1,4 @@
-export type CategoryId = "finance" | "seo" | "dev" | "convert" | "home";
+export type CategoryId = "finance" | "seo" | "dev" | "convert" | "home" | "math";
 
 export type Tool = {
   keyword: string;
@@ -51,6 +51,13 @@ export const CATEGORIES: Record<
     href: "/home",
     description:
       "Household calculators that run in the browser, including a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+  },
+  math: {
+    id: "math",
+    name: "Math",
+    href: "/math",
+    description:
+      "Free math calculators that run in your browser, starting with a ratio calculator that simplifies ratios to lowest terms and solves A : B = C : D. Nothing is uploaded.",
   },
 };
 
@@ -830,6 +837,20 @@ export const TOOLS: Tool[] = [
       "Enter slab length, width, and thickness or a column diameter and height. Get cubic yards and bags. Nothing is uploaded.",
     cta: "Calculate",
   },
+  {
+    keyword: "ratio calculator",
+    aliases: ["simplify ratio calculator", "ratio simplifier", "equivalent ratio calculator"],
+    slug: "ratio-calculator",
+    href: "/math/ratio-calculator",
+    title: "Ratio Calculator",
+    shortTitle: "Ratio Calculator",
+    category: "math",
+    description:
+      "Simplify a ratio to lowest terms or solve a missing value in A : B = C : D, with 1 : n, decimal, and percentage forms.",
+    summary:
+      "Enter two numbers to simplify, or three of A, B, C, D to solve the fourth. Nothing is uploaded.",
+    cta: "Calculate",
+  },
 ];
 
 const publishedKeywords = new Set<string>();
@@ -854,7 +875,7 @@ export const FEATURED_TOOL_SLUGS = [
   "heic-to-png",
 ] as const;
 
-export const CATEGORY_ORDER: CategoryId[] = ["finance", "seo", "dev", "convert", "home"];
+export const CATEGORY_ORDER: CategoryId[] = ["finance", "seo", "dev", "convert", "home", "math"];
 
 export function getFeaturedTools(): Tool[] {
   return FEATURED_TOOL_SLUGS.map((slug) => {
