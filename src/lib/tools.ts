@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser, starting with a ratio calculator that simplifies ratios to lowest terms and solves A : B = C : D. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, and a proportion calculator that solves A / B = C / D and checks if two ratios are proportional. Nothing is uploaded.",
   },
 };
 
@@ -849,6 +849,20 @@ export const TOOLS: Tool[] = [
       "Simplify a ratio to lowest terms or solve a missing value in A : B = C : D, with 1 : n, decimal, and percentage forms.",
     summary:
       "Enter two numbers to simplify, or three of A, B, C, D to solve the fourth. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "proportion calculator",
+    aliases: ["proportions calculator", "solve proportion calculator", "cross multiplication calculator"],
+    slug: "proportion-calculator",
+    href: "/math/proportion-calculator",
+    title: "Proportion Calculator",
+    shortTitle: "Proportion Calculator",
+    category: "math",
+    description:
+      "Solve a proportion A / B = C / D for the missing value, or check if two ratios are proportional with cross products and the scale factor.",
+    summary:
+      "Enter three of A, B, C, D to solve the fourth, or all four to check. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];

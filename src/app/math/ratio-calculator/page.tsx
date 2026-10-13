@@ -108,7 +108,11 @@ export default function RatioCalculatorPage() {
           <Link className="text-mint underline" href="/math">
             Math
           </Link>{" "}
-          hub, or work out a share of a total with the{" "}
+          hub, solve or check an equation of two ratios with the{" "}
+          <Link className="text-mint underline" href="/math/proportion-calculator">
+            proportion calculator
+          </Link>
+          , work out a share of a total with the{" "}
           <Link className="text-mint underline" href="/finance/percent-off-calculator">
             percent off calculator
           </Link>{" "}
