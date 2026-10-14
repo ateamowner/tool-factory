@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, and a proportion calculator that solves A / B = C / D and checks if two ratios are proportional. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, and a GCF calculator that finds the greatest common factor with steps. Nothing is uploaded.",
   },
 };
 
@@ -863,6 +863,20 @@ export const TOOLS: Tool[] = [
       "Solve a proportion A / B = C / D for the missing value, or check if two ratios are proportional with cross products and the scale factor.",
     summary:
       "Enter three of A, B, C, D to solve the fourth, or all four to check. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "gcf calculator",
+    aliases: ["greatest common factor calculator", "gcd calculator", "hcf calculator"],
+    slug: "gcf-calculator",
+    href: "/math/gcf-calculator",
+    title: "GCF Calculator",
+    shortTitle: "GCF Calculator",
+    category: "math",
+    description:
+      "Find the greatest common factor (GCD/HCF) of 2 to 20 whole numbers with prime factorization, Euclidean algorithm steps, common factors, and the LCM.",
+    summary:
+      "Enter whole numbers separated by commas or spaces. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
