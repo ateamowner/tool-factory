@@ -115,7 +115,11 @@ export default function ProportionCalculatorPage() {
           <Link className="text-mint underline" href="/math">
             Math
           </Link>{" "}
-          hub, or work out a share of a total with the{" "}
+          hub, find the greatest common factor with the{" "}
+          <Link className="text-mint underline" href="/math/gcf-calculator">
+            GCF calculator
+          </Link>
+          , or work out a share of a total with the{" "}
           <Link className="text-mint underline" href="/finance/percent-off-calculator">
             percent off calculator
           </Link>

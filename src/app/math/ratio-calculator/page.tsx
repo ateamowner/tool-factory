@@ -112,6 +112,10 @@ export default function RatioCalculatorPage() {
           <Link className="text-mint underline" href="/math/proportion-calculator">
             proportion calculator
           </Link>
+          , find the greatest common factor with the{" "}
+          <Link className="text-mint underline" href="/math/gcf-calculator">
+            GCF calculator
+          </Link>
           , work out a share of a total with the{" "}
           <Link className="text-mint underline" href="/finance/percent-off-calculator">
             percent off calculator
