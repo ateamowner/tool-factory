@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, and a GCF calculator that finds the greatest common factor with steps. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, and a factoring calculator for prime factorization and all factors. Nothing is uploaded.",
   },
 };
 
@@ -877,6 +877,20 @@ export const TOOLS: Tool[] = [
       "Find the greatest common factor (GCD/HCF) of 2 to 20 whole numbers with prime factorization, Euclidean algorithm steps, common factors, and the LCM.",
     summary:
       "Enter whole numbers separated by commas or spaces. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "factoring calculator",
+    aliases: ["factor calculator", "prime factorization calculator", "factorization calculator"],
+    slug: "factoring-calculator",
+    href: "/math/factoring-calculator",
+    title: "Factoring Calculator",
+    shortTitle: "Factoring Calculator",
+    category: "math",
+    description:
+      "Find the prime factorization of a whole number, list every positive factor, see the factor count, and tell whether the number is prime or composite.",
+    summary:
+      "Enter a positive whole number. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
