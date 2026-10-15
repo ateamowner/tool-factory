@@ -119,6 +119,10 @@ export default function ProportionCalculatorPage() {
           <Link className="text-mint underline" href="/math/gcf-calculator">
             GCF calculator
           </Link>
+          , factor one number with the{" "}
+          <Link className="text-mint underline" href="/math/factoring-calculator">
+            factoring calculator
+          </Link>
           , or work out a share of a total with the{" "}
           <Link className="text-mint underline" href="/finance/percent-off-calculator">
             percent off calculator

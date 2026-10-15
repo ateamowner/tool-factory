@@ -104,7 +104,11 @@ export default function GcfCalculatorPage() {
           GCF is 4 × 3 = 12.
         </p>
         <p>
-          Reduce a ratio with the{" "}
+          Break one number into primes with the{" "}
+          <Link className="text-mint underline" href="/math/factoring-calculator">
+            factoring calculator
+          </Link>
+          , reduce a ratio with the{" "}
           <Link className="text-mint underline" href="/math/ratio-calculator">
             ratio calculator
           </Link>
