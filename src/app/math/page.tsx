@@ -5,7 +5,7 @@ import { toPublicUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Math Tools",
   description:
-    "Free math calculators that run in your browser, including a ratio calculator, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor, and a factoring calculator for prime factorization. Nothing is uploaded.",
+    "Free math calculators that run in your browser, including a ratio calculator, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor, a factoring calculator for prime factorization, and a slope calculator from two points. Nothing is uploaded.",
   alternates: { canonical: toPublicUrl("/math") },
 };
 
