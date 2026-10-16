@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, and a factoring calculator for prime factorization and all factors. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, and a slope calculator that finds slope from two points. Nothing is uploaded.",
   },
 };
 
@@ -891,6 +891,20 @@ export const TOOLS: Tool[] = [
       "Find the prime factorization of a whole number, list every positive factor, see the factor count, and tell whether the number is prime or composite.",
     summary:
       "Enter a positive whole number. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "slope calculator",
+    aliases: ["slope from two points calculator", "find slope calculator", "rise over run calculator"],
+    slug: "slope-calculator",
+    href: "/math/slope-calculator",
+    title: "Slope Calculator",
+    shortTitle: "Slope Calculator",
+    category: "math",
+    description:
+      "Find the slope from two points with rise over run, angle in degrees, y-intercept, and point-slope form — handles vertical and horizontal lines.",
+    summary:
+      "Enter (x1, y1) and (x2, y2). Nothing is uploaded.",
     cta: "Calculate",
   },
 ];

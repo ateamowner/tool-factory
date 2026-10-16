@@ -123,6 +123,10 @@ export default function ProportionCalculatorPage() {
           <Link className="text-mint underline" href="/math/factoring-calculator">
             factoring calculator
           </Link>
+          , find the slope between two points with the{" "}
+          <Link className="text-mint underline" href="/math/slope-calculator">
+            slope calculator
+          </Link>
           , or work out a share of a total with the{" "}
           <Link className="text-mint underline" href="/finance/percent-off-calculator">
             percent off calculator
