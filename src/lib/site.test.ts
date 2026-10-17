@@ -88,7 +88,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/gcf-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/factoring-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/slope-calculator"));
-    assert.equal(urls.length, 64);
+    assert.ok(urls.includes("https://ateamkit.com/math/standard-deviation-calculator"));
+    assert.equal(urls.length, 65);
   });
 });
 

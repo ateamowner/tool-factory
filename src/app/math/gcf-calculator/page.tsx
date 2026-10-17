@@ -116,9 +116,13 @@ export default function GcfCalculatorPage() {
           <Link className="text-mint underline" href="/math/proportion-calculator">
             proportion calculator
           </Link>
-          , or find the slope between two points with the{" "}
+          , find the slope between two points with the{" "}
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator
+          </Link>
+          , or measure the spread of a data set with the{" "}
+          <Link className="text-mint underline" href="/math/standard-deviation-calculator">
+            standard deviation calculator
           </Link>
           . Browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">
