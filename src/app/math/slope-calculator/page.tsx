@@ -116,9 +116,13 @@ export default function SlopeCalculatorPage() {
           <Link className="text-mint underline" href="/math/ratio-calculator">
             ratio calculator
           </Link>
-          , or solve A / B = C / D with the{" "}
+          , solve A / B = C / D with the{" "}
           <Link className="text-mint underline" href="/math/proportion-calculator">
             proportion calculator
+          </Link>
+          , or measure the spread of a data set with the{" "}
+          <Link className="text-mint underline" href="/math/standard-deviation-calculator">
+            standard deviation calculator
           </Link>
           . Browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">

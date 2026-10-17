@@ -127,6 +127,10 @@ export default function ProportionCalculatorPage() {
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator
           </Link>
+          , measure the spread of a data set with the{" "}
+          <Link className="text-mint underline" href="/math/standard-deviation-calculator">
+            standard deviation calculator
+          </Link>
           , or work out a share of a total with the{" "}
           <Link className="text-mint underline" href="/finance/percent-off-calculator">
             percent off calculator

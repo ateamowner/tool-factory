@@ -139,6 +139,22 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/math/slope-calculator")?.cta, "Calculate");
     assert.equal(TOOLS.find((tool) => tool.href === "/math/slope-calculator")?.title, "Slope Calculator");
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/standard-deviation-calculator")?.category, "math");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "standard deviation calculator")?.href,
+      "/math/standard-deviation-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("standard deviation calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "standard deviation calculator")?.aliases.includes(
+        "sample standard deviation calculator",
+      ),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/standard-deviation-calculator")?.cta, "Calculate");
+    assert.equal(
+      TOOLS.find((tool) => tool.href === "/math/standard-deviation-calculator")?.title,
+      "Standard Deviation Calculator",
+    );
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");

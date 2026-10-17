@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, and a slope calculator that finds slope from two points. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, and a standard deviation calculator for sample and population data. Nothing is uploaded.",
   },
 };
 
@@ -905,6 +905,20 @@ export const TOOLS: Tool[] = [
       "Find the slope from two points with rise over run, angle in degrees, y-intercept, and point-slope form — handles vertical and horizontal lines.",
     summary:
       "Enter (x1, y1) and (x2, y2). Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "standard deviation calculator",
+    aliases: ["sample standard deviation calculator", "population standard deviation calculator", "variance calculator"],
+    slug: "standard-deviation-calculator",
+    href: "/math/standard-deviation-calculator",
+    title: "Standard Deviation Calculator",
+    shortTitle: "Standard Deviation Calculator",
+    category: "math",
+    description:
+      "Find sample and population standard deviation, variance, mean, sum, and count from a list of numbers, with step-by-step work.",
+    summary:
+      "Paste numbers separated by commas, spaces, or new lines. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
