@@ -121,9 +121,13 @@ export default function StandardDeviationCalculatorPage() {
           <Link className="text-mint underline" href="/math/ratio-calculator">
             ratio calculator
           </Link>
-          , or solve A / B = C / D with the{" "}
+          , solve A / B = C / D with the{" "}
           <Link className="text-mint underline" href="/math/proportion-calculator">
             proportion calculator
+          </Link>
+          , or work out percentages and percent change with the{" "}
+          <Link className="text-mint underline" href="/math/percentage-calculator">
+            percentage calculator
           </Link>
           . Browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">

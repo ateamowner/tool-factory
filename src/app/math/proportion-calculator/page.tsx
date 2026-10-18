@@ -131,6 +131,10 @@ export default function ProportionCalculatorPage() {
           <Link className="text-mint underline" href="/math/standard-deviation-calculator">
             standard deviation calculator
           </Link>
+          , find a percent of a number or percent change with the{" "}
+          <Link className="text-mint underline" href="/math/percentage-calculator">
+            percentage calculator
+          </Link>
           , or work out a share of a total with the{" "}
           <Link className="text-mint underline" href="/finance/percent-off-calculator">
             percent off calculator

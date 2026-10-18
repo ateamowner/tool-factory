@@ -155,6 +155,17 @@ describe("tool registry stop rule", () => {
       TOOLS.find((tool) => tool.href === "/math/standard-deviation-calculator")?.title,
       "Standard Deviation Calculator",
     );
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/percentage-calculator")?.category, "math");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "percentage calculator")?.href,
+      "/math/percentage-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("percentage calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "percentage calculator")?.aliases.includes("percent change calculator"),
+    );
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/percentage-calculator")?.cta, "Calculate");
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/percentage-calculator")?.title, "Percentage Calculator");
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
@@ -731,7 +742,6 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(keywordAlreadyPublished("stacked discount calculator"), false);
     assert.equal(keywordAlreadyPublished("successive discount calculator"), false);
-    assert.equal(keywordAlreadyPublished("percentage calculator"), false);
     assert.equal(
       TOOLS.find((tool) => tool.keyword === "future value calculator")?.href,
       "/finance/future-value-calculator",
@@ -931,10 +941,9 @@ describe("tool registry stop rule", () => {
     );
   });
 
-  it("does not ship schema.org validator or percentage calculator pages", () => {
+  it("does not ship schema.org validator or job cost pages", () => {
     const banned = [
       "validator.schema.org",
-      "percentage calculator",
       "job cost ballpark",
       "soft wash job cost",
     ];

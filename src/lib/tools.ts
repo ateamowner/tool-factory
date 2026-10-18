@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, and a standard deviation calculator for sample and population data. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, and a percentage calculator for percents of numbers and percent change. Nothing is uploaded.",
   },
 };
 
@@ -919,6 +919,20 @@ export const TOOLS: Tool[] = [
       "Find sample and population standard deviation, variance, mean, sum, and count from a list of numbers, with step-by-step work.",
     summary:
       "Paste numbers separated by commas, spaces, or new lines. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "percentage calculator",
+    aliases: ["percent calculator", "percentage increase calculator", "percent change calculator"],
+    slug: "percentage-calculator",
+    href: "/math/percentage-calculator",
+    title: "Percentage Calculator",
+    shortTitle: "Percentage Calculator",
+    category: "math",
+    description:
+      "Find X% of Y, what percent X is of Y, and the percent increase or decrease from X to Y, with step-by-step work.",
+    summary:
+      "Pick a mode and enter two numbers. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
