@@ -106,6 +106,12 @@ export default function PercentOffCalculatorPage() {
           original − discount. Example: $80 and 25% off is $20 off and a $60
           sale price. People also search this as a percentage off calculator or
           percent discount calculator; there is no second URL for those aliases.
+          For general percentages, such as X% of Y, what percent one number is
+          of another, or percent increase and decrease, use the{" "}
+          <Link className="text-mint underline" href="/math/percentage-calculator">
+            percentage calculator
+          </Link>
+          .
         </p>
         <p>
           Results are educational estimates, not tax or pricing advice.

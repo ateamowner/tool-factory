@@ -120,9 +120,13 @@ export default function SlopeCalculatorPage() {
           <Link className="text-mint underline" href="/math/proportion-calculator">
             proportion calculator
           </Link>
-          , or measure the spread of a data set with the{" "}
+          , measure the spread of a data set with the{" "}
           <Link className="text-mint underline" href="/math/standard-deviation-calculator">
             standard deviation calculator
+          </Link>
+          , or find a percent of a number or percent change with the{" "}
+          <Link className="text-mint underline" href="/math/percentage-calculator">
+            percentage calculator
           </Link>
           . Browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">
