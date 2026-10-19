@@ -108,6 +108,11 @@ export default function HouseSqFtEstimatorPage() {
           <Link className="text-mint underline" href="/home/roof-algae-severity">
             roof algae severity quiz
           </Link>
+          . To measure the floor area of rooms, including L-shaped rooms,
+          triangles, and circles in feet and inches, use the{" "}
+          <Link className="text-mint underline" href="/home/square-footage-calculator">
+            square footage calculator
+          </Link>
           .
         </p>
       </section>

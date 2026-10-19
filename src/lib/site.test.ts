@@ -90,7 +90,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/slope-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/standard-deviation-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/percentage-calculator"));
-    assert.equal(urls.length, 66);
+    assert.ok(urls.includes("https://ateamkit.com/home/square-footage-calculator"));
+    assert.equal(urls.length, 67);
   });
 });
 
