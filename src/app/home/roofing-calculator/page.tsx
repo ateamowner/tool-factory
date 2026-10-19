@@ -170,6 +170,10 @@ export default function RoofingCalculatorPage() {
           <Link className="text-mint underline" href="/home/concrete-calculator">
             concrete calculator
           </Link>
+          . For the floor area of rooms and other shapes, use the{" "}
+          <Link className="text-mint underline" href="/home/square-footage-calculator">
+            square footage calculator
+          </Link>
           .
         </p>
       </section>

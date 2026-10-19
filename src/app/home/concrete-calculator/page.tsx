@@ -121,6 +121,10 @@ export default function ConcreteCalculatorPage() {
           <Link className="text-mint underline" href="/convert/cubic-yard-calculator">
             cubic yard calculator
           </Link>
+          . To find the area of a patio or room first, use the{" "}
+          <Link className="text-mint underline" href="/home/square-footage-calculator">
+            square footage calculator
+          </Link>
           .
         </p>
       </section>

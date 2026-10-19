@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -835,6 +835,20 @@ export const TOOLS: Tool[] = [
       "Concrete volume in cubic yards and cubic feet for slabs, patios, footings, and round columns, plus waste and 40, 60, and 80 lb bag counts.",
     summary:
       "Enter slab length, width, and thickness or a column diameter and height. Get cubic yards and bags. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "square footage calculator",
+    aliases: ["sq ft calculator", "square feet calculator", "area calculator"],
+    slug: "square-footage-calculator",
+    href: "/home/square-footage-calculator",
+    title: "Square Footage Calculator",
+    shortTitle: "Square Footage Calculator",
+    category: "home",
+    description:
+      "Square feet for rectangles, L-shaped rooms, triangles, and circles from feet and inches, with multiple rooms summed and sq yd and sq m conversions.",
+    summary:
+      "Pick a shape, enter feet and inches, and add rooms. Optional waste percent. Nothing is uploaded.",
     cta: "Calculate",
   },
   {
