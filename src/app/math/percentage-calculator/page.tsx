@@ -131,9 +131,13 @@ export default function PercentageCalculatorPage() {
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator
           </Link>
-          , or measure the spread of a data set with the{" "}
+          , measure the spread of a data set with the{" "}
           <Link className="text-mint underline" href="/math/standard-deviation-calculator">
             standard deviation calculator
+          </Link>
+          , or divide step by step with remainders and decimals using the{" "}
+          <Link className="text-mint underline" href="/math/long-division-calculator">
+            long division calculator
           </Link>
           . Browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">

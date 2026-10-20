@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, and a percentage calculator for percents of numbers and percent change. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, and a long division calculator that shows every step with remainders and decimals. Nothing is uploaded.",
   },
 };
 
@@ -947,6 +947,20 @@ export const TOOLS: Tool[] = [
       "Find X% of Y, what percent X is of Y, and the percent increase or decrease from X to Y, with step-by-step work.",
     summary:
       "Pick a mode and enter two numbers. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "long division calculator",
+    aliases: ["long division calculator with remainders", "long division calculator with decimals", "long division solver"],
+    slug: "long-division-calculator",
+    href: "/math/long-division-calculator",
+    title: "Long Division Calculator",
+    shortTitle: "Long Division Calculator",
+    category: "math",
+    description:
+      "Divide two numbers with every long division step shown: quotient and remainder, the decimal answer, and repeating decimals.",
+    summary:
+      "Enter a dividend and a divisor. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];

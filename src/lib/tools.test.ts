@@ -166,6 +166,13 @@ describe("tool registry stop rule", () => {
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/math/percentage-calculator")?.cta, "Calculate");
     assert.equal(TOOLS.find((tool) => tool.href === "/math/percentage-calculator")?.title, "Percentage Calculator");
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/long-division-calculator")?.category, "math");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "long division calculator")?.href,
+      "/math/long-division-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("long division calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/long-division-calculator")?.title, "Long Division Calculator");
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
