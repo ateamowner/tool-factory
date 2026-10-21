@@ -5,7 +5,7 @@ import { toPublicUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Household Tools",
   description:
-    "Free household calculators that run in your browser, including a square footage calculator for rooms and shapes, a roofing calculator, a concrete calculator, a soft wash mix calculator, house sq-ft estimator, vinyl siding cleanability checker, and roof algae quiz.",
+    "Free household calculators that run in your browser, including a square footage calculator for rooms and shapes, a drywall calculator, a roofing calculator, a concrete calculator, a soft wash mix calculator, house sq-ft estimator, vinyl siding cleanability checker, and roof algae quiz.",
   alternates: { canonical: toPublicUrl("/home") },
 };
 
