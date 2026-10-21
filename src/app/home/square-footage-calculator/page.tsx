@@ -124,7 +124,11 @@ export default function SquareFootageCalculatorPage() {
           <Link className="text-mint underline" href="/convert/cubic-yard-calculator">
             cubic yard calculator
           </Link>
-          . Browse more tools on the{" "}
+          . Hanging walls or a ceiling? The{" "}
+          <Link className="text-mint underline" href="/home/drywall-calculator">
+            drywall calculator
+          </Link>{" "}
+          turns room size into sheets and joint compound. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">
             Household
           </Link>{" "}

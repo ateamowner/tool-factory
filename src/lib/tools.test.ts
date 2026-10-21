@@ -944,7 +944,7 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("roof square calculator"), false);
     assert.equal(
       TOOLS.filter((tool) => tool.category === "home").map((tool) => tool.slug).sort().join(","),
-      "concrete-calculator,house-sq-ft-estimator,roof-algae-severity,roofing-calculator,soft-wash-mix-calculator,square-footage-calculator,vinyl-siding-cleanability",
+      "concrete-calculator,drywall-calculator,house-sq-ft-estimator,roof-algae-severity,roofing-calculator,soft-wash-mix-calculator,square-footage-calculator,vinyl-siding-cleanability",
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/home/square-footage-calculator")?.category, "home");
     assert.equal(
@@ -952,6 +952,11 @@ describe("tool registry stop rule", () => {
       "/home/square-footage-calculator",
     );
     assert.ok(keywordAlreadyPublished("square footage calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/home/drywall-calculator")?.category, "home");
+    assert.ok(keywordAlreadyPublished("drywall calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "drywall calculator")?.aliases.includes("sheetrock calculator"),
+    );
     assert.ok(
       TOOLS.find((tool) => tool.keyword === "square footage calculator")?.aliases.includes("sq ft calculator"),
     );

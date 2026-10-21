@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -849,6 +849,20 @@ export const TOOLS: Tool[] = [
       "Square feet for rectangles, L-shaped rooms, triangles, and circles from feet and inches, with multiple rooms summed and sq yd and sq m conversions.",
     summary:
       "Pick a shape, enter feet and inches, and add rooms. Optional waste percent. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "drywall calculator",
+    aliases: ["drywall sheet calculator", "sheetrock calculator", "how much drywall do i need"],
+    slug: "drywall-calculator",
+    href: "/home/drywall-calculator",
+    title: "Drywall Calculator",
+    shortTitle: "Drywall Calculator",
+    category: "home",
+    description:
+      "Drywall sheets for walls and ceilings in 4 × 8, 4 × 10, or 4 × 12 sizes, minus doors and windows, plus joint compound, tape, and screws.",
+    summary:
+      "Enter room length, width, and wall height. Get sheets, mud, tape, and screws. Nothing is uploaded.",
     cta: "Calculate",
   },
   {

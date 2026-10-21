@@ -92,7 +92,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/percentage-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/home/square-footage-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/long-division-calculator"));
-    assert.equal(urls.length, 68);
+    assert.ok(urls.includes("https://ateamkit.com/home/drywall-calculator"));
+    assert.equal(urls.length, 69);
   });
 });
 
