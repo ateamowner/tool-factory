@@ -173,6 +173,10 @@ describe("tool registry stop rule", () => {
     );
     assert.ok(keywordAlreadyPublished("long division calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/math/long-division-calculator")?.title, "Long Division Calculator");
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/lcm-calculator")?.category, "math");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "lcm calculator")?.href, "/math/lcm-calculator");
+    assert.ok(keywordAlreadyPublished("lcm calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/lcm-calculator")?.title, "LCM Calculator");
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");

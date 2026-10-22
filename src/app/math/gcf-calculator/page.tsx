@@ -45,7 +45,7 @@ const faqs: FaqItem[] = [
   {
     question: "What is the difference between GCF and LCM?",
     answer:
-      "The GCF is the largest number that divides all of your numbers. The least common multiple (LCM) is the smallest number that all of them divide into. For 12 and 18 the GCF is 6 and the LCM is 36. For two numbers, GCF × LCM equals the product of the numbers.",
+      "The GCF is the largest number that divides all of your numbers. The least common multiple (LCM) is the smallest number that all of them divide into. For 12 and 18 the GCF is 6 and the LCM is 36. For two numbers, GCF × LCM equals the product of the numbers. Use the LCM calculator for LCM steps.",
   },
   {
     question: "What does it mean if the GCF is 1?",
@@ -104,7 +104,11 @@ export default function GcfCalculatorPage() {
           GCF is 4 × 3 = 12.
         </p>
         <p>
-          Break one number into primes with the{" "}
+          Find the least common multiple with the{" "}
+          <Link className="text-mint underline" href="/math/lcm-calculator">
+            LCM calculator
+          </Link>
+          , break one number into primes with the{" "}
           <Link className="text-mint underline" href="/math/factoring-calculator">
             factoring calculator
           </Link>
