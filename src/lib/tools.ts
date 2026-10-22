@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, and a long division calculator that shows every step with remainders and decimals. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, and an LCM calculator that finds the least common multiple with steps. Nothing is uploaded.",
   },
 };
 
@@ -975,6 +975,20 @@ export const TOOLS: Tool[] = [
       "Divide two numbers with every long division step shown: quotient and remainder, the decimal answer, and repeating decimals.",
     summary:
       "Enter a dividend and a divisor. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "lcm calculator",
+    aliases: ["least common multiple calculator", "lowest common multiple calculator", "lcm finder"],
+    slug: "lcm-calculator",
+    href: "/math/lcm-calculator",
+    title: "LCM Calculator",
+    shortTitle: "LCM Calculator",
+    category: "math",
+    description:
+      "Find the least common multiple of 2 to 20 whole numbers with prime factorization, GCF method steps, and listed multiples.",
+    summary:
+      "Enter whole numbers separated by commas or spaces. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
