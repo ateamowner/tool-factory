@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -863,6 +863,20 @@ export const TOOLS: Tool[] = [
       "Drywall sheets for walls and ceilings in 4 × 8, 4 × 10, or 4 × 12 sizes, minus doors and windows, plus joint compound, tape, and screws.",
     summary:
       "Enter room length, width, and wall height. Get sheets, mud, tape, and screws. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "sod calculator",
+    aliases: ["how much sod do i need", "sod pallet calculator", "sod square footage calculator"],
+    slug: "sod-calculator",
+    href: "/home/sod-calculator",
+    title: "Sod Calculator",
+    shortTitle: "Sod Calculator",
+    category: "home",
+    description:
+      "Square feet, rolls, and pallets of sod from lawn length and width or total area, with a waste percent and editable roll and pallet sizes.",
+    summary:
+      "Enter lawn size and waste percent. Get square feet, rolls, and pallets. Nothing is uploaded.",
     cta: "Calculate",
   },
   {
