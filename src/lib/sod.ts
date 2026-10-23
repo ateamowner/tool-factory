@@ -1,4 +1,12 @@
-import { parseNumberInput } from "./drywall.ts";
+/** Parse a user-entered number, allowing commas and spaces. Blank returns 0; invalid returns null. */
+function parseNumberInput(raw: unknown): number | null {
+  const text = raw === null || raw === undefined ? "" : String(raw);
+  const cleaned = text.replace(/[,\s]/g, "");
+  if (cleaned === "") return 0;
+  if (cleaned === "-" || cleaned === "+" || cleaned === ".") return null;
+  const n = Number(cleaned);
+  return Number.isFinite(n) ? n : null;
+}
 
 /** Common sod sizes (planning defaults; suppliers vary). */
 export const DEFAULT_ROLL_SQ_FT = 10; // 2 × 5 ft slab or roll
