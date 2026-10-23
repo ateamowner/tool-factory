@@ -128,7 +128,11 @@ export default function SquareFootageCalculatorPage() {
           <Link className="text-mint underline" href="/home/drywall-calculator">
             drywall calculator
           </Link>{" "}
-          turns room size into sheets and joint compound. Browse more tools on the{" "}
+          turns room size into sheets and joint compound. Laying a new lawn? The{" "}
+          <Link className="text-mint underline" href="/home/sod-calculator">
+            sod calculator
+          </Link>{" "}
+          turns lawn area into rolls and pallets of sod. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">
             Household
           </Link>{" "}
