@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -877,6 +877,20 @@ export const TOOLS: Tool[] = [
       "Square feet, rolls, and pallets of sod from lawn length and width or total area, with a waste percent and editable roll and pallet sizes.",
     summary:
       "Enter lawn size and waste percent. Get square feet, rolls, and pallets. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "tile calculator",
+    aliases: ["how many tiles do i need", "floor tile calculator", "tile square footage calculator"],
+    slug: "tile-calculator",
+    href: "/home/tile-calculator",
+    title: "Tile Calculator",
+    shortTitle: "Tile Calculator",
+    category: "home",
+    description:
+      "Tiles and boxes needed for a floor, wall, or backsplash from area or length and width, tile size, grout gap, and a waste percent.",
+    summary:
+      "Enter area, tile size, grout gap, and waste. Get tiles and boxes. Nothing is uploaded.",
     cta: "Calculate",
   },
   {
