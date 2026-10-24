@@ -60,6 +60,14 @@ const FEATURED_BADGES = [
     width: 200,
     height: 56,
   },
+  {
+    name: "PeerPush",
+    href: "https://peerpush.com/p/tool-factory",
+    src: "https://peerpush.com/p/tool-factory/badge.png",
+    alt: "Tool Factory on PeerPush",
+    width: 230,
+    height: 65,
+  },
 ] as const;
 
 export function Footer() {
