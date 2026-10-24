@@ -68,6 +68,14 @@ const FEATURED_BADGES = [
     width: 230,
     height: 65,
   },
+  {
+    name: "Aura++",
+    href: "https://auraplusplus.com/projects/tool-factory",
+    src: "https://auraplusplus.com/images/badges/featured-on-light.svg",
+    alt: "Featured on Aura++",
+    width: 265,
+    height: 58,
+  },
 ] as const;
 
 export function Footer() {
