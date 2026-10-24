@@ -22,11 +22,11 @@ const FEATURED_BADGES = [
   },
   {
     name: "Startup Fame",
-    href: "https://startupfa.me",
-    src: "https://startupfa.me/badges/featured/dark.webp",
-    alt: "Featured on Startup Fame",
-    width: 171,
-    height: 54,
+    href: "https://startupfa.me/s/tool-factory?utm_source=ateamkit.com",
+    src: "https://startupfa.me/badges/featured-badge-small.webp",
+    alt: "Tool Factory - Featured on Startup Fame",
+    width: 224,
+    height: 36,
   },
   {
     name: "StartupBase",
@@ -43,6 +43,14 @@ const FEATURED_BADGES = [
     alt: "Featured on SaaSCity",
     width: 150,
     height: 54,
+  },
+  {
+    name: "ScrollLaunch",
+    href: "https://www.scrolllaunch.com/products/tool-factory?ref=badge",
+    src: "https://www.scrolllaunch.com/api/badge/tool-factory?variant=launched&theme=light",
+    alt: "Tool Factory - Featured on ScrollLaunch",
+    width: 220,
+    height: 48,
   },
 ] as const;
 
