@@ -52,6 +52,14 @@ const FEATURED_BADGES = [
     width: 220,
     height: 48,
   },
+  {
+    name: "BetterLaunch",
+    href: "https://www.betterlaunch.co/product/tool-factory",
+    src: "https://www.betterlaunch.co/badge-discover-dark.svg",
+    alt: "Better Launch",
+    width: 200,
+    height: 56,
+  },
 ] as const;
 
 export function Footer() {
