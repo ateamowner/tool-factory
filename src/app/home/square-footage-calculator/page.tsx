@@ -132,7 +132,11 @@ export default function SquareFootageCalculatorPage() {
           <Link className="text-mint underline" href="/home/sod-calculator">
             sod calculator
           </Link>{" "}
-          turns lawn area into rolls and pallets of sod. Browse more tools on the{" "}
+          turns lawn area into rolls and pallets of sod, and the{" "}
+          <Link className="text-mint underline" href="/home/tile-calculator">
+            tile calculator
+          </Link>{" "}
+          turns floor or wall area into tiles and boxes. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">
             Household
           </Link>{" "}
