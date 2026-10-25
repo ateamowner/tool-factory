@@ -699,6 +699,9 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/markup-calculator")?.cta, "Calculate");
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/markup-calculator")?.category, "finance");
     assert.equal(keywordAlreadyPublished("markup percentage calculator"), false);
+    assert.equal(TOOLS.find((tool) => tool.keyword === "margin calculator")?.href, "/finance/margin-calculator");
+    assert.ok(keywordAlreadyPublished("margin calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/margin-calculator")?.category, "finance");
     assert.equal(
       TOOLS.find((tool) => tool.keyword === "cd rate calculator")?.href,
       "/finance/cd-rate-calculator",

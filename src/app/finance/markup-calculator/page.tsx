@@ -137,6 +137,10 @@ export default function MarkupCalculatorPage() {
           <Link className="text-mint underline" href="/finance/403b-calculator">
             403b calculator
           </Link>
+          . To price from a target margin on selling price instead, use the{" "}
+          <Link className="text-mint underline" href="/finance/margin-calculator">
+            margin calculator
+          </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
