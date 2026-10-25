@@ -422,6 +422,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "margin calculator",
+    aliases: ["gross margin calculator", "profit margin calculator", "margin percentage calculator"],
+    slug: "margin-calculator",
+    href: "/finance/margin-calculator",
+    title: "Margin Calculator",
+    shortTitle: "Margin Calculator",
+    category: "finance",
+    description:
+      "Gross margin %, profit dollars, and markup % from cost and selling price, or the selling price for a target margin — all in the browser.",
+    summary:
+      "Enter cost and selling price, or cost and a target margin %, to see margin, price, profit, and markup.",
+    cta: "Calculate",
+  },
+  {
     keyword: "percent off calculator",
     aliases: ["percentage off calculator", "percent discount calculator"],
     slug: "percent-off-calculator",
