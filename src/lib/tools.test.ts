@@ -703,6 +703,12 @@ describe("tool registry stop rule", () => {
     assert.ok(keywordAlreadyPublished("margin calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/margin-calculator")?.category, "finance");
     assert.equal(
+      TOOLS.find((tool) => tool.keyword === "simple interest calculator")?.href,
+      "/finance/simple-interest-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("simple interest calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/simple-interest-calculator")?.category, "finance");
+    assert.equal(
       TOOLS.find((tool) => tool.keyword === "cd rate calculator")?.href,
       "/finance/cd-rate-calculator",
     );
