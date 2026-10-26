@@ -436,6 +436,20 @@ export const TOOLS: Tool[] = [
     cta: "Calculate",
   },
   {
+    keyword: "simple interest calculator",
+    aliases: ["simple interest formula calculator", "calculate simple interest", "simple interest loan calculator"],
+    slug: "simple-interest-calculator",
+    href: "/finance/simple-interest-calculator",
+    title: "Simple Interest Calculator",
+    shortTitle: "Simple Interest Calculator",
+    category: "finance",
+    description:
+      "Simple interest and total amount from principal, annual rate, and a term in days, months, or years using I = P × r × t — all in the browser.",
+    summary:
+      "Enter principal, annual rate, and a term in days, months, or years to see interest and the total amount.",
+    cta: "Calculate",
+  },
+  {
     keyword: "percent off calculator",
     aliases: ["percentage off calculator", "percent discount calculator"],
     slug: "percent-off-calculator",

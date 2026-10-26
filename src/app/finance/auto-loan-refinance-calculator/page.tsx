@@ -131,6 +131,10 @@ export default function AutoLoanRefinanceCalculatorPage() {
           <Link className="text-mint underline" href="/finance/paycheck-calculator-hourly">
             paycheck calculator hourly
           </Link>
+          . To estimate flat interest on a principal, use the{" "}
+          <Link className="text-mint underline" href="/finance/simple-interest-calculator">
+            simple interest calculator
+          </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder

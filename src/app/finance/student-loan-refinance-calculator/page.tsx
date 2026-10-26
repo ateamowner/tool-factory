@@ -140,6 +140,10 @@ export default function StudentLoanRefinanceCalculatorPage() {
           <Link className="text-mint underline" href="/finance/break-even-sales-calculator">
             break even sales calculator
           </Link>
+          . To estimate flat interest on a principal, use the{" "}
+          <Link className="text-mint underline" href="/finance/simple-interest-calculator">
+            simple interest calculator
+          </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
