@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
+    {
+      url: toPublicUrl("/seo/best-free-seo-tools-2027"),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
     ...TOOLS.map((tool) => ({
       url: toPublicUrl(tool.href),
       lastModified: now,
