@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, and an LCM calculator that finds the least common multiple with steps. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, and a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots. Nothing is uploaded.",
   },
 };
 
@@ -1045,6 +1045,20 @@ export const TOOLS: Tool[] = [
       "Find the least common multiple of 2 to 20 whole numbers with prime factorization, GCF method steps, and listed multiples.",
     summary:
       "Enter whole numbers separated by commas or spaces. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "quadratic formula calculator",
+    aliases: ["quadratic equation calculator", "quadratic equation solver", "discriminant calculator"],
+    slug: "quadratic-formula-calculator",
+    href: "/math/quadratic-formula-calculator",
+    title: "Quadratic Formula Calculator",
+    shortTitle: "Quadratic Formula Calculator",
+    category: "math",
+    description:
+      "Solve ax² + bx + c = 0 with the discriminant shown step by step, real or complex roots, and the parabola's vertex and axis of symmetry.",
+    summary:
+      "Enter a, b, and c. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
