@@ -177,6 +177,12 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.keyword === "lcm calculator")?.href, "/math/lcm-calculator");
     assert.ok(keywordAlreadyPublished("lcm calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/math/lcm-calculator")?.title, "LCM Calculator");
+    assert.equal(
+      TOOLS.find((tool) => tool.keyword === "quadratic formula calculator")?.href,
+      "/math/quadratic-formula-calculator",
+    );
+    assert.ok(keywordAlreadyPublished("quadratic formula calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/quadratic-formula-calculator")?.category, "math");
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");

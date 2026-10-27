@@ -108,6 +108,10 @@ export default function SlopeCalculatorPage() {
           <Link className="text-mint underline" href="/math/factoring-calculator">
             factoring calculator
           </Link>
+          , solve a quadratic and find its vertex with the{" "}
+          <Link className="text-mint underline" href="/math/quadratic-formula-calculator">
+            quadratic formula calculator
+          </Link>
           , find the greatest common factor with the{" "}
           <Link className="text-mint underline" href="/math/gcf-calculator">
             GCF calculator

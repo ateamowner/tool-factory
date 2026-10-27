@@ -98,7 +98,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/home/tile-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/margin-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/simple-interest-calculator"));
-    assert.equal(urls.length, 74);
+    assert.ok(urls.includes("https://ateamkit.com/math/quadratic-formula-calculator"));
+    assert.equal(urls.length, 75);
   });
 });
 

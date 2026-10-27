@@ -116,6 +116,10 @@ export default function FactoringCalculatorPage() {
           <Link className="text-mint underline" href="/math/proportion-calculator">
             proportion calculator
           </Link>
+          , solve ax² + bx + c = 0 with the{" "}
+          <Link className="text-mint underline" href="/math/quadratic-formula-calculator">
+            quadratic formula calculator
+          </Link>
           , find the slope between two points with the{" "}
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator
