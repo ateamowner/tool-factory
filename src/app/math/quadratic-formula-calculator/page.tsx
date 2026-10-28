@@ -108,6 +108,10 @@ export default function QuadraticFormulaCalculatorPage() {
           <Link className="text-mint underline" href="/math/factoring-calculator">
             factoring calculator
           </Link>
+          . Simplify the radical in your answer with the{" "}
+          <Link className="text-mint underline" href="/math/square-root-calculator">
+            square root calculator
+          </Link>
           . Find the slope of a line between two points with the{" "}
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator
