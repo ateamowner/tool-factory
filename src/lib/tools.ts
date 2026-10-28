@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, and a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, and a square root calculator that simplifies radicals and finds cube roots. Nothing is uploaded.",
   },
 };
 
@@ -1059,6 +1059,20 @@ export const TOOLS: Tool[] = [
       "Solve ax² + bx + c = 0 with the discriminant shown step by step, real or complex roots, and the parabola's vertex and axis of symmetry.",
     summary:
       "Enter a, b, and c. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "square root calculator",
+    aliases: ["simplify square root calculator", "simplest radical form calculator", "cube root calculator"],
+    slug: "square-root-calculator",
+    href: "/math/square-root-calculator",
+    title: "Square Root Calculator",
+    shortTitle: "Square Root Calculator",
+    category: "math",
+    description:
+      "Find a square root as a decimal and a simplified radical (√72 = 6√2), flag perfect squares, switch to cube roots, and get imaginary answers for negatives.",
+    summary:
+      "Enter any number. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
