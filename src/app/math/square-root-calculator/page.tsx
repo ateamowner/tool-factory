@@ -113,6 +113,10 @@ export default function SquareRootCalculatorPage() {
           <Link className="text-mint underline" href="/math/factoring-calculator">
             factoring calculator
           </Link>
+          . Write very large or small answers with the{" "}
+          <Link className="text-mint underline" href="/math/scientific-notation-calculator">
+            scientific notation calculator
+          </Link>
           , measure spread with the{" "}
           <Link className="text-mint underline" href="/math/standard-deviation-calculator">
             standard deviation calculator
