@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, and a scientific notation calculator that converts numbers and does math in scientific and E notation. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a scientific notation calculator that converts numbers and does math in scientific and E notation, and an exponent calculator for negative and fractional powers that solves for a missing base or exponent. Nothing is uploaded.",
   },
 };
 
@@ -1087,6 +1087,20 @@ export const TOOLS: Tool[] = [
       "Convert numbers to scientific notation (123,000 = 1.23 × 10⁵) and back, see E notation, and add, subtract, multiply or divide in scientific notation with steps.",
     summary:
       "Enter any number or two numbers to combine. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "exponent calculator",
+    aliases: ["power calculator", "exponents calculator", "fractional exponent calculator", "negative exponent calculator"],
+    slug: "exponent-calculator",
+    href: "/math/exponent-calculator",
+    title: "Exponent Calculator",
+    shortTitle: "Exponent Calculator",
+    category: "math",
+    description:
+      "Raise any number to a power (2¹⁰ = 1,024), including negative, decimal and fractional exponents, see huge answers in scientific notation, and solve for a missing base or exponent.",
+    summary:
+      "Enter a base and an exponent. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];

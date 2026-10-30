@@ -101,7 +101,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/quadratic-formula-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/square-root-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/scientific-notation-calculator"));
-    assert.equal(urls.length, 77);
+    assert.ok(urls.includes("https://ateamkit.com/math/exponent-calculator"));
+    assert.equal(urls.length, 78);
   });
 });
 
