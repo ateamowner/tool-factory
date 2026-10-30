@@ -107,7 +107,11 @@ export default function ScientificNotationCalculatorPage() {
           get 2.4 × 10¹¹, or 2.4E+11 in E notation.
         </p>
         <p>
-          Working with roots? Find square and cube roots with the{" "}
+          Raising numbers to a power? Use the{" "}
+          <Link className="text-mint underline" href="/math/exponent-calculator">
+            exponent calculator
+          </Link>{" "}
+          for negative and fractional exponents. Working with roots? Find square and cube roots with the{" "}
           <Link className="text-mint underline" href="/math/square-root-calculator">
             square root calculator
           </Link>
