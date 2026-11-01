@@ -111,7 +111,11 @@ export default function ScientificNotationCalculatorPage() {
           <Link className="text-mint underline" href="/math/exponent-calculator">
             exponent calculator
           </Link>{" "}
-          for negative and fractional exponents. Working with roots? Find square and cube roots with the{" "}
+          for negative and fractional exponents. Count or round sig figs with the{" "}
+          <Link className="text-mint underline" href="/math/significant-figures-calculator">
+            significant figures calculator
+          </Link>
+          . Working with roots? Find square and cube roots with the{" "}
           <Link className="text-mint underline" href="/math/square-root-calculator">
             square root calculator
           </Link>

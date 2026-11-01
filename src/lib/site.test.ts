@@ -103,7 +103,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/scientific-notation-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/exponent-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/rounding-calculator"));
-    assert.equal(urls.length, 79);
+    assert.ok(urls.includes("https://ateamkit.com/math/significant-figures-calculator"));
+    assert.equal(urls.length, 80);
   });
 });
 

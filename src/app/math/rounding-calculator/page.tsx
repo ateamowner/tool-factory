@@ -135,6 +135,10 @@ export default function RoundingCalculatorPage() {
           <Link className="text-mint underline" href="/math/exponent-calculator">
             exponent calculator
           </Link>
+          , round to significant figures with the{" "}
+          <Link className="text-mint underline" href="/math/significant-figures-calculator">
+            significant figures calculator
+          </Link>
           , or browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">
             Math

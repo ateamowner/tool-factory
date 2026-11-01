@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, and a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes, and a significant figures calculator that counts sig figs and rounds to any number of significant figures. Nothing is uploaded.",
   },
 };
 
@@ -1115,6 +1115,20 @@ export const TOOLS: Tool[] = [
       "Round any number to N decimal places or to the nearest whole number, 10, 100 or 1,000 using half up, half even (banker's), always up or always down, with steps.",
     summary:
       "Enter a number and pick where to round. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "significant figures calculator",
+    aliases: ["sig fig calculator", "sig fig counter", "significant figures counter", "round to significant figures calculator"],
+    slug: "significant-figures-calculator",
+    href: "/math/significant-figures-calculator",
+    title: "Significant Figures Calculator",
+    shortTitle: "Sig Fig Calculator",
+    category: "math",
+    description:
+      "Count significant figures in any number, see which zeros count, and round to N sig figs. Handles trailing zeros, decimals and scientific notation, with steps.",
+    summary:
+      "Enter a number to count or round its sig figs. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
