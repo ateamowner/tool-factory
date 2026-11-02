@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a BTU calculator for room heating and cooling and AC unit size, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -1129,6 +1129,20 @@ export const TOOLS: Tool[] = [
       "Count significant figures in any number, see which zeros count, and round to N sig figs. Handles trailing zeros, decimals and scientific notation, with steps.",
     summary:
       "Enter a number to count or round its sig figs. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "btu calculator",
+    aliases: ["ac btu calculator", "room btu calculator", "air conditioner size calculator", "heating btu calculator"],
+    slug: "btu-calculator",
+    href: "/home/btu-calculator",
+    title: "BTU Calculator",
+    shortTitle: "BTU Calculator",
+    category: "home",
+    description:
+      "Cooling and heating BTUs for a room from its size, adjusted for ceiling height, sun exposure, people and a kitchen, with a suggested standard AC unit size.",
+    summary:
+      "Enter room length and width or square feet, then sun, people and ceiling height. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
