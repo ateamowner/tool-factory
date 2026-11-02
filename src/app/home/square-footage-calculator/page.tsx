@@ -136,7 +136,12 @@ export default function SquareFootageCalculatorPage() {
           <Link className="text-mint underline" href="/home/tile-calculator">
             tile calculator
           </Link>{" "}
-          turns floor or wall area into tiles and boxes. Browse more tools on the{" "}
+          turns floor or wall area into tiles and boxes. Sizing an air
+          conditioner or heater for the room? The{" "}
+          <Link className="text-mint underline" href="/home/btu-calculator">
+            BTU calculator
+          </Link>{" "}
+          turns square footage into heating and cooling BTUs. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">
             Household
           </Link>{" "}
