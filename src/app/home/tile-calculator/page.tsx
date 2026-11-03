@@ -118,7 +118,11 @@ export default function TileCalculatorPage() {
           <Link className="text-mint underline" href="/home/drywall-calculator">
             drywall calculator
           </Link>
-          . Browse more tools on the{" "}
+          . Tiling a staircase? The{" "}
+          <Link className="text-mint underline" href="/home/stair-calculator">
+            stair calculator
+          </Link>{" "}
+          gives tread depth and riser height for each step. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">
             Household
           </Link>{" "}

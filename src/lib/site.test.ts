@@ -105,7 +105,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/rounding-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/significant-figures-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/home/btu-calculator"));
-    assert.equal(urls.length, 81);
+    assert.ok(urls.includes("https://ateamkit.com/home/stair-calculator"));
+    assert.equal(urls.length, 82);
   });
 });
 
