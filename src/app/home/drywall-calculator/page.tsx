@@ -120,7 +120,11 @@ export default function DrywallCalculatorPage() {
           <Link className="text-mint underline" href="/home/roofing-calculator">
             roofing calculator
           </Link>
-          . Browse more tools on the{" "}
+          . Building stairs to a new floor? The{" "}
+          <Link className="text-mint underline" href="/home/stair-calculator">
+            stair calculator
+          </Link>{" "}
+          works out steps, risers and stringer length. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">
             Household
           </Link>{" "}

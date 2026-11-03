@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a BTU calculator for room heating and cooling and AC unit size, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -1143,6 +1143,20 @@ export const TOOLS: Tool[] = [
       "Cooling and heating BTUs for a room from its size, adjusted for ceiling height, sun exposure, people and a kitchen, with a suggested standard AC unit size.",
     summary:
       "Enter room length and width or square feet, then sun, people and ceiling height. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "stair calculator",
+    aliases: ["stair stringer calculator", "stair rise and run calculator", "step calculator", "stairs calculator"],
+    slug: "stair-calculator",
+    href: "/home/stair-calculator",
+    title: "Stair Calculator",
+    shortTitle: "Stair Calculator",
+    category: "home",
+    description:
+      "Number of steps, riser height, tread depth, total run, stringer length and stair angle from total rise, with typical residential limit checks.",
+    summary:
+      "Enter total rise, max riser height and tread depth. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];

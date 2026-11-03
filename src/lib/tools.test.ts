@@ -978,7 +978,7 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("roof square calculator"), false);
     assert.equal(
       TOOLS.filter((tool) => tool.category === "home").map((tool) => tool.slug).sort().join(","),
-      "btu-calculator,concrete-calculator,drywall-calculator,house-sq-ft-estimator,roof-algae-severity,roofing-calculator,sod-calculator,soft-wash-mix-calculator,square-footage-calculator,tile-calculator,vinyl-siding-cleanability",
+      "btu-calculator,concrete-calculator,drywall-calculator,house-sq-ft-estimator,roof-algae-severity,roofing-calculator,sod-calculator,soft-wash-mix-calculator,square-footage-calculator,stair-calculator,tile-calculator,vinyl-siding-cleanability",
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/home/square-footage-calculator")?.category, "home");
     assert.equal(
@@ -995,6 +995,8 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.keyword === "btu calculator")?.href, "/home/btu-calculator");
     assert.ok(keywordAlreadyPublished("btu calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/home/btu-calculator")?.category, "home");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "stair calculator")?.href, "/home/stair-calculator");
+    assert.ok(keywordAlreadyPublished("stair calculator"));
     assert.ok(
       TOOLS.find((tool) => tool.keyword === "drywall calculator")?.aliases.includes("sheetrock calculator"),
     );
