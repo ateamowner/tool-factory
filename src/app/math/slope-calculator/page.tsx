@@ -132,6 +132,10 @@ export default function SlopeCalculatorPage() {
           <Link className="text-mint underline" href="/math/percentage-calculator">
             percentage calculator
           </Link>
+          , or solve a circle&apos;s radius, diameter and area with the{" "}
+          <Link className="text-mint underline" href="/math/circumference-calculator">
+            circumference calculator
+          </Link>
           . Browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">
             Math

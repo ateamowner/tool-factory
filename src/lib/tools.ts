@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes, and a significant figures calculator that counts sig figs and rounds to any number of significant figures. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes, a significant figures calculator that counts sig figs and rounds to any number of significant figures, and a circumference calculator that solves radius, diameter, circumference and area of a circle. Nothing is uploaded.",
   },
 };
 
@@ -1157,6 +1157,20 @@ export const TOOLS: Tool[] = [
       "Number of steps, riser height, tread depth, total run, stringer length and stair angle from total rise, with typical residential limit checks.",
     summary:
       "Enter total rise, max riser height and tread depth. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "circumference calculator",
+    aliases: ["circumference of a circle calculator", "radius calculator", "diameter calculator", "circle circumference calculator"],
+    slug: "circumference-calculator",
+    href: "/math/circumference-calculator",
+    title: "Circumference Calculator",
+    shortTitle: "Circumference Calculator",
+    category: "math",
+    description:
+      "Solve a circle's radius, diameter, circumference or area from any one of them, in terms of π and as decimals, with units and formulas.",
+    summary:
+      "Pick what you know, enter it and choose a unit. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];

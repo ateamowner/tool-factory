@@ -198,6 +198,9 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.keyword === "significant figures calculator")?.href, "/math/significant-figures-calculator");
     assert.ok(keywordAlreadyPublished("significant figures calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/math/significant-figures-calculator")?.category, "math");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "circumference calculator")?.href, "/math/circumference-calculator");
+    assert.ok(keywordAlreadyPublished("circumference calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/circumference-calculator")?.category, "math");
 
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
