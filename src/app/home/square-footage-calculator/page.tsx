@@ -141,7 +141,12 @@ export default function SquareFootageCalculatorPage() {
           <Link className="text-mint underline" href="/home/btu-calculator">
             BTU calculator
           </Link>{" "}
-          turns square footage into heating and cooling BTUs. Browse more tools on the{" "}
+          turns square footage into heating and cooling BTUs. Only know the distance
+          around a round area? The{" "}
+          <Link className="text-mint underline" href="/math/circumference-calculator">
+            circumference calculator
+          </Link>{" "}
+          turns circumference into radius, diameter and area. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">
             Household
           </Link>{" "}
