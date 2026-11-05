@@ -119,6 +119,10 @@ export default function SimpleInterestCalculatorPage() {
           <Link className="text-mint underline" href="/finance/student-loan-refinance-calculator">
             student loan refinance calculator
           </Link>
+          . Estimate how long compound interest takes to double with the{" "}
+          <Link className="text-mint underline" href="/finance/rule-of-72-calculator">
+            rule of 72 calculator
+          </Link>
           . Browse more calculators on the{" "}
           <Link className="text-mint underline" href="/finance">
             Finance
