@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -1171,6 +1171,20 @@ export const TOOLS: Tool[] = [
       "Solve a circle's radius, diameter, circumference or area from any one of them, in terms of π and as decimals, with units and formulas.",
     summary:
       "Pick what you know, enter it and choose a unit. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "rule of 72 calculator",
+    aliases: ["rule of seventy two calculator", "doubling time calculator", "rule of 72 investment calculator"],
+    slug: "rule-of-72-calculator",
+    href: "/finance/rule-of-72-calculator",
+    title: "Rule of 72 Calculator",
+    shortTitle: "Rule of 72 Calculator",
+    category: "finance",
+    description:
+      "Years to double from a rate, or the rate to double in N years, with Rule of 72 estimates beside exact compound answers plus Rules of 70 and 69.3 — all in the browser.",
+    summary:
+      "Enter an annual rate or years to double. See Rule of 72, 70, and 69.3 estimates next to the exact compound answer.",
     cta: "Calculate",
   },
 ];

@@ -137,6 +137,10 @@ export default function FutureValueCalculatorPage() {
           <Link className="text-mint underline" href="/finance/emergency-fund-calculator">
             emergency fund calculator
           </Link>
+          . Quick doubling-time estimates live on the{" "}
+          <Link className="text-mint underline" href="/finance/rule-of-72-calculator">
+            rule of 72 calculator
+          </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
