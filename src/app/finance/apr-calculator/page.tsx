@@ -120,6 +120,20 @@ export default function AprCalculatorPage() {
           hub, or open the{" "}
           <Link
             className="text-mint underline"
+            href="/finance/heloc-calculator"
+          >
+            HELOC calculator
+          </Link>
+          ,{" "}
+          <Link
+            className="text-mint underline"
+            href="/finance/amortization-calculator"
+          >
+            amortization calculator
+          </Link>
+          ,{" "}
+          <Link
+            className="text-mint underline"
             href="/finance/auto-loan-refinance-calculator"
           >
             refinance calculator auto loan

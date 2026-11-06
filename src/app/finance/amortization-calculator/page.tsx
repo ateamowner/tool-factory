@@ -113,6 +113,10 @@ export default function AmortizationCalculatorPage() {
             Finance
           </Link>{" "}
           hub, or open the{" "}
+          <Link className="text-mint underline" href="/finance/heloc-calculator">
+            HELOC calculator
+          </Link>
+          ,{" "}
           <Link className="text-mint underline" href="/finance/mortgage-recast-calculator">
             mortgage recast calculator
           </Link>
