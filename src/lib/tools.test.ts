@@ -210,6 +210,15 @@ describe("tool registry stop rule", () => {
       ),
     );
 
+    assert.equal(TOOLS.find((tool) => tool.keyword === "heloc calculator")?.href, "/finance/heloc-calculator");
+    assert.ok(keywordAlreadyPublished("heloc calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/heloc-calculator")?.category, "finance");
+    assert.ok(
+      TOOLS.find((tool) => tool.href === "/finance/heloc-calculator")?.aliases.includes(
+        "heloc payment calculator",
+      ),
+    );
+
     assert.deepEqual(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.aliases, []);
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.cta, "Format");
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/sql-formatter")?.category, "dev");
