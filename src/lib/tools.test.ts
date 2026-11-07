@@ -211,6 +211,9 @@ describe("tool registry stop rule", () => {
     );
 
     assert.equal(TOOLS.find((tool) => tool.keyword === "heloc calculator")?.href, "/finance/heloc-calculator");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "pay raise calculator")?.href, "/finance/pay-raise-calculator");
+    assert.ok(keywordAlreadyPublished("pay raise calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/pay-raise-calculator")?.category, "finance");
     assert.ok(keywordAlreadyPublished("heloc calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/heloc-calculator")?.category, "finance");
     assert.ok(
