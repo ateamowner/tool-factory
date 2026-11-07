@@ -109,7 +109,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/circumference-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/rule-of-72-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/heloc-calculator"));
-    assert.equal(urls.length, 85);
+    assert.ok(urls.includes("https://ateamkit.com/finance/pay-raise-calculator"));
+    assert.equal(urls.length, 86);
   });
 });
 

@@ -105,6 +105,14 @@ export default function PaycheckCalculatorHourlyPage() {
           <Link className="text-mint underline" href="/finance/stock-average-calculator">
             stock average calculator
           </Link>
+          . See what a raise adds to each paycheck with the{" "}
+          <Link className="text-mint underline" href="/finance/pay-raise-calculator">
+            pay raise calculator
+          </Link>
+          , or price extra hours with the{" "}
+          <Link className="text-mint underline" href="/finance/overtime-calculator">
+            overtime calculator
+          </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder

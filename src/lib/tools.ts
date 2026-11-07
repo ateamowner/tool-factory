@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -1199,6 +1199,20 @@ export const TOOLS: Tool[] = [
       "Interest-only draw payment, fully amortizing repayment payment, payment jump, LTV/CLTV, max HELOC from equity, and optional extra payments — all in the browser.",
     summary:
       "Enter home value, mortgage, HELOC limit, drawn amount, APR, and draw/repayment years to see both phase payments and LTV/CLTV.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "pay raise calculator",
+    aliases: ["raise calculator", "salary increase calculator", "pay increase calculator", "raise percentage calculator"],
+    slug: "pay-raise-calculator",
+    href: "/finance/pay-raise-calculator",
+    title: "Pay Raise Calculator",
+    shortTitle: "Pay Raise Calculator",
+    category: "finance",
+    description:
+      "Raise as a percent or dollar amount, or the raise percent between old and new pay, for hourly or salary, with new pay per hour, week, month, and year — all in the browser.",
+    summary:
+      "Enter current pay and a raise, or old and new pay. See the raise percent and the new pay and difference per hour, week, month, and year.",
     cta: "Calculate",
   },
 ];

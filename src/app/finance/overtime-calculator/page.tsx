@@ -124,6 +124,10 @@ export default function OvertimeCalculatorPage() {
             paycheck calculator hourly
           </Link>
           ,{" "}
+          <Link className="text-mint underline" href="/finance/pay-raise-calculator">
+            pay raise calculator
+          </Link>
+          ,{" "}
           <Link
             className="text-mint underline"
             href="/finance/monthly-budget-template"
