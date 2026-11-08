@@ -124,6 +124,10 @@ export default function BalanceTransferCalculatorPage() {
             Finance
           </Link>{" "}
           hub, or open the{" "}
+          <Link className="text-mint underline" href="/finance/credit-card-payoff-calculator">
+            credit card payoff calculator
+          </Link>
+          ,{" "}
           <Link className="text-mint underline" href="/finance/credit-utilization-calculator">
             credit utilization calculator
           </Link>

@@ -119,6 +119,14 @@ export default function CreditUtilizationCalculatorPage() {
           <Link className="text-mint underline" href="/finance/paycheck-calculator-hourly">
             paycheck calculator hourly
           </Link>
+          . Plan how fast to pay down a card with the{" "}
+          <Link className="text-mint underline" href="/finance/credit-card-payoff-calculator">
+            credit card payoff calculator
+          </Link>
+          , or compare a 0% offer with the{" "}
+          <Link className="text-mint underline" href="/finance/balance-transfer-calculator">
+            balance transfer calculator
+          </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder

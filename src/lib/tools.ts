@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -1213,6 +1213,20 @@ export const TOOLS: Tool[] = [
       "Raise as a percent or dollar amount, or the raise percent between old and new pay, for hourly or salary, with new pay per hour, week, month, and year — all in the browser.",
     summary:
       "Enter current pay and a raise, or old and new pay. See the raise percent and the new pay and difference per hour, week, month, and year.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "credit card payoff calculator",
+    aliases: ["credit card payment calculator", "credit card debt payoff calculator", "pay off credit card calculator", "credit card interest payoff calculator"],
+    slug: "credit-card-payoff-calculator",
+    href: "/finance/credit-card-payoff-calculator",
+    title: "Credit Card Payoff Calculator",
+    shortTitle: "Credit Card Payoff Calculator",
+    category: "finance",
+    description:
+      "Months to pay off a card from a fixed payment, or the payment needed to be debt-free by a target date, with total interest, total paid, and a warning when the payment doesn't cover interest — all in the browser.",
+    summary:
+      "Enter balance, APR, and a monthly payment or target months. See the payoff time or payment, total interest, and total paid.",
     cta: "Calculate",
   },
 ];
