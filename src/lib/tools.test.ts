@@ -211,6 +211,9 @@ describe("tool registry stop rule", () => {
     );
 
     assert.equal(TOOLS.find((tool) => tool.keyword === "heloc calculator")?.href, "/finance/heloc-calculator");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "dividend calculator")?.href, "/finance/dividend-calculator");
+    assert.ok(keywordAlreadyPublished("dividend calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/dividend-calculator")?.category, "finance");
     assert.equal(TOOLS.find((tool) => tool.keyword === "credit card payoff calculator")?.href, "/finance/credit-card-payoff-calculator");
     assert.ok(keywordAlreadyPublished("credit card payoff calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/credit-card-payoff-calculator")?.category, "finance");

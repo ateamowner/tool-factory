@@ -118,6 +118,10 @@ export default function FutureValueCalculatorPage() {
             Finance
           </Link>{" "}
           hub, or open the{" "}
+          <Link className="text-mint underline" href="/finance/dividend-calculator">
+            dividend calculator
+          </Link>
+          ,{" "}
           <Link className="text-mint underline" href="/finance/cd-rate-calculator">
             CD rate calculator
           </Link>

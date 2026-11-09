@@ -100,7 +100,12 @@ export default function StockAverageCalculatorPage() {
         </p>
         <p>
           Everything on this page runs in your browser. Lots never leave the
-          device, and there is no account. Pair it with the{" "}
+          device, and there is no account. Estimate the income a position pays
+          with the{" "}
+          <Link className="text-mint underline" href="/finance/dividend-calculator">
+            dividend calculator
+          </Link>
+          . Pair it with the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder
           </Link>{" "}
