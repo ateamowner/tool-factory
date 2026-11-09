@@ -111,7 +111,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/heloc-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/pay-raise-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/credit-card-payoff-calculator"));
-    assert.equal(urls.length, 87);
+    assert.ok(urls.includes("https://ateamkit.com/finance/dividend-calculator"));
+    assert.equal(urls.length, 88);
   });
 });
 

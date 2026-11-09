@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a dividend calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -1227,6 +1227,20 @@ export const TOOLS: Tool[] = [
       "Months to pay off a card from a fixed payment, or the payment needed to be debt-free by a target date, with total interest, total paid, and a warning when the payment doesn't cover interest — all in the browser.",
     summary:
       "Enter balance, APR, and a monthly payment or target months. See the payoff time or payment, total interest, and total paid.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "dividend calculator",
+    aliases: ["dividend income calculator", "dividend yield calculator", "dividend reinvestment calculator", "drip calculator"],
+    slug: "dividend-calculator",
+    href: "/finance/dividend-calculator",
+    title: "Dividend Calculator",
+    shortTitle: "Dividend Calculator",
+    category: "finance",
+    description:
+      "Annual and per-payout dividend income from shares or an amount invested, plus a DRIP projection with optional dividend and price growth — all in the browser.",
+    summary:
+      "Enter shares or amount, price, and dividend or yield. See income per year and payout, and a year-by-year DRIP projection.",
     cta: "Calculate",
   },
 ];
