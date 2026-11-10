@@ -105,7 +105,11 @@ export default function StandardDeviationCalculatorPage() {
           4.5714 and s ≈ 2.1381.
         </p>
         <p>
-          Find the slope between two points with the{" "}
+          Find the average, median, mode, and range with the{" "}
+          <Link className="text-mint underline" href="/math/mean-median-mode-calculator">
+            mean median mode calculator
+          </Link>
+          , find the slope between two points with the{" "}
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator
           </Link>
