@@ -135,6 +135,10 @@ export default function PercentageCalculatorPage() {
           <Link className="text-mint underline" href="/math/standard-deviation-calculator">
             standard deviation calculator
           </Link>
+          , find the mean, median, mode, and range of a list with the{" "}
+          <Link className="text-mint underline" href="/math/mean-median-mode-calculator">
+            mean median mode calculator
+          </Link>
           , or divide step by step with remainders and decimals using the{" "}
           <Link className="text-mint underline" href="/math/long-division-calculator">
             long division calculator

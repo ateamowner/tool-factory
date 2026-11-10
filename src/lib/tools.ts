@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes, a significant figures calculator that counts sig figs and rounds to any number of significant figures, and a circumference calculator that solves radius, diameter, circumference and area of a circle. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a mean median mode calculator that also gives the range, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes, a significant figures calculator that counts sig figs and rounds to any number of significant figures, and a circumference calculator that solves radius, diameter, circumference and area of a circle. Nothing is uploaded.",
   },
 };
 
@@ -1241,6 +1241,20 @@ export const TOOLS: Tool[] = [
       "Annual and per-payout dividend income from shares or an amount invested, plus a DRIP projection with optional dividend and price growth — all in the browser.",
     summary:
       "Enter shares or amount, price, and dividend or yield. See income per year and payout, and a year-by-year DRIP projection.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "mean median mode calculator",
+    aliases: ["mean median mode range calculator", "median calculator", "mode calculator", "average calculator"],
+    slug: "mean-median-mode-calculator",
+    href: "/math/mean-median-mode-calculator",
+    title: "Mean Median Mode Calculator",
+    shortTitle: "Mean Median Mode Calculator",
+    category: "math",
+    description:
+      "Find the mean, median, mode, and range of a list of numbers, plus count, sum, min, and max, with step-by-step work.",
+    summary:
+      "Paste numbers separated by commas, spaces, or new lines. Nothing is uploaded.",
     cta: "Calculate",
   },
 ];
