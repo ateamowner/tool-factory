@@ -212,7 +212,18 @@ describe("tool registry stop rule", () => {
 
     assert.equal(TOOLS.find((tool) => tool.keyword === "system of equations calculator")?.href, "/math/system-of-equations-calculator");
     assert.ok(keywordAlreadyPublished("system of equations calculator"));
-    assert.ok(keywordAlreadyPublished("solve system of equations calculator"));
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "system of equations calculator")?.aliases.includes(
+        "solve system of equations calculator",
+      ),
+    );
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "system of equations calculator")?.aliases.includes(
+        "systems of equations calculator",
+      ),
+    );
+    assert.equal(keywordAlreadyPublished("solve system of equations calculator"), false);
+    assert.equal(keywordAlreadyPublished("systems of equations calculator"), false);
     assert.equal(TOOLS.find((tool) => tool.href === "/math/system-of-equations-calculator")?.category, "math");
     assert.equal(TOOLS.find((tool) => tool.keyword === "mean median mode calculator")?.href, "/math/mean-median-mode-calculator");
     assert.ok(keywordAlreadyPublished("mean median mode calculator"));

@@ -1,4 +1,4 @@
-import { divisors, formatFactorization, primeFactorize } from "./gcf";
+import { divisors, formatFactorization, primeFactorize } from "./gcf.ts";
 
 export type NumberKind = "one" | "prime" | "composite";
 
