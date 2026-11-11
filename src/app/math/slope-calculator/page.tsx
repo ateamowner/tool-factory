@@ -112,6 +112,10 @@ export default function SlopeCalculatorPage() {
           <Link className="text-mint underline" href="/math/quadratic-formula-calculator">
             quadratic formula calculator
           </Link>
+          , solve two or three linear equations together with the{" "}
+          <Link className="text-mint underline" href="/math/system-of-equations-calculator">
+            system of equations calculator
+          </Link>
           , find the greatest common factor with the{" "}
           <Link className="text-mint underline" href="/math/gcf-calculator">
             GCF calculator

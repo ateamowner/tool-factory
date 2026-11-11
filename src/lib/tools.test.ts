@@ -210,6 +210,10 @@ describe("tool registry stop rule", () => {
       ),
     );
 
+    assert.equal(TOOLS.find((tool) => tool.keyword === "system of equations calculator")?.href, "/math/system-of-equations-calculator");
+    assert.ok(keywordAlreadyPublished("system of equations calculator"));
+    assert.ok(keywordAlreadyPublished("solve system of equations calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/math/system-of-equations-calculator")?.category, "math");
     assert.equal(TOOLS.find((tool) => tool.keyword === "mean median mode calculator")?.href, "/math/mean-median-mode-calculator");
     assert.ok(keywordAlreadyPublished("mean median mode calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/math/mean-median-mode-calculator")?.category, "math");
