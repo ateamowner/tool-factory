@@ -112,6 +112,10 @@ export default function QuadraticFormulaCalculatorPage() {
           <Link className="text-mint underline" href="/math/square-root-calculator">
             square root calculator
           </Link>
+          . Solve two or three linear equations at once with the{" "}
+          <Link className="text-mint underline" href="/math/system-of-equations-calculator">
+            system of equations calculator
+          </Link>
           . Find the slope of a line between two points with the{" "}
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator

@@ -113,7 +113,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/credit-card-payoff-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/dividend-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/mean-median-mode-calculator"));
-    assert.equal(urls.length, 89);
+    assert.ok(urls.includes("https://ateamkit.com/math/system-of-equations-calculator"));
+    assert.equal(urls.length, 90);
   });
 });
 
