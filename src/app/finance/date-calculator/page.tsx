@@ -122,6 +122,10 @@ export default function DateCalculatorPage() {
           <Link className="text-mint underline" href="/finance/tip-calculator">
             tip calculator
           </Link>
+          . To split rent for a partial month, use the{" "}
+          <Link className="text-mint underline" href="/finance/prorated-rent-calculator">
+            prorated rent calculator
+          </Link>
           .
         </p>
       </section>

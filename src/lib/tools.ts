@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a dividend calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a dividend calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, a prorated rent calculator for move-in and move-out, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -1241,6 +1241,20 @@ export const TOOLS: Tool[] = [
       "Annual and per-payout dividend income from shares or an amount invested, plus a DRIP projection with optional dividend and price growth — all in the browser.",
     summary:
       "Enter shares or amount, price, and dividend or yield. See income per year and payout, and a year-by-year DRIP projection.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "prorated rent calculator",
+    aliases: ["prorated rent"],
+    slug: "prorated-rent-calculator",
+    href: "/finance/prorated-rent-calculator",
+    title: "Prorated Rent Calculator",
+    shortTitle: "Prorated Rent Calculator",
+    category: "finance",
+    description:
+      "Calculate prorated rent for a move-in or move-out by actual days in the month, a 30-day month, or 365 days a year.",
+    summary:
+      "Enter monthly rent and a move-in or move-out date. Nothing is uploaded.",
     cta: "Calculate",
   },
   {

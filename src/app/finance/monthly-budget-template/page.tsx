@@ -124,6 +124,10 @@ export default function MonthlyBudgetTemplatePage() {
           <Link className="text-mint underline" href="/home/soft-wash-mix-calculator">
             soft wash mix calculator
           </Link>
+          . Moving mid-month? Work out a partial month of rent with the{" "}
+          <Link className="text-mint underline" href="/finance/prorated-rent-calculator">
+            prorated rent calculator
+          </Link>
           .
         </p>
       </section>
