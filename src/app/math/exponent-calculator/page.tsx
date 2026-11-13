@@ -109,6 +109,10 @@ export default function ExponentCalculatorPage() {
           <Link className="text-mint underline" href="/math/scientific-notation-calculator">
             scientific notation calculator
           </Link>
+          , solve for exponents with the{" "}
+          <Link className="text-mint underline" href="/math/log-calculator">
+            log calculator
+          </Link>
           , find square and cube roots with the{" "}
           <Link className="text-mint underline" href="/math/square-root-calculator">
             square root calculator
