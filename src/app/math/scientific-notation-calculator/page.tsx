@@ -111,7 +111,12 @@ export default function ScientificNotationCalculatorPage() {
           <Link className="text-mint underline" href="/math/exponent-calculator">
             exponent calculator
           </Link>{" "}
-          for negative and fractional exponents. Count or round sig figs with the{" "}
+          for negative and fractional exponents, or find a logarithm or antilog
+          with the{" "}
+          <Link className="text-mint underline" href="/math/log-calculator">
+            log calculator
+          </Link>
+          . Count or round sig figs with the{" "}
           <Link className="text-mint underline" href="/math/significant-figures-calculator">
             significant figures calculator
           </Link>
