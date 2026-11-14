@@ -136,7 +136,12 @@ export default function SquareFootageCalculatorPage() {
           <Link className="text-mint underline" href="/home/tile-calculator">
             tile calculator
           </Link>{" "}
-          turns floor or wall area into tiles and boxes. Sizing an air
+          turns floor or wall area into tiles and boxes. Covering the walls
+          instead? The{" "}
+          <Link className="text-mint underline" href="/home/wallpaper-calculator">
+            wallpaper calculator
+          </Link>{" "}
+          turns room size into rolls. Sizing an air
           conditioner or heater for the room? The{" "}
           <Link className="text-mint underline" href="/home/btu-calculator">
             BTU calculator

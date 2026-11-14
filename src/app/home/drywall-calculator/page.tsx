@@ -120,7 +120,11 @@ export default function DrywallCalculatorPage() {
           <Link className="text-mint underline" href="/home/roofing-calculator">
             roofing calculator
           </Link>
-          . Building stairs to a new floor? The{" "}
+          . Papering the finished walls? The{" "}
+          <Link className="text-mint underline" href="/home/wallpaper-calculator">
+            wallpaper calculator
+          </Link>{" "}
+          turns room size into rolls. Building stairs to a new floor? The{" "}
           <Link className="text-mint underline" href="/home/stair-calculator">
             stair calculator
           </Link>{" "}
