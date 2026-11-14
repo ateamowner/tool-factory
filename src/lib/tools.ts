@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a wallpaper calculator for rolls with pattern repeat, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -891,6 +891,20 @@ export const TOOLS: Tool[] = [
       "Drywall sheets for walls and ceilings in 4 × 8, 4 × 10, or 4 × 12 sizes, minus doors and windows, plus joint compound, tape, and screws.",
     summary:
       "Enter room length, width, and wall height. Get sheets, mud, tape, and screws. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "wallpaper calculator",
+    aliases: ["how much wallpaper do i need", "wallpaper roll calculator"],
+    slug: "wallpaper-calculator",
+    href: "/home/wallpaper-calculator",
+    title: "Wallpaper Calculator",
+    shortTitle: "Wallpaper Calculator",
+    category: "home",
+    description:
+      "Wallpaper rolls for a room in feet or meters, minus doors and windows, with roll size, pattern repeat, and waste percent.",
+    summary:
+      "Enter room length, width, and wall height. Get rolls, strips, and strip length. Nothing is uploaded.",
     cta: "Calculate",
   },
   {
