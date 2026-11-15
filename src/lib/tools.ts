@@ -57,7 +57,7 @@ export const CATEGORIES: Record<
     name: "Math",
     href: "/math",
     description:
-      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a mean median mode calculator that also gives the range, a system of equations calculator that solves 2x2 and 3x3 systems by substitution and elimination, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a log calculator for log base 10, natural log (ln), custom bases and antilogs with change of base steps, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes, a significant figures calculator that counts sig figs and rounds to any number of significant figures, and a circumference calculator that solves radius, diameter, circumference and area of a circle. Nothing is uploaded.",
+      "Free math calculators that run in your browser: a ratio calculator that simplifies ratios to lowest terms, a proportion calculator that solves A / B = C / D, a GCF calculator that finds the greatest common factor with steps, a factoring calculator for prime factorization and all factors, a slope calculator that finds slope from two points, a standard deviation calculator for sample and population data, a mean median mode calculator that also gives the range, a system of equations calculator that solves 2x2 and 3x3 systems by substitution and elimination, a percentage calculator for percents of numbers and percent change, a long division calculator that shows every step with remainders and decimals, an LCM calculator that finds the least common multiple with steps, a quadratic formula calculator that solves ax² + bx + c = 0 with real or complex roots, a square root calculator that simplifies radicals and finds cube roots, a log calculator for log base 10, natural log (ln), custom bases and antilogs with change of base steps, a p-value calculator for z, t and chi-square tests with a significance check, a scientific notation calculator that converts numbers and does math in scientific and E notation, an exponent calculator for negative and fractional powers that solves for a missing base or exponent, a rounding calculator that rounds to decimal places or the nearest 10, 100 or 1,000 with half up, banker's, ceiling and floor modes, a significant figures calculator that counts sig figs and rounds to any number of significant figures, and a circumference calculator that solves radius, diameter, circumference and area of a circle. Nothing is uploaded.",
   },
 };
 
@@ -1101,6 +1101,20 @@ export const TOOLS: Tool[] = [
       "Convert numbers to scientific notation (123,000 = 1.23 × 10⁵) and back, see E notation, and add, subtract, multiply or divide in scientific notation with steps.",
     summary:
       "Enter any number or two numbers to combine. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "p value calculator",
+    aliases: ["p-value calculator", "p value from z score", "p value from t score", "p value from chi square", "z score to p value calculator"],
+    slug: "p-value-calculator",
+    href: "/math/p-value-calculator",
+    title: "P-Value Calculator",
+    shortTitle: "P-Value Calculator",
+    category: "math",
+    description:
+      "Get the p-value from a z score, t score or chi-square statistic, one-tailed or two-tailed, with a significance check against alpha.",
+    summary:
+      "Pick a test, enter the statistic and alpha. Nothing is uploaded.",
     cta: "Calculate",
   },
   {
