@@ -117,6 +117,10 @@ export default function MeanMedianModeCalculatorPage() {
           <Link className="text-mint underline" href="/math/standard-deviation-calculator">
             standard deviation calculator
           </Link>
+          , test whether a result is significant with the{" "}
+          <Link className="text-mint underline" href="/math/p-value-calculator">
+            p-value calculator
+          </Link>
           , work out percentages and percent change with the{" "}
           <Link className="text-mint underline" href="/math/percentage-calculator">
             percentage calculator
