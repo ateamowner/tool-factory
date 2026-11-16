@@ -117,6 +117,10 @@ export default function MeanMedianModeCalculatorPage() {
           <Link className="text-mint underline" href="/math/standard-deviation-calculator">
             standard deviation calculator
           </Link>
+          , find quartiles, the interquartile range and outliers with the{" "}
+          <Link className="text-mint underline" href="/math/iqr-calculator">
+            IQR calculator
+          </Link>
           , test whether a result is significant with the{" "}
           <Link className="text-mint underline" href="/math/p-value-calculator">
             p-value calculator

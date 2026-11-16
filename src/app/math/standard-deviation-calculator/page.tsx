@@ -109,6 +109,10 @@ export default function StandardDeviationCalculatorPage() {
           <Link className="text-mint underline" href="/math/mean-median-mode-calculator">
             mean median mode calculator
           </Link>
+          , find quartiles, the interquartile range and outliers with the{" "}
+          <Link className="text-mint underline" href="/math/iqr-calculator">
+            IQR calculator
+          </Link>
           , turn a z score or t score into a significance result with the{" "}
           <Link className="text-mint underline" href="/math/p-value-calculator">
             p-value calculator
