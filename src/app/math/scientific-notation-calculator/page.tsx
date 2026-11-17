@@ -128,6 +128,10 @@ export default function ScientificNotationCalculatorPage() {
           <Link className="text-mint underline" href="/math/percentage-calculator">
             percentage calculator
           </Link>
+          , or convert a line from slope-intercept or point-slope form with the{" "}
+          <Link className="text-mint underline" href="/math/standard-form-calculator">
+            standard form calculator
+          </Link>
           , divide step by step with the{" "}
           <Link className="text-mint underline" href="/math/long-division-calculator">
             long division calculator

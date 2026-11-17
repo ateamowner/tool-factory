@@ -112,6 +112,10 @@ export default function SlopeCalculatorPage() {
           <Link className="text-mint underline" href="/math/quadratic-formula-calculator">
             quadratic formula calculator
           </Link>
+          , write the line as Ax + By = C with the{" "}
+          <Link className="text-mint underline" href="/math/standard-form-calculator">
+            standard form calculator
+          </Link>
           , solve two or three linear equations together with the{" "}
           <Link className="text-mint underline" href="/math/system-of-equations-calculator">
             system of equations calculator

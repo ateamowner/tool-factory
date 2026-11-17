@@ -119,7 +119,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/home/wallpaper-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/p-value-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/iqr-calculator"));
-    assert.equal(urls.length, 95);
+    assert.ok(urls.includes("https://ateamkit.com/math/standard-form-calculator"));
+    assert.equal(urls.length, 96);
   });
 });
 
