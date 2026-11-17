@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { TOOLS, getFeaturedTools, keywordAlreadyPublished } from "./tools.ts";
+import { TOOLS, getFeaturedTools, getRelatedTools, keywordAlreadyPublished } from "./tools.ts";
 
 describe("featured homepage tools", () => {
   it("locks the three Site Design featured slugs to live paths", () => {
@@ -1091,5 +1091,49 @@ describe("tool registry stop rule", () => {
         false,
       );
     }
+  });
+});
+
+describe("getRelatedTools", () => {
+  it("returns at most 8 tools from the same category and never the current page", () => {
+    for (const tool of TOOLS) {
+      const related = getRelatedTools(tool.href);
+      assert.ok(related.length <= 8);
+      assert.ok(related.every((item) => item.category === tool.category));
+      assert.ok(related.every((item) => item.href !== tool.href));
+    }
+  });
+
+  it("returns every other convert tool for the mm to inches calculator", () => {
+    const related = getRelatedTools("/convert/mm-to-inches-calculator");
+    assert.equal(related.length, 7);
+    assert.ok(related.every((item) => item.category === "convert"));
+    assert.equal(
+      related.some((item) => item.href === "/convert/mm-to-inches-calculator"),
+      false,
+    );
+  });
+
+  it("returns the 8 nearest finance tools for the date calculator", () => {
+    const related = getRelatedTools("/finance/date-calculator");
+    assert.deepEqual(
+      related.map((tool) => tool.href),
+      [
+        "/finance/time-card-calculator",
+        "/finance/amortization-calculator",
+        "/finance/bottleneck-calculator",
+        "/finance/tip-calculator",
+        "/finance/break-even-sales-calculator",
+        "/finance/overtime-calculator",
+        "/finance/vat-number-validator",
+        "/finance/apr-calculator",
+      ],
+    );
+  });
+
+  it("returns all other tools when a category has fewer than 8 others", () => {
+    const related = getRelatedTools("/seo/utm-builder");
+    assert.equal(related.length, 4);
+    assert.ok(related.every((item) => item.category === "seo"));
   });
 });

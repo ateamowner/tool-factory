@@ -130,6 +130,62 @@ export default function DateCalculatorPage() {
         </p>
       </section>
 
+
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90" aria-labelledby="who-heading">
+        <h2 id="who-heading" className="text-2xl font-semibold tracking-tight text-text">
+          Who the date calculator is for
+        </h2>
+        <p>
+          Use this page when you need a real calendar count, not a rough guess.
+          Office managers use it to tally leave or a notice period. Landlords and
+          tenants use it to measure a lease term or a move-out date. Project leads
+          use it to count calendar days versus weekdays. Anyone adding a 30, 60, or
+          90 day term to a start date can get the result date in Add or subtract
+          mode. The dates stay in your browser.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90" aria-labelledby="example-heading">
+        <h2 id="example-heading" className="text-2xl font-semibold tracking-tight text-text">
+          Worked example
+        </h2>
+        <p>
+          A rental starts on Friday, June 5, 2026 and ends on Thursday, August 13,
+          2026. Leave Include end date off and the calculator counts 69 elapsed
+          days, which is 2 months and 8 days, or 9 weeks and 6 days. Of those 69
+          days, 49 are weekdays (Monday through Friday). Tick Include end date to
+          count the last day as well: the stay is then 70 days, with 50 weekdays.
+          That include-the-last-day count is the usual way to tally the nights plus
+          the final day of a rental or a leave request.
+        </p>
+        <p>
+          In Add or subtract mode, June 5, 2026 plus 2 months is Wednesday,
+          August 5, 2026. The same start date plus 90 days can be entered as 90 in
+          the days field; from Saturday, October 10, 2026, 90 days later is Friday,
+          January 8, 2027.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90" aria-labelledby="edge-heading">
+        <h2 id="edge-heading" className="text-2xl font-semibold tracking-tight text-text">
+          Edge cases
+        </h2>
+        <p>
+          Include end date adds one day to both the total and the weekday count.
+          When you add or subtract months, a start date past the end of the target
+          month moves to that month's last day: January 31, 2026 plus one month is
+          February 28, 2026, and January 31, 2024 plus one month is February 29,
+          2024 because 2024 is a leap year. Day counts use the real calendar, so
+          leap days are included when they fall in the range.
+        </p>
+        <p>
+          Weekdays are Monday through Friday only. Public holidays are not
+          removed, so subtract any holidays that apply to you if you need an exact
+          business-day count. The tool does not store dates or send them to a
+          server.
+        </p>
+      </section>
+
       <section className="mt-12 max-w-3xl" aria-labelledby="howto-heading">
         <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight text-text">
           How to use the date calculator

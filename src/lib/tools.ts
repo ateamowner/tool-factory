@@ -1395,8 +1395,27 @@ export function getToolsByCategory(category: CategoryId): Tool[] {
   return TOOLS.filter((tool) => tool.category === category);
 }
 
-export function getRelatedTools(href: string): Tool[] {
-  return TOOLS.filter((tool) => tool.href !== href);
+export const RELATED_TOOLS_LIMIT = 8;
+
+export function getRelatedTools(href: string, limit = RELATED_TOOLS_LIMIT): Tool[] {
+  const current = getToolByHref(href);
+  if (!current) return [];
+
+  const inCategory = TOOLS.filter((tool) => tool.category === current.category);
+  const currentIndex = inCategory.findIndex((tool) => tool.href === href);
+  if (currentIndex === -1) return [];
+
+  const others = inCategory.filter((tool) => tool.href !== href);
+  if (others.length <= limit) return others;
+
+  return others
+    .map((tool) => {
+      const toolIndex = inCategory.findIndex((item) => item.href === tool.href);
+      return { tool, toolIndex, distance: Math.abs(toolIndex - currentIndex) };
+    })
+    .sort((a, b) => a.distance - b.distance || a.toolIndex - b.toolIndex)
+    .slice(0, limit)
+    .map((item) => item.tool);
 }
 
 export function keywordAlreadyPublished(keyword: string): boolean {

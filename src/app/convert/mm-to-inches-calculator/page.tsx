@@ -146,6 +146,60 @@ export default function MmToInchesCalculatorPage() {
         </p>
       </section>
 
+
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90" aria-labelledby="who-heading">
+        <h2 id="who-heading" className="text-2xl font-semibold tracking-tight text-text">
+          Who the mm to inches calculator is for
+        </h2>
+        <p>
+          Use this page when a length is listed in millimeters and you need inches,
+          or the other way around. Woodworkers and fabricators use it to read a
+          metric drawing or a product spec. Students use it to check homework that
+          converts SI lengths to inches. Shoppers use it to compare a millimeter
+          measurement on a listing with a tape that reads in inches. The conversion
+          runs in your browser, and the numbers stay on the device.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90" aria-labelledby="example-heading">
+        <h2 id="example-heading" className="text-2xl font-semibold tracking-tight text-text">
+          Worked example
+        </h2>
+        <p>
+          The formula is inches = millimeters ÷ 25.4, because one international
+          inch is defined as exactly 25.4 millimeters. A 19 mm board is
+          19 ÷ 25.4 = 0.748031 in (rounded to six decimal places). The calculator
+          also shows the nearest 1/64 inch fraction, which is 3/4 in. That fraction
+          is 0.0019685 in larger than the exact decimal, so use the decimal result
+          when a sixty-fourth step is not tight enough.
+        </p>
+        <p>
+          A 610 mm shelf is 610 ÷ 25.4 = 24.015748 in, shown as 24 1/64 in. Exact
+          inch values convert cleanly the other way too: 20 in × 25.4 = 508 mm, and
+          0.5 in × 25.4 = 12.7 mm.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl space-y-4 text-[17px] leading-7 text-text/90" aria-labelledby="edge-heading">
+        <h2 id="edge-heading" className="text-2xl font-semibold tracking-tight text-text">
+          Edge cases
+        </h2>
+        <p>
+          Millimeters and inches must be finite and 0 or more. Empty, infinite, or
+          negative values are rejected. Commas in thousands (1,000) are accepted.
+          Zero is a valid length and converts to zero. The page uses the
+          international inch (exactly 25.4 mm). Older U.S. survey inches differed
+          slightly and are not used here.
+        </p>
+        <p>
+          The 1/64 inch fraction is a rounded nearest step, not a tighter
+          tolerance. Results are an educational conversion from the numbers you
+          enter, not a calibrated measurement or an engineering spec. Check the
+          drawing or a qualified spec before you cut or order material. Nothing is
+          uploaded.
+        </p>
+      </section>
+
       <section className="mt-12 max-w-3xl" aria-labelledby="howto-heading">
         <h2 id="howto-heading" className="text-2xl font-semibold tracking-tight text-text">
           How to use the mm to inches calculator
