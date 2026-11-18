@@ -127,6 +127,10 @@ export default function CircumferenceCalculatorPage() {
           <Link className="text-mint underline" href="/math/square-root-calculator">
             square root calculator
           </Link>
+          , find the volume of a cylinder or sphere with the{" "}
+          <Link className="text-mint underline" href="/math/volume-calculator">
+            volume calculator
+          </Link>
           , or browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">
             Math

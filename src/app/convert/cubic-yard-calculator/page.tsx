@@ -140,6 +140,10 @@ export default function CubicYardCalculatorPage() {
           <Link className="text-mint underline" href="/convert/heic-to-pdf">
             HEIC to PDF converter
           </Link>
+          . For the volume of a cylinder, sphere, cone or pyramid in any unit, use the{" "}
+          <Link className="text-mint underline" href="/math/volume-calculator">
+            volume calculator
+          </Link>
           . For envelope square feet, use the{" "}
           <Link className="text-mint underline" href="/home/house-sq-ft-estimator">
             house sq-ft estimator
