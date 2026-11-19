@@ -124,6 +124,10 @@ export default function PValueCalculatorPage() {
           <Link className="text-mint underline" href="/math/mean-median-mode-calculator">
             mean median mode calculator
           </Link>
+          , estimate a range for a mean or proportion with the{" "}
+          <Link className="text-mint underline" href="/math/confidence-interval-calculator">
+            confidence interval calculator
+          </Link>
           , or browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">
             Math

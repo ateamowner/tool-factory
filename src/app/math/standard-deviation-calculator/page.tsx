@@ -117,6 +117,10 @@ export default function StandardDeviationCalculatorPage() {
           <Link className="text-mint underline" href="/math/p-value-calculator">
             p-value calculator
           </Link>
+          , build a range around a sample mean or proportion with the{" "}
+          <Link className="text-mint underline" href="/math/confidence-interval-calculator">
+            confidence interval calculator
+          </Link>
           , find the slope between two points with the{" "}
           <Link className="text-mint underline" href="/math/slope-calculator">
             slope calculator
