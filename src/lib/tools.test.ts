@@ -213,6 +213,9 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.keyword === "prorated rent calculator")?.href, "/finance/prorated-rent-calculator");
     assert.ok(keywordAlreadyPublished("prorated rent calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/prorated-rent-calculator")?.category, "finance");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "insulation calculator")?.href, "/home/insulation-calculator");
+    assert.ok(keywordAlreadyPublished("insulation calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/home/insulation-calculator")?.category, "home");
     assert.equal(TOOLS.find((tool) => tool.keyword === "confidence interval calculator")?.href, "/math/confidence-interval-calculator");
     assert.ok(keywordAlreadyPublished("confidence interval calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/math/confidence-interval-calculator")?.category, "math");
@@ -1046,7 +1049,7 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("roof square calculator"), false);
     assert.equal(
       TOOLS.filter((tool) => tool.category === "home").map((tool) => tool.slug).sort().join(","),
-      "btu-calculator,concrete-calculator,drywall-calculator,house-sq-ft-estimator,roof-algae-severity,roofing-calculator,sod-calculator,soft-wash-mix-calculator,square-footage-calculator,stair-calculator,tile-calculator,vinyl-siding-cleanability,wallpaper-calculator",
+      "btu-calculator,concrete-calculator,drywall-calculator,house-sq-ft-estimator,insulation-calculator,roof-algae-severity,roofing-calculator,sod-calculator,soft-wash-mix-calculator,square-footage-calculator,stair-calculator,tile-calculator,vinyl-siding-cleanability,wallpaper-calculator",
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/home/square-footage-calculator")?.category, "home");
     assert.equal(
