@@ -146,7 +146,11 @@ export default function SquareFootageCalculatorPage() {
           <Link className="text-mint underline" href="/home/btu-calculator">
             BTU calculator
           </Link>{" "}
-          turns square footage into heating and cooling BTUs. Only know the distance
+          turns square footage into heating and cooling BTUs, and the{" "}
+          <Link className="text-mint underline" href="/home/insulation-calculator">
+            insulation calculator
+          </Link>{" "}
+          turns it into R-value, batts, rolls and blown-in bags. Only know the distance
           around a round area? The{" "}
           <Link className="text-mint underline" href="/math/circumference-calculator">
             circumference calculator

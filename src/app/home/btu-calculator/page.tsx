@@ -116,9 +116,13 @@ export default function BtuCalculatorPage() {
           <Link className="text-mint underline" href="/home/drywall-calculator">
             drywall calculator
           </Link>{" "}
-          and{" "}
+          ,{" "}
           <Link className="text-mint underline" href="/home/tile-calculator">
             tile calculator
+          </Link>{" "}
+          and{" "}
+          <Link className="text-mint underline" href="/home/insulation-calculator">
+            insulation calculator
           </Link>{" "}
           use the same room measurements. Browse more tools on the{" "}
           <Link className="text-mint underline" href="/home">

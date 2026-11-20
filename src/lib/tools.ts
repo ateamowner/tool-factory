@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a wallpaper calculator for rolls with pattern repeat, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, an insulation calculator for R-value, batts, rolls and blown-in bags, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a wallpaper calculator for rolls with pattern repeat, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -877,6 +877,20 @@ export const TOOLS: Tool[] = [
       "Square feet for rectangles, L-shaped rooms, triangles, and circles from feet and inches, with multiple rooms summed and sq yd and sq m conversions.",
     summary:
       "Pick a shape, enter feet and inches, and add rooms. Optional waste percent. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "insulation calculator",
+    aliases: ["attic insulation calculator", "r value calculator", "blown in insulation calculator", "how much insulation do i need"],
+    slug: "insulation-calculator",
+    href: "/home/insulation-calculator",
+    title: "Insulation Calculator",
+    shortTitle: "Insulation Calculator",
+    category: "home",
+    description:
+      "R-value target by climate zone, then batts, rolls, or bags of blown-in insulation for attics, cathedral ceilings, walls, and floors, minus what you already have.",
+    summary:
+      "Enter square footage and climate zone. Get R-value, depth, and batts, rolls, or bags. Nothing is uploaded.",
     cta: "Calculate",
   },
   {
