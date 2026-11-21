@@ -115,7 +115,11 @@ export default function RoiCalculatorPage() {
           <Link className="text-mint underline" href="/finance">
             Finance
           </Link>{" "}
-          hub, or open the{" "}
+          hub, check a rental with the{" "}
+          <Link className="text-mint underline" href="/finance/cap-rate-calculator">
+            cap rate calculator
+          </Link>
+          , or open the{" "}
           <Link className="text-mint underline" href="/finance/future-value-calculator">
             future value calculator
           </Link>

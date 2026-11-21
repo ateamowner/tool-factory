@@ -123,7 +123,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/math/volume-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/confidence-interval-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/home/insulation-calculator"));
-    assert.equal(urls.length, 99);
+    assert.ok(urls.includes("https://ateamkit.com/finance/cap-rate-calculator"));
+    assert.equal(urls.length, 100);
   });
 });
 

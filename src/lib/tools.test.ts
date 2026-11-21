@@ -213,6 +213,9 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.keyword === "prorated rent calculator")?.href, "/finance/prorated-rent-calculator");
     assert.ok(keywordAlreadyPublished("prorated rent calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/prorated-rent-calculator")?.category, "finance");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "cap rate calculator")?.href, "/finance/cap-rate-calculator");
+    assert.ok(keywordAlreadyPublished("cap rate calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/finance/cap-rate-calculator")?.category, "finance");
     assert.equal(TOOLS.find((tool) => tool.keyword === "insulation calculator")?.href, "/home/insulation-calculator");
     assert.ok(keywordAlreadyPublished("insulation calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/home/insulation-calculator")?.category, "home");
