@@ -143,6 +143,10 @@ export default function PercentageCalculatorPage() {
           <Link className="text-mint underline" href="/math/long-division-calculator">
             long division calculator
           </Link>
+          , turn grades into a semester or cumulative average with the{" "}
+          <Link className="text-mint underline" href="/math/gpa-calculator">
+            GPA calculator
+          </Link>
           . Browse more tools in the{" "}
           <Link className="text-mint underline" href="/math">
             Math
