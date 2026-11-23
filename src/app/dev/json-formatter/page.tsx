@@ -115,6 +115,10 @@ export default function JsonFormatterPage() {
           <Link className="text-mint underline" href="/dev/jwt-decoder">
             JWT decoder
           </Link>
+          . Have XML instead? Use the{" "}
+          <Link className="text-mint underline" href="/dev/xml-formatter">
+            XML formatter
+          </Link>
           . Tidy a query with the{" "}
           <Link className="text-mint underline" href="/dev/sql-formatter">
             SQL formatter

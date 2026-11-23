@@ -120,6 +120,10 @@ export default function SqlFormatterPage() {
           <Link className="text-mint underline" href="/dev/cron-expression-generator">
             cron expression generator
           </Link>
+          . Reformat a feed or config with the{" "}
+          <Link className="text-mint underline" href="/dev/xml-formatter">
+            XML formatter
+          </Link>
           . Check structured data with the{" "}
           <Link className="text-mint underline" href="/seo/schema-markup-validator">
             schema markup validator

@@ -36,7 +36,7 @@ export const CATEGORIES: Record<
     name: "Developer",
     href: "/dev",
     description:
-      "Small developer utilities that run locally in your browser — a JSON formatter and validator, UUID generation, JWT decoding, cron expressions, and a SQL formatter.",
+      "Small developer utilities that run locally in your browser — a JSON formatter and validator, UUID generation, JWT decoding, cron expressions, a SQL formatter, and an XML formatter that validates with line-numbered errors.",
   },
   convert: {
     id: "convert",
@@ -647,6 +647,20 @@ export const TOOLS: Tool[] = [
       "Validate and pretty-print JSON in the browser with 2 or 4 spaces or tabs, minify, or sort keys. Copy or download — nothing uploaded.",
     summary:
       "Paste JSON to validate it, pretty-print or minify it, then copy or download the result.",
+    cta: "Format",
+  },
+  {
+    keyword: "xml formatter",
+    aliases: ["xml beautifier", "xml validator", "xml pretty print", "format xml online"],
+    slug: "xml-formatter",
+    href: "/dev/xml-formatter",
+    title: "XML Formatter",
+    shortTitle: "XML Formatter",
+    category: "dev",
+    description:
+      "Validate, pretty-print, and minify XML in the browser with line-numbered errors. Copy or download — nothing uploaded.",
+    summary:
+      "Paste XML to validate it, pretty-print or minify it, then copy or download the result.",
     cta: "Format",
   },
   {
