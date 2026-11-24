@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, an insulation calculator for R-value, batts, rolls and blown-in bags, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a wallpaper calculator for rolls with pattern repeat, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, and a roofing calculator for area, squares, and waste. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, an insulation calculator for R-value, batts, rolls and blown-in bags, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a wallpaper calculator for rolls with pattern repeat, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, a roofing calculator for area, squares, and waste, and a roof pitch calculator for pitch, angle, and slope. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -863,6 +863,20 @@ export const TOOLS: Tool[] = [
       "Roof surface area, roofing squares, and squares with waste from length × width or plan area, plus an optional pitch factor. Optional price per square stays blank.",
     summary:
       "Enter roof length and width or a plan area, an optional pitch, and waste. One square is 100 sq ft. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "roof pitch calculator",
+    aliases: ["roof pitch", "pitch of a roof calculator", "roof slope calculator", "rafter length calculator"],
+    slug: "roof-pitch-calculator",
+    href: "/home/roof-pitch-calculator",
+    title: "Roof Pitch Calculator",
+    shortTitle: "Roof Pitch Calculator",
+    category: "home",
+    description:
+      "Enter rise and run to get roof pitch (x/12), angle in degrees, slope percent, and the rafter multiplier. Runs in your browser.",
+    summary:
+      "Enter rise and run in the same unit. See pitch per 12, angle, slope percent, and rafter length. Nothing is uploaded.",
     cta: "Calculate",
   },
   {

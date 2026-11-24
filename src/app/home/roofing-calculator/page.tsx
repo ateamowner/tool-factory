@@ -146,6 +146,13 @@ export default function RoofingCalculatorPage() {
           Nothing is uploaded, and there is no account.
         </p>
         <p>
+          Need the slope first? Use the{" "}
+          <Link className="text-mint underline" href="/home/roof-pitch-calculator">
+            roof pitch calculator
+          </Link>{" "}
+          to get the pitch factor.
+        </p>
+        <p>
           Browse the{" "}
           <Link className="text-mint underline" href="/home">
             Household

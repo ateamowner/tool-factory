@@ -126,7 +126,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/finance/cap-rate-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/math/gpa-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/dev/xml-formatter"));
-    assert.equal(urls.length, 102);
+    assert.ok(urls.includes("https://ateamkit.com/home/roof-pitch-calculator"));
+    assert.equal(urls.length, 103);
   });
 });
 
