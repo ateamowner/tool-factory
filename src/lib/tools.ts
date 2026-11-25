@@ -36,7 +36,7 @@ export const CATEGORIES: Record<
     name: "Developer",
     href: "/dev",
     description:
-      "Small developer utilities that run locally in your browser — a JSON formatter and validator, UUID generation, JWT decoding, cron expressions, a SQL formatter, and an XML formatter that validates with line-numbered errors.",
+      "Small developer utilities that run locally in your browser — a JSON formatter and validator, a Unix timestamp converter for seconds and milliseconds, UUID generation, JWT decoding, cron expressions, a SQL formatter, and an XML formatter that validates with line-numbered errors.",
   },
   convert: {
     id: "convert",
@@ -662,6 +662,20 @@ export const TOOLS: Tool[] = [
     summary:
       "Paste XML to validate it, pretty-print or minify it, then copy or download the result.",
     cta: "Format",
+  },
+  {
+    keyword: "unix timestamp converter",
+    aliases: ["epoch converter", "unix time converter", "unix epoch converter", "epoch timestamp converter"],
+    slug: "unix-timestamp-converter",
+    href: "/dev/unix-timestamp-converter",
+    title: "Unix Timestamp Converter",
+    shortTitle: "Unix Timestamp Converter",
+    category: "dev",
+    description:
+      "Convert Unix time in seconds or milliseconds to UTC and local dates, or turn a date into a timestamp. Live current Unix time — nothing uploaded.",
+    summary:
+      "Paste a timestamp or pick a date to convert both ways in UTC or local time, then copy the result.",
+    cta: "Convert",
   },
   {
     keyword: "heic to png converter",

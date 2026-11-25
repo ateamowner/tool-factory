@@ -110,6 +110,10 @@ export default function CronExpressionGeneratorPage() {
           <Link className="text-mint underline" href="/dev/jwt-decoder">
             JWT decoder
           </Link>
+          . To turn a run time into epoch seconds, use the{" "}
+          <Link className="text-mint underline" href="/dev/unix-timestamp-converter">
+            Unix timestamp converter
+          </Link>
           . For crawl rules, try the{" "}
           <Link className="text-mint underline" href="/seo/robots-txt-builder">
             robots.txt builder

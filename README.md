@@ -21,6 +21,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | UUID generator (also online GUID generator) | `/dev/uuid-generator` |
 | JWT decoder (also JWT token decoder) | `/dev/jwt-decoder` |
 | Cron expression generator (also cron maker) | `/dev/cron-expression-generator` |
+| Unix timestamp converter (also epoch converter) | `/dev/unix-timestamp-converter` |
 | SQL formatter | `/dev/sql-formatter` |
 | HEIC to PNG converter | `/convert/heic-to-png` |
 | HEIC to PDF converter | `/convert/heic-to-pdf` |
