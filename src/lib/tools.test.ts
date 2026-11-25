@@ -222,6 +222,15 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.keyword === "xml formatter")?.href, "/dev/xml-formatter");
     assert.ok(keywordAlreadyPublished("xml formatter"));
     assert.equal(TOOLS.find((tool) => tool.href === "/dev/xml-formatter")?.category, "dev");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "unix timestamp converter")?.href, "/dev/unix-timestamp-converter");
+    assert.ok(keywordAlreadyPublished("unix timestamp converter"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/unix-timestamp-converter")?.category, "dev");
+    assert.equal(TOOLS.find((tool) => tool.href === "/dev/unix-timestamp-converter")?.cta, "Convert");
+    assert.ok(
+      TOOLS.find((tool) => tool.keyword === "unix timestamp converter")?.aliases.includes(
+        "epoch converter",
+      ),
+    );
     assert.equal(TOOLS.find((tool) => tool.keyword === "gpa calculator")?.href, "/math/gpa-calculator");
     assert.ok(keywordAlreadyPublished("gpa calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/math/gpa-calculator")?.category, "math");

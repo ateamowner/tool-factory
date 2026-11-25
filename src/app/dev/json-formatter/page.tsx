@@ -115,6 +115,10 @@ export default function JsonFormatterPage() {
           <Link className="text-mint underline" href="/dev/jwt-decoder">
             JWT decoder
           </Link>
+          . To convert epoch values in that JSON, use the{" "}
+          <Link className="text-mint underline" href="/dev/unix-timestamp-converter">
+            Unix timestamp converter
+          </Link>
           . Have XML instead? Use the{" "}
           <Link className="text-mint underline" href="/dev/xml-formatter">
             XML formatter
