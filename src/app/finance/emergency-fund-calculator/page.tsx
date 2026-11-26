@@ -115,6 +115,10 @@ export default function EmergencyFundCalculatorPage() {
           <Link className="text-mint underline" href="/finance/mortgage-recast-calculator">
             mortgage recast calculator
           </Link>
+          . To see the full picture of what you own and owe, use the{" "}
+          <Link className="text-mint underline" href="/finance/net-worth-calculator">
+            net worth calculator
+          </Link>
           . For campaign URLs, use the{" "}
           <Link className="text-mint underline" href="/seo/utm-builder">
             UTM builder

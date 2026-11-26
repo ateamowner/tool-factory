@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a dividend calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, a prorated rent calculator for move-in and move-out, a cap rate calculator for rental NOI, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a dividend calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, a prorated rent calculator for move-in and move-out, a cap rate calculator for rental NOI, a net worth calculator for assets minus debts, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -1423,6 +1423,20 @@ export const TOOLS: Tool[] = [
       "Calculate NOI and the capitalization rate of a rental property from value, rent, vacancy, and expenses, plus the value implied by a target cap rate.",
     summary:
       "Enter price, rent, vacancy, and expenses. Get NOI and cap rate. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "net worth calculator",
+    aliases: ["net worth", "personal net worth calculator", "assets and liabilities calculator"],
+    slug: "net-worth-calculator",
+    href: "/finance/net-worth-calculator",
+    title: "Net Worth Calculator",
+    shortTitle: "Net Worth Calculator",
+    category: "finance",
+    description:
+      "Add cash, investments, retirement, home, and vehicles, subtract mortgage, loans, and credit cards, and see net worth and your asset-to-debt ratio.",
+    summary:
+      "Enter what you own and what you owe. Get net worth and asset-to-debt ratio. Nothing is uploaded.",
     cta: "Calculate",
   },
   {

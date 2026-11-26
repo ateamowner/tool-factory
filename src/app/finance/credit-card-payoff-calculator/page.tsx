@@ -128,6 +128,10 @@ export default function CreditCardPayoffCalculatorPage() {
           <Link className="text-mint underline" href="/finance/monthly-budget-template">
             monthly budget template
           </Link>
+          . Wondering how card debt affects your total picture? Try the{" "}
+          <Link className="text-mint underline" href="/finance/net-worth-calculator">
+            net worth calculator
+          </Link>
           . Browse more calculators on the{" "}
           <Link className="text-mint underline" href="/finance">
             Finance
