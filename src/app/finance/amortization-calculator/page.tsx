@@ -128,9 +128,13 @@ export default function AmortizationCalculatorPage() {
           <Link className="text-mint underline" href="/finance/auto-loan-refinance-calculator">
             auto loan refinance calculator
           </Link>
-          , and{" "}
+          ,{" "}
           <Link className="text-mint underline" href="/finance/student-loan-refinance-calculator">
             student loan refinance calculator
+          </Link>
+          , and{" "}
+          <Link className="text-mint underline" href="/finance/debt-payoff-calculator">
+            debt payoff calculator
           </Link>
           .
         </p>

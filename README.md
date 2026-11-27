@@ -10,6 +10,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Paycheck calculator hourly | `/finance/paycheck-calculator-hourly` |
 | Emergency fund calculator | `/finance/emergency-fund-calculator` |
 | Net worth calculator | `/finance/net-worth-calculator` |
+| Debt payoff calculator | `/finance/debt-payoff-calculator` |
 | Mortgage recast calculator (also recast mortgage calculator) | `/finance/mortgage-recast-calculator` |
 | Real estate commission calculator | `/finance/real-estate-commission-calculator` |
 | VAT number validator (also VAT number checker / EU VAT validator / VAT checker) | `/finance/vat-number-validator` |

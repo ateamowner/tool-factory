@@ -132,6 +132,10 @@ export default function CreditCardPayoffCalculatorPage() {
           <Link className="text-mint underline" href="/finance/net-worth-calculator">
             net worth calculator
           </Link>
+          . Juggling several balances? Compare avalanche and snowball with the{" "}
+          <Link className="text-mint underline" href="/finance/debt-payoff-calculator">
+            debt payoff calculator
+          </Link>
           . Browse more calculators on the{" "}
           <Link className="text-mint underline" href="/finance">
             Finance
