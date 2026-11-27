@@ -22,7 +22,7 @@ export const CATEGORIES: Record<
     name: "Finance",
     href: "/finance",
     description:
-      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a dividend calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, a prorated rent calculator for move-in and move-out, a cap rate calculator for rental NOI, a net worth calculator for assets minus debts, and a VAT number validator. Your numbers stay in the browser.",
+      "Client-side calculators and checkers for investing and personal finance, including an ROI calculator, a future value calculator, a rule of 72 calculator, a HELOC calculator, a pay raise calculator, a credit card payoff calculator, a dividend calculator, a discount calculator, a percent off calculator, a CD rate calculator, a markup calculator, a straight line depreciation calculator, a purchasing power calculator, a balance transfer calculator, a student loan refinance calculator, a break even sales calculator, a bottleneck calculator, an overtime calculator, an APR calculator, a monthly budget template, a prorated rent calculator for move-in and move-out, a cap rate calculator for rental NOI, a net worth calculator for assets minus debts, a debt payoff calculator comparing avalanche and snowball, and a VAT number validator. Your numbers stay in the browser.",
   },
   seo: {
     id: "seo",
@@ -1437,6 +1437,20 @@ export const TOOLS: Tool[] = [
       "Add cash, investments, retirement, home, and vehicles, subtract mortgage, loans, and credit cards, and see net worth and your asset-to-debt ratio.",
     summary:
       "Enter what you own and what you owe. Get net worth and asset-to-debt ratio. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "debt payoff calculator",
+    aliases: ["debt payoff", "debt snowball calculator", "debt avalanche calculator", "debt snowball vs avalanche"],
+    slug: "debt-payoff-calculator",
+    href: "/finance/debt-payoff-calculator",
+    title: "Debt Payoff Calculator",
+    shortTitle: "Debt Payoff Calculator",
+    category: "finance",
+    description:
+      "Enter several debts with balance, APR, and minimum payment plus an extra monthly payment. Compare avalanche vs snowball payoff dates, total interest, and the month-by-month schedule.",
+    summary:
+      "Compare avalanche and snowball payoff for multiple debts. Nothing is uploaded.",
     cta: "Calculate",
   },
   {

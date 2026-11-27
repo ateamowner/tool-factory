@@ -129,7 +129,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/home/roof-pitch-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/dev/unix-timestamp-converter"));
     assert.ok(urls.includes("https://ateamkit.com/finance/net-worth-calculator"));
-    assert.equal(urls.length, 105);
+    assert.ok(urls.includes("https://ateamkit.com/finance/debt-payoff-calculator"));
+    assert.equal(urls.length, 106);
   });
 });
 
