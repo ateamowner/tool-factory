@@ -131,6 +131,13 @@ export default function BtuCalculatorPage() {
           hub.
         </p>
         <p>
+          Wiring a new window unit or mini-split? Check the supply wire with the{" "}
+          <Link className="text-mint underline" href="/home/voltage-drop-calculator">
+            voltage drop calculator
+          </Link>
+          .
+        </p>
+        <p>
           Results are rules of thumb for planning. For a whole-house system, ask
           an HVAC contractor for a Manual J load calculation.
         </p>

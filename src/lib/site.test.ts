@@ -130,7 +130,8 @@ describe("toPublicUrl", () => {
     assert.ok(urls.includes("https://ateamkit.com/dev/unix-timestamp-converter"));
     assert.ok(urls.includes("https://ateamkit.com/finance/net-worth-calculator"));
     assert.ok(urls.includes("https://ateamkit.com/finance/debt-payoff-calculator"));
-    assert.equal(urls.length, 106);
+    assert.ok(urls.includes("https://ateamkit.com/home/voltage-drop-calculator"));
+    assert.equal(urls.length, 107);
   });
 });
 

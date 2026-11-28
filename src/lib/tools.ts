@@ -50,7 +50,7 @@ export const CATEGORIES: Record<
     name: "Household",
     href: "/home",
     description:
-      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, an insulation calculator for R-value, batts, rolls and blown-in bags, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a wallpaper calculator for rolls with pattern repeat, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, a roofing calculator for area, squares, and waste, and a roof pitch calculator for pitch, angle, and slope. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
+      "Household calculators that run in the browser, including a square footage calculator for rooms and shapes, a drywall calculator for sheets and joint compound, an insulation calculator for R-value, batts, rolls and blown-in bags, a sod calculator for rolls and pallets, a tile calculator for tiles and boxes, a wallpaper calculator for rolls with pattern repeat, a BTU calculator for room heating and cooling and AC unit size, a stair calculator for steps, risers and stringers, a roofing calculator for area, squares, and waste, and a roof pitch calculator for pitch, angle, and slope, and a voltage drop calculator for wire size. Soft-wash mix, area, siding, and roof-streak tools are educational — not a service booking, a bid, or a chemical spec.",
   },
   math: {
     id: "math",
@@ -891,6 +891,20 @@ export const TOOLS: Tool[] = [
       "Enter rise and run to get roof pitch (x/12), angle in degrees, slope percent, and the rafter multiplier. Runs in your browser.",
     summary:
       "Enter rise and run in the same unit. See pitch per 12, angle, slope percent, and rafter length. Nothing is uploaded.",
+    cta: "Calculate",
+  },
+  {
+    keyword: "voltage drop calculator",
+    aliases: ["voltage drop", "wire voltage drop calculator", "wire size voltage drop calculator", "awg voltage drop calculator"],
+    slug: "voltage-drop-calculator",
+    href: "/home/voltage-drop-calculator",
+    title: "Voltage Drop Calculator",
+    shortTitle: "Voltage Drop Calculator",
+    category: "home",
+    description:
+      "Enter wire material, AWG, length, amps, voltage, and phase to get volts dropped, percent drop, voltage at load, and the smallest AWG under 3%. Uses NEC Table 8.",
+    summary:
+      "Check copper or aluminum wire voltage drop against the 3% guideline. Nothing is uploaded.",
     cta: "Calculate",
   },
   {

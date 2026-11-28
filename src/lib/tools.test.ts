@@ -218,6 +218,9 @@ describe("tool registry stop rule", () => {
     assert.equal(TOOLS.find((tool) => tool.keyword === "net worth calculator")?.href, "/finance/net-worth-calculator");
     assert.ok(keywordAlreadyPublished("net worth calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/net-worth-calculator")?.category, "finance");
+    assert.equal(TOOLS.find((tool) => tool.keyword === "voltage drop calculator")?.href, "/home/voltage-drop-calculator");
+    assert.ok(keywordAlreadyPublished("voltage drop calculator"));
+    assert.equal(TOOLS.find((tool) => tool.href === "/home/voltage-drop-calculator")?.category, "home");
     assert.equal(TOOLS.find((tool) => tool.keyword === "debt payoff calculator")?.href, "/finance/debt-payoff-calculator");
     assert.ok(keywordAlreadyPublished("debt payoff calculator"));
     assert.equal(TOOLS.find((tool) => tool.href === "/finance/debt-payoff-calculator")?.category, "finance");
@@ -1076,7 +1079,7 @@ describe("tool registry stop rule", () => {
     assert.equal(keywordAlreadyPublished("roof square calculator"), false);
     assert.equal(
       TOOLS.filter((tool) => tool.category === "home").map((tool) => tool.slug).sort().join(","),
-      "btu-calculator,concrete-calculator,drywall-calculator,house-sq-ft-estimator,insulation-calculator,roof-algae-severity,roof-pitch-calculator,roofing-calculator,sod-calculator,soft-wash-mix-calculator,square-footage-calculator,stair-calculator,tile-calculator,vinyl-siding-cleanability,wallpaper-calculator",
+      "btu-calculator,concrete-calculator,drywall-calculator,house-sq-ft-estimator,insulation-calculator,roof-algae-severity,roof-pitch-calculator,roofing-calculator,sod-calculator,soft-wash-mix-calculator,square-footage-calculator,stair-calculator,tile-calculator,vinyl-siding-cleanability,voltage-drop-calculator,wallpaper-calculator",
     );
     assert.equal(TOOLS.find((tool) => tool.href === "/home/square-footage-calculator")?.category, "home");
     assert.equal(

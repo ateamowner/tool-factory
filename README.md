@@ -33,6 +33,7 @@ Free, mobile-first utility tools that run entirely in the browser. No signup. No
 | Soft wash mix calculator (also softwash / house wash mix calculator) | `/home/soft-wash-mix-calculator` |
 | House sq-ft estimator (also house square footage estimator) | `/home/house-sq-ft-estimator` |
 | Vinyl siding cleanability checker | `/home/vinyl-siding-cleanability` |
+| Voltage drop calculator | `/home/voltage-drop-calculator` |
 | Roof algae severity quiz (also roof algae quiz) | `/home/roof-algae-severity` |
 
 Hubs: `/` · `/finance` · `/seo` · `/dev` · `/convert` · `/home`

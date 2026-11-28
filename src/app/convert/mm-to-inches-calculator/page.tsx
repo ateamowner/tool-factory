@@ -114,6 +114,13 @@ export default function MmToInchesCalculatorPage() {
           device, and there is no account.
         </p>
         <p>
+          Working with wire gauges? See how wire size affects losses in the{" "}
+          <Link className="text-mint underline" href="/home/voltage-drop-calculator">
+            voltage drop calculator
+          </Link>
+          .
+        </p>
+        <p>
           Browse more converters on the{" "}
           <Link className="text-mint underline" href="/convert">
             Convert
